@@ -168,18 +168,9 @@ a
 
 [m-footer]
   clear both
-  overflow hidden
-  width s('calc(100% - %s)', $drawer_width + $aside_width)
-  margin 0 $aside_width 0 $drawer_width
-  background var(--color-background)
+  width 100%
   @media (min-width: $app_mobile_width)
     transition all 0.6s
-    padding-bottom $font_size * 4 // Lyric height
-    border 1px solid var(--color-clear)
-    border-bottom none
-    border-radius $gap $gap 0 0
-  @media (max-width: $app_mobile_width)
-    padding-bottom s('calc(20vh + %s)', $gap * 2) // Lyric height
 
 [m-heaper]
   width 100%
@@ -241,8 +232,6 @@ a
 :root.lyride
   .aplayer-lrc
     opacity 0 !important
-  [m-footer]
-    padding-bottom 0 // Lyric height
 
 @media (max-width: $app_width)
   [m-aside].sticky-bottom, [m-aside].sticky-top
@@ -266,12 +255,6 @@ a
   [m-header]
     border none
     border-bottom 1px solid var(--color-clear)
-    border-radius 0
-  [m-footer]
-    width 100%
-    margin 0
-    border none
-    border-top 1px solid var(--color-clear)
     border-radius 0
   [m-heaper]
     display none
@@ -338,11 +321,11 @@ a
 @media (min-width: $app_mobile_width)
   [m-header], [p-search-dialog-bar], [p-search-dialog-result]
     box-shadow 0 0 $gap var(--color-clear), 0 $gap * 1.5 $gap * 3 $gap * -1.5 var(--color-clear)
-  [m-footer]
-    box-shadow 0 0 $gap * 0.5 var(--color-clear)
   [m-heaper]
     box-shadow 0 0 $gap * 0.5 var(--color-clear), 0 $gap $gap * 2 $gap * -1 var(--color-clear)
   [p-brand], [p-menus], [p-skin], [p-settings], [p-panels], [p-audioplayer], [p-toc], [p-translater-bar], [p-comment], [p-hitokoto], [p-recentposts], [p-timeline], [p-post], [p-page]
     box-shadow 0 0 $gap * 0.5 var(--color-clear), 0 $gap $gap * 2 $gap * -1 var(--color-clear)
   [p-translater-result]
     box-shadow 0 $gap $gap * 2 $gap * -1 var(--color-clear)
+  [p-footer]
+    box-shadow 0 0 $gap * 0.5 var(--color-clear)

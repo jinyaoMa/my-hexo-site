@@ -9,7 +9,15 @@
   user-select none
   animation footer-appear 0.6s ease
   padding $font_size
+  padding-bottom $font_size * 5
+  margin 0 auto
   text-align center
+  background var(--color-background)
+  border 1px solid var(--color-clear)
+  border-bottom none
+  border-radius $gap
+  transition all 0.6s
+  width s('calc(100% - %s)', $drawer_width + $aside_width)
 
 [p-footer-powered], [p-footer-theme]
   @media (min-width: $app_mobile_width)
@@ -35,3 +43,11 @@
     display inline-block
     img
       height $font_size * 2
+
+:root.lyride
+  [p-footer]
+    padding-bottom $font_size
+
+:root.closeDrawer, :root.closeAside
+  [p-footer]
+    width 100%
