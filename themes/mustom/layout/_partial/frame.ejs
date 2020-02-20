@@ -17,7 +17,7 @@
   <title><%= title %></title>
   <%- adScript %>
   <%- $css('style') %>
-  <%- $nomjs('nomodule') %>
+  <%- !config.babelify && $nomjs('nomodule') %>
   <%- $mjs('main') %>
 </head>
 
