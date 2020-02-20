@@ -158,7 +158,7 @@ const final_load = o => util.layoutParts(parts => {
     });
     if (flag) {
       window.clearInterval(looper);
-      evanyou();
+      evanyou.draw();
       listen2Links();
       activateSpinner(false);
       applyConfig();
@@ -525,6 +525,8 @@ util.run(next => { // DEFAULT
         final();
       }
     }, lock_wait);
+
+    evanyou.init('[m-evanyou-canvas]');
 
     goingto.init(null, el => {
       checklist.goingto = true;
