@@ -132,6 +132,10 @@ toc:
   icon: '<i class="fas fa-paragraph fa-fw"></i>'
 search:
   close: '<i class="fas fa-times fa-fw"></i>'
+extension:
+  icons:
+    normal: /asset/img/start.png
+    reverse: /asset/img/start.reverse.png
 manifest:
   path: /manifest.json
   name: ma-jinyao.cn

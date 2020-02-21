@@ -11,6 +11,7 @@ import api from "./common/api.js";
 import config from "./common/config.js";
 import ajax from "./common/ajax.js";
 import goingto from "./part/goingto.js";
+import extension from "./part/extension.js";
 import search from "./part/search.js";
 import xdrawer from "./part/xdrawer.js";
 import xaside from "./part/xaside.js";
@@ -503,6 +504,7 @@ util.run(next => { // DEFAULT
   desktop(final) { // DESKTOP
     let checklist = {
       goingto: false,
+      extension: false,
       xdrawer: false,
       xaside: false,
       translater: false,
@@ -530,6 +532,9 @@ util.run(next => { // DEFAULT
 
     goingto.init(null, el => {
       checklist.goingto = true;
+    });
+    extension.init(null, el => {
+      checklist.extension = true;
     });
     xdrawer.init({
       onclick(state) {
