@@ -74,7 +74,7 @@ menus:
   others:
     test:
       url: /test/
-      icon: '<i class="fas fa-code fa-fw"></i>'
+      icon: '<i class="fas fa-edit fa-fw"></i>'
 skin:
   default: "#000000"
   colorful: "linear-gradient(to bottom right,#ff3333 ,#66cc66 , #0099cc)"

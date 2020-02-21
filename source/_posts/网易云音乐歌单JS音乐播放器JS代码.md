@@ -9,8 +9,8 @@ tags:
   - 音乐播放器
   - Javascript
 abbrlink: 12019
-date: 2019-12-17
-updated: 2019-12-17
+date: 2019-01-17 18:09:00
+updated: 2019-01-17 18:09:00
 ---
 
 ![JS音乐播放器截图](/pictures/yaoplayer-0.jpg)

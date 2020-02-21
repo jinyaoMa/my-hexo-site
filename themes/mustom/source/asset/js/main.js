@@ -33,6 +33,7 @@ import recentposts from "./part/recentposts.js";
 import timeline from "./part/timeline.js";
 import post from "./part/post.js";
 import page from "./part/page.js";
+import records from "./part/records.js";
 
 _run_APlayer();
 _run_AV();
@@ -257,14 +258,18 @@ const final_load = o => util.layoutParts(parts => {
   }
 
   if (/^\/(test)\//.test(pathname())) {
-    api('pages/test', ptdata => {
-      parts.includes('page') && page.init({
-        title: ptdata.title,
-        content: ptdata.content
-      }, el => {
-        checklist.page = true;
-        progress.step(stepping);
-      });
+    ajax({
+      url: `/test/records.json`,
+      method: 'get',
+      dataType: 'json',
+      success(data) {
+        parts.includes('records') && records.init({
+          data
+        }, el => {
+          checklist.records = true;
+          progress.step(stepping);
+        });
+      }
     });
   }
 

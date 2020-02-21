@@ -23,7 +23,7 @@ menus:
   others:
     caption: 其他
     items:
-      test: 测试
+      test: 记录
 skin:
   caption: 皮肤
   items:

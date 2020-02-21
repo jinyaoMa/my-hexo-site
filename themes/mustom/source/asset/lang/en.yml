@@ -23,7 +23,7 @@ menus:
   others:
     caption: OTHERS
     items:
-      test: Test
+      test: Records
 skin:
   caption: SKIN
   items:

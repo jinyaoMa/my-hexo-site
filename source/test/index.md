@@ -1,6 +1,6 @@
 ---
 layout: page
 name: test
-title: 测试 / Test
+title: 记录 / Records
+parts: records
 ---
-
