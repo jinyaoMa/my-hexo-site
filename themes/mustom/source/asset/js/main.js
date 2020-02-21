@@ -533,8 +533,17 @@ util.run(next => { // DEFAULT
     goingto.init(null, el => {
       checklist.goingto = true;
     });
-    extension.init(null, el => {
-      checklist.extension = true;
+    ajax({
+      url: `/extension/content.json`,
+      method: 'get',
+      dataType: 'json',
+      success(data) {
+        extension.init({
+          data
+        }, el => {
+          checklist.extension = true;
+        });
+      }
     });
     xdrawer.init({
       onclick(state) {

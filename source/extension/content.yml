@@ -1,0 +1,7 @@
+- name: My Site
+  icon: /asset/img/author.medium.png
+  link: /
+
+- name: Test
+  icon: /extension/test/icon.png
+  link: /extension/test/

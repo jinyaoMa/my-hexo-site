@@ -81,6 +81,38 @@ const init = (params, callback) => {
           navigator.querySelector('[p-post-navigator-next]').style.display = 'none';
         });
       }
+
+      let scripts = element.querySelectorAll('script');
+      let currentIndex = 0;
+      (function run() {
+        if (currentIndex < scripts.length) {
+          let s = document.createElement('script');
+          if (scripts[currentIndex].src === '') {
+            s.innerHTML = scripts[currentIndex].innerHTML;
+            scripts[currentIndex].parentElement.append(s);
+            scripts[currentIndex].remove();
+            currentIndex += 1;
+            run();
+          } else {
+            s.async = true;
+            s.src = scripts[currentIndex].src;
+            s.onload = o => {
+              currentIndex += 1;
+              run();
+            };
+            scripts[currentIndex].parentElement.append(s);
+            scripts[currentIndex].remove();
+          }
+        }
+      })();
+
+      element.querySelectorAll('link[rel~="stylesheet"]').forEach(style => {
+        let s = document.createElement('link');
+        s.ref = "stylesheet";
+        s.href = style.href;
+        style.parentElement.append(s);
+        style.remove();
+      });
     }
 
     callback && callback(element);
