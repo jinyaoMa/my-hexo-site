@@ -1,2 +1,8 @@
-- cover: ""
-  title: ""
+# Sample
+- cover:  # [empty] to use default cover
+  title: ma-jinyao.cn
+  type:  # e.g. [empty] / book / article / paper / report / anime / video / movie / audio / song
+  author: jinyaoMa
+  source: "https://ma-jinyao.cn"
+  progress: 1% # format 'number/total' OR '90%' OR 'complete', [empty] to use '0%'
+  intro: "耀 の 个人网站 | Mark の Personal Website"

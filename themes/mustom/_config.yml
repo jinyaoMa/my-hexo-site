@@ -53,6 +53,10 @@ contact:
   qq:
     url: tencent://message/?uin=907881445
     icon: '<i class="fab fa-qq fa-fw"></i>'
+menuicons:
+  main: '<i class="fas fa-sitemap fa-fw"></i>'
+  job: '<i class="fas fa-briefcase fa-fw"></i>'
+  others: '<i class="fas fa-ellipsis-h fa-fw"></i>'
 menus:
   main:
     home:
@@ -75,9 +79,11 @@ menus:
     test:
       url: /test/
       icon: '<i class="fas fa-edit fa-fw"></i>'
+skinicon: '<i class="fas fa-tshirt fa-fw"></i>'
 skin:
   default: "#000000"
   colorful: "linear-gradient(to bottom right,#ff3333 ,#66cc66 , #0099cc)"
+settingsicon: '<i class="fas fa-cog fa-fw"></i>'
 settings:
   langshift: '<i class="fas fa-globe-asia fa-fw"></i>'
   night: '<i class="fas fa-adjust fa-fw"></i>'
@@ -136,6 +142,9 @@ extension:
   icons:
     normal: /asset/img/start.png
     reverse: /asset/img/start.reverse.png
+records:
+  icon: '<i class="fas fa-save fa-fw"></i>'
+  cover: /asset/img/qf3cu.temp.png
 manifest:
   path: /manifest.json
   name: ma-jinyao.cn

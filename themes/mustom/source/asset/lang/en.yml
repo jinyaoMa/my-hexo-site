@@ -90,7 +90,7 @@ post:
       notice: "Copyright Notice: "
     text: All articles/posts in this website are licensed under %s unless stating additionally.
 page:
-  caption: PAGE CONTENT
+  caption: PAGE
 toc:
   caption: TABLE OF CONTENTS
   noheadings: "?(￣△￣?) [No Table of Contents]"
@@ -106,3 +106,5 @@ pather:
   letter: Cover Letter
   test: Test
   home: Home
+records:
+  caption: RECORD

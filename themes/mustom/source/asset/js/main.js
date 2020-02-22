@@ -258,6 +258,15 @@ const final_load = o => util.layoutParts(parts => {
   }
 
   if (/^\/(test)\//.test(pathname())) {
+    api('pages/test', pldata => {
+      parts.includes('page') && page.init({
+        title: pldata.title,
+        content: pldata.content
+      }, el => {
+        checklist.page = true;
+        progress.step(stepping);
+      });
+    });
     ajax({
       url: `/test/records.json`,
       method: 'get',

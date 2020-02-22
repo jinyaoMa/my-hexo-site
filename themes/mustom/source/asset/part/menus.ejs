@@ -1,7 +1,10 @@
 <div p-menus>
   <% $forIn(theme.menus, (name, menu) => { %>
   <div p-menu>
-    <div p-menu-caption data-lang="menus.<%- name %>.caption"></div>
+    <div p-menu-caption>
+      <%- theme.menuicons[name] %>
+      <span data-lang="menus.<%- name %>.caption"></span>
+    </div>
     <div p-menu-items>
       <% $forIn(menu, (key, item) => { %>
       <a data-menu-key="<%- key %>" href="<%- item.url %>">
