@@ -8,7 +8,8 @@ $app_width = 1366px
 $drawer_width = 300px
 $aside_width = 300px
 $main_min_width = 320px
-$app_mobile_width = $drawer_width + $aside_width + $main_min_width * 1.1 // scrollbar offset
+$main_min_width_with_offset = $main_min_width + 32px // scrollbar offset
+$app_mobile_width = $drawer_width + $aside_width + $main_min_width_with_offset
 
 $audioplayer_height = 56px
 $audioplayer_list_height = (32px + 1px) * 9 // Meting.js list-max-height

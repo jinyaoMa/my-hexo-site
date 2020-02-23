@@ -108,3 +108,21 @@ pather:
   home: 首页
 records:
   caption: 记录
+  labels:
+    type: "类型："
+    author: "创作者："
+    source: "来源："
+    progress: "进度："
+    summary: "总结："
+  types:
+    default: 默认
+    books: 书籍
+    article: 文章
+    paper: 论文
+    newspaper: 报纸
+    report: 报告
+    picture: 图片
+    anime: 动漫
+    video: 视频
+    movie: 电影
+    audio: 音频

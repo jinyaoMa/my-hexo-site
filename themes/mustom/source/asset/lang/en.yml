@@ -108,3 +108,21 @@ pather:
   home: Home
 records:
   caption: RECORD
+  labels:
+    type: "Type:"
+    author: "Contributor:"
+    source: "Source:"
+    progress: "Progress:"
+    summary: "Summary:"
+  types:
+    default: Default
+    books: Books
+    article: Article
+    paper: Paper
+    newspaper: Newspaper
+    report: Report
+    picture: Picture
+    anime: Anime
+    video: Video
+    movie: Movie
+    audio: Audio

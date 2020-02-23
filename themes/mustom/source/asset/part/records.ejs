@@ -4,15 +4,38 @@
       <%- theme.records.icon %>
       <span data-lang="records.caption"></span>
     </div>
-    <div p-record-main>
-      <img p-record-cover src="<%- theme.records.cover %>">
-      <div p-record-content>
-        <div p-record-title></div>
-        <div p-record-type></div>
-        <div p-record-author></div>
-        <div p-record-source></div>
-        <div p-record-progress></div>
-        <div p-record-intro></div>
+    <div p-record-frame>
+      <div p-record-main>
+        <div p-record-cover>
+          <img src="<%- theme.records.cover %>">
+        </div>
+        <div p-record-content>
+          <div p-record-title>
+            <span p-record-inner></span>
+          </div>
+          <div p-record-type>
+            <span p-record-label data-lang="records.labels.type"></span>
+            <span p-record-inner></span>
+          </div>
+          <div p-record-author>
+            <span p-record-label data-lang="records.labels.author"></span>
+            <span p-record-inner></span>
+          </div>
+          <div p-record-source>
+            <span p-record-label data-lang="records.labels.source"></span>
+            <span p-record-inner></span>
+          </div>
+          <div p-record-progress>
+            <span p-record-label data-lang="records.labels.progress"></span>
+            <div p-record-inner>
+              <div p-record-progress-current><%- theme.records.na %></div>
+            </div>
+          </div>
+          <div p-record-summary>
+            <span p-record-label data-lang="records.labels.summary"></span>
+            <div p-record-inner></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
