@@ -23,7 +23,7 @@ menus:
   others:
     caption: OTHERS
     items:
-      test: Records
+      records: Records
 skin:
   caption: SKIN
   items:
@@ -104,7 +104,7 @@ pather:
   about: About
   resume: Resume
   letter: Cover Letter
-  test: Test
+  records: Records
   home: Home
 records:
   caption: RECORD

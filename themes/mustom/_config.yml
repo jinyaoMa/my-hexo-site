@@ -76,8 +76,8 @@ menus:
       url: /letter/
       icon: '<i class="fas fa-file-contract fa-fw"></i>'
   others:
-    test:
-      url: /test/
+    records:
+      url: /records/
       icon: '<i class="fas fa-edit fa-fw"></i>'
 skinicon: '<i class="fas fa-tshirt fa-fw"></i>'
 skin:

@@ -1,5 +1,5 @@
 # Sample
-- cover: # [empty] to use default cover
+- cover: /asset/img/author.medium.png # [empty] to use default cover
   title: 耀 の 个人网站
   type: # e.g. [empty] / books / article / paper / newspaper / report / picture / anime / video / movie / audio
   author: jinyaoMa
@@ -7,7 +7,7 @@
   progress: Latest # format 'number/total' OR '100%' OR 'Complete', [empty] to use 'N/A', NO ALLOW SPACE
   summary: 耀 の 个人网站 | Mark の Personal Website
 
-- cover: /asset/img/author.medium.png
+- cover:
   title: Test
   type:
   author: jinyaoMa

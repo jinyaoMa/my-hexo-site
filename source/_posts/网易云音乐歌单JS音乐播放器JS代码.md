@@ -13,7 +13,7 @@ date: 2019-01-17 18:09:00
 updated: 2019-01-17 18:09:00
 ---
 
-![JS音乐播放器截图](/pictures/yaoplayer-0.jpg)
+![JS音乐播放器截图](/gallery/yaoplayer-0.jpg)
 网易云音乐歌单JS音乐播放器JS代码
 感谢[MessAPI](https://github.com/messoer/mess-api-doc)提供的网易云音乐API
 代码依赖jQuery和fontawesome

@@ -23,7 +23,7 @@ menus:
   others:
     caption: 其他
     items:
-      test: 记录
+      records: 记录
 skin:
   caption: 皮肤
   items:
@@ -104,7 +104,7 @@ pather:
   about: 关于
   resume: 简历
   letter: 自荐信
-  test: 测试
+  records: 记录
   home: 首页
 records:
   caption: 记录

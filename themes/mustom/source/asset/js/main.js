@@ -257,8 +257,8 @@ const final_load = o => util.layoutParts(parts => {
     });
   }
 
-  if (/^\/(test)\//.test(pathname())) {
-    api('pages/test', pldata => {
+  if (/^\/(records)\//.test(pathname())) {
+    api('pages/records', pldata => {
       parts.includes('page') && page.init({
         title: pldata.title,
         content: pldata.content
@@ -268,7 +268,7 @@ const final_load = o => util.layoutParts(parts => {
       });
     });
     ajax({
-      url: `/test/records.json`,
+      url: `/records/content.json`,
       method: 'get',
       dataType: 'json',
       success(data) {
