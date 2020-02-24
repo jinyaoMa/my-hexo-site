@@ -23,20 +23,6 @@
 [p-timeline-items]
   padding $gap * 4
   line-height 2
-  @media (min-width: $app_mobile_width)
-    a
-      display inline-block
-      &:after
-        content ''
-        display block
-        margin-top -1px
-        width 0
-        height 1px
-        background var(--color-link)
-        transition width 0.6s
-      &:hover
-        &:after
-          width 100%
   [p-timeline-head], [p-timeline-row]
     clear both
   [p-timeline-year], [p-timeline-date]
@@ -67,9 +53,18 @@
     font-weight bold
     @media (min-width: $app_mobile_width)
       a
+        display inline-block
         &:after
+          content ''
+          display block
           margin-top -2px
+          width 0
           height 2px
+          background var(--color-link)
+          transition width 0.6s
+        &:hover
+          &:after
+            width 100%
   [p-timeline-content]
     user-select text
   @media (min-width: $app_mobile_width)

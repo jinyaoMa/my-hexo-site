@@ -20,6 +20,12 @@ const init = (params, callback) => {
         if (params.posts[i].cover) {
           let cover = recentpost.querySelector('[p-recentpost-cover] span');
           let img = document.createElement('img');
+          img.onload = o => {
+            let cTemp = recentpost.querySelector('[p-recentpost-cover]');
+            if (cTemp && img.offsetWidth > cTemp.offsetWidth && img.offsetHeight > cTemp.offsetHeight) {
+              img.style.height = cTemp.offsetHeight + 'px';
+            }
+          };
           img.src = params.posts[i].cover;
           cover.appendChild(img);
         }
