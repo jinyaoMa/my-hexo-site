@@ -35,12 +35,12 @@
     display block
   a
     background var(--color-gallery)
-    &:hover
-      background var(--color-gallery-hover)
     @media (max-width: $app_mobile_width)
       padding $gap
     @media (min-width: $app_mobile_width)
       padding $gap * 3
+      &:hover
+        background var(--color-gallery-hover)
   img
     max-width 100%
     margin 0 auto
