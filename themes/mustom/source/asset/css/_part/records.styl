@@ -66,6 +66,7 @@
     padding 0 $gap * 2
     margin $gap * 2 0
   width 100%
+  transition all 0.6s
   max-width $app_width - $drawer_width - $aside_width - $main_min_width - $gap - 2px // outer border-width offset
   max-height $main_min_width
   overflow-x hidden
@@ -137,3 +138,15 @@
     text-align center
     i
       display none
+
+:root.closeDrawer:not(.closeAside)
+  [p-record-content]
+    max-width $app_width - $aside_width - $main_min_width - $gap * 3 - 2px // outer border-width offset
+
+:root.closeAside:not(.closeDrawer)
+  [p-record-content]
+    max-width $app_width - $drawer_width - $main_min_width - $gap * 3 - 2px // outer border-width offset
+
+:root.closeDrawer.closeAside
+  [p-record-content]
+    max-width $app_width - $main_min_width - $gap * 5 - 2px // outer border-width offset

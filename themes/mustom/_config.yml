@@ -79,6 +79,9 @@ menus:
     records:
       url: /records/
       icon: '<i class="fas fa-edit fa-fw"></i>'
+    gallery:
+      url: /gallery/
+      icon: '<i class="fas fa-images fa-fw"></i>'
 skinicon: '<i class="fas fa-tshirt fa-fw"></i>'
 skin:
   default: "#000000"
@@ -146,6 +149,8 @@ records:
   icon: '<i class="fas fa-save fa-fw"></i>'
   cover: /asset/img/qf3cu.temp.png
   na: N/A
+gallery:
+  icon: '<i class="fas fa-image fa-fw"></i>'
 manifest:
   path: /manifest.json
   name: ma-jinyao.cn

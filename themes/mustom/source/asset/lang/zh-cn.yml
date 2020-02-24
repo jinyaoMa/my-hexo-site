@@ -24,6 +24,7 @@ menus:
     caption: 其他
     items:
       records: 记录
+      gallery: 图库
 skin:
   caption: 皮肤
   items:
@@ -105,6 +106,7 @@ pather:
   resume: 简历
   letter: 自荐信
   records: 记录
+  gallery: 图库
   home: 首页
 records:
   caption: 记录

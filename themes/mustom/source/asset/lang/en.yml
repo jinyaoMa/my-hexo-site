@@ -24,6 +24,7 @@ menus:
     caption: OTHERS
     items:
       records: Records
+      gallery: Gallery
 skin:
   caption: SKIN
   items:
@@ -105,6 +106,7 @@ pather:
   resume: Resume
   letter: Cover Letter
   records: Records
+  gallery: Gallery
   home: Home
 records:
   caption: RECORD

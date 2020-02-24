@@ -10,7 +10,12 @@ const init = (params, callback) => {
 
     if (params) {
       params.title && (element.querySelector('[p-page-title]').innerText = params.title);
-      params.content && (element.querySelector('[p-page-main]').innerHTML = params.content);
+      if (params.content && params.content.trim() !== '') {
+        element.querySelector('[p-page-main]').innerHTML = params.content;
+      } else {
+        element.querySelector('[p-page-title]').style.borderWidth = 0;
+        element.querySelector('[p-page-main]').style.display = 'none';
+      }
 
       let scripts = element.querySelectorAll('script');
       let currentIndex = 0;

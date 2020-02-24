@@ -34,6 +34,7 @@ import timeline from "./part/timeline.js";
 import post from "./part/post.js";
 import page from "./part/page.js";
 import records from "./part/records.js";
+import gallery from "./part/gallery.js";
 
 _run_APlayer();
 _run_AV();
@@ -276,6 +277,31 @@ const final_load = o => util.layoutParts(parts => {
           data
         }, el => {
           checklist.records = true;
+          progress.step(stepping);
+        });
+      }
+    });
+  }
+
+  if (/^\/(gallery)\//.test(pathname())) {
+    api('pages/gallery', pldata => {
+      parts.includes('page') && page.init({
+        title: pldata.title,
+        content: pldata.content
+      }, el => {
+        checklist.page = true;
+        progress.step(stepping);
+      });
+    });
+    ajax({
+      url: `/gallery/content.json`,
+      method: 'get',
+      dataType: 'json',
+      success(data) {
+        parts.includes('gallery') && gallery.init({
+          data
+        }, el => {
+          checklist.gallery = true;
           progress.step(stepping);
         });
       }

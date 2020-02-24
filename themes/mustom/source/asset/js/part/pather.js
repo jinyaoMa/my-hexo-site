@@ -49,6 +49,9 @@ const update = o => {
   } else if (/^\/(records)\//.test(pathname)) {
     a.href = menus.others.records.url;
     a.setAttribute('data-lang', 'pather.records');
+  } else if (/^\/(gallery)\//.test(pathname)) {
+    a.href = menus.others.gallery.url;
+    a.setAttribute('data-lang', 'pather.gallery');
   } else {
     a.href = menus.main.home.url;
     a.setAttribute('data-lang', 'pather.home');
