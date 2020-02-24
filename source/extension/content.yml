@@ -6,3 +6,7 @@
 - name: Test
   icon: /extension/test/icon.png
   link: /extension/test/
+
+- name: Driving Test
+  icon: https://www.drivingtest.ca/wp-content/uploads/apple-icon-180x180.png
+  link: https://www.drivingtest.ca/ontario-g1-driving-test/
