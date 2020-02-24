@@ -1,7 +1,7 @@
 ---
 layout: page
 name: gallery
-title: 图库 / Gallery
+title: Gallery / 图库
 parts: 
   - page
   - gallery

@@ -10,10 +10,10 @@ date: 2019-06-19 20:00:00
 updated: 2019-06-19 20:00:00
 ---
 
-Oracle SQL 复习笔记（进行中）
+Oracle SQL 复习笔记（~~进行中~~放弃了...）
 <!-- more -->
 
-# Cheat Sheet
+# 笔记 / Cheat Sheet
 
 ``` SQL
 concat(field/string, field/string, field/string...)

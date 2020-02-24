@@ -1,7 +1,7 @@
 ---
 layout: page
 name: records
-title: 记录 / Records
+title: Records / 记录
 parts: 
   - page
   - records

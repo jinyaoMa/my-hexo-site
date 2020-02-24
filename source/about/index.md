@@ -1,22 +1,7 @@
 ---
 layout: page
 name: about
-title: 关于 / About
----
-
-大家好！ 
-欢迎来到[我的个人网站](/)！ 
-这里收集了个人认为日常实用的代码， 个人在校所学知识的复习资料， 网上收集的实用代码以及个人感兴趣的各种知识记录。 以下为我给自己设立的要求： 
-
-1. 记录日常复习中带有重复利用价值的代码及介绍
-2. 记录日常突发奇想的算法及想法
-3. 记录自学过程中的代码及介绍
-4. 记录解决难题过程中的代码及介绍
-5. 积极生产小工具和复用性极高的代码以形成自己的个人代码库
-6. 以上要求做不到的话， 就随便写点什么吧 (๑•́ ₃ •̀๑)
-
-从前的我没有把知识记录下来的习惯， 希望现在可以通过[我的个人网站](/)来养成这种习惯。 
-
+title: About / 关于
 ---
 
 Hello guys！ 
@@ -32,16 +17,22 @@ There are useful codes from my daily experience and the internet, summaries of r
 
 In the past, I did not develop a habit to record what I had learned. Now, I hope I can develop the habit by writing notes in [My Personal Website](/).
 
-# 关于我的信息 / Information About Me
-
-- 昵称： 耀
-- 目前职业： 学生
-- 专业： 软件开发
-- 目前居住地： 加拿大安省哈村
-- 家乡： 广东江门
-- 爱好： 看书、 玩游戏、 看动漫、 躺着、 敲代码
-
 ---
+
+大家好！ 
+欢迎来到[我的个人网站](/)！ 
+这里收集了个人认为日常实用的代码， 个人在校所学知识的复习资料， 网上收集的实用代码以及个人感兴趣的各种知识记录。 以下为我给自己设立的要求： 
+
+1. 记录日常复习中带有重复利用价值的代码及介绍
+2. 记录日常突发奇想的算法及想法
+3. 记录自学过程中的代码及介绍
+4. 记录解决难题过程中的代码及介绍
+5. 积极生产小工具和复用性极高的代码以形成自己的个人代码库
+6. 以上要求做不到的话， 就随便写点什么吧 (๑•́ ₃ •̀๑)
+
+从前的我没有把知识记录下来的习惯， 希望现在可以通过[我的个人网站](/)来养成这种习惯。
+
+# Information About Me / 关于我的信息
 
 - Nickname: Mark
 - Current Occupation: Student
@@ -50,7 +41,16 @@ In the past, I did not develop a habit to record what I had learned. Now, I hope
 - Hometown: Jiangmen, Guangdong, China
 - Hobby: Reading, Gaming, Anime, Sleeping, Coding
 
-# 联系方式 / Contact
+---
+
+- 昵称： 耀
+- 目前职业： 学生
+- 专业： 软件开发
+- 目前居住地： 加拿大安省哈村
+- 家乡： 广东江门
+- 爱好： 看书、 玩游戏、 看动漫、 躺着、 敲代码
+
+# Contact / 联系方式
 
 - QQ: 907881445
 - Email: jinyao.ma@outlook.com

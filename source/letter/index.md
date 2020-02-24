@@ -1,7 +1,7 @@
 ---
 layout: page
 name: letter
-title: 自荐信样本 / Cover Letter Samples
+title: Cover Letter Samples / 自荐信样本
 ---
 
 Jinyao Ma
