@@ -4,54 +4,19 @@ name: resume
 title: 简历样本 / Resume Samples
 ---
 
-# 程序员简历小技巧 / Programmer Resume Tips
+## 程序员简历小技巧 / Programmer Resume Tips
 
-## English
-- Digitizing
-- case-flow
-- formalizing
+- 中文
+  * 数字化
+  * 案例化
+  * 正式化
+- English
+  * Digitizing
+  * case-flow
+  * formalizing
 
-## 中文
-- 数字化
-- 案例化
-- 正式化
+## 旧版 / OLD
 
-# 旧版 / OLD
-
-``` yaml ENGLISH
-Mark:  # Collection Link：https://github.com/jinyaoMa
-  Email: jinyao.ma@outlook.com
-  Cellphone: +1234567890
-  Objective:
-  - Web development, in order to have in-depth comprehension about web development and expand knowledge in this field. I am confident to develop my skills quickly in a web development related position.
-  - Mobile development, in order to develop myself comprehensively in the software industry. I am interested in iOS and Android development and have higher grades in iOS and Android fundamental courses than others’ at school.
-  Education:
-    Mohawk_College:
-    Software_Development:  # 2015.09 – 2019.12
-      Introduction: 1/3 Web Development，1/3 Programming and Design Fundamentals，1/3 others (include fundamentals about iOS, Android, machine learning, etc.）
-      Full-mark_Courses: Emerging Web Technology (include CodeIgniter, Vue, Laravel), Android Application Development，Web Application ASP.NET，HTML5 & Web Development，PHP & JavaScript 
-  Technical_Skills:
-    Programming_Language: 
-      Commonly_Used: HTML, CSS, PHP, JavaScript, Java
-      Understand: Swift, Python 3, XML, VB, C, C#
-    Frameworks: 
-      Commonly_Used: jQuery
-      Understand: CodeIgniter, Vue, Bootstrap, Laravel
-    Others: 
-      Commonly_Used: Node.js, Oracle SQL/Transact SQL/MySQL, Git, Hexo
-      Understand: Redis, MVC, UML, Selenium, GML, Adobe Photoshop
-    IDEs: 
-      Have_Used: Notepad++, NetBeans, Visual Studio, Android Studio, XCode
-  Projects:
-    Personal_Blog:  # Individual Project    2018.12 – Present
-      In order to improve my comprehension to the software development field of study, I designed the theme of my blog and add in some plugins and functionalities using third-party APIs in my blog, and generated it using Hexo.
-    Website_Activity_Monitor:   # Course Lab    2018.09 – 2018.12
-      In order to be comprehensive and proficient in Vue and Node.js, this lab was done with a single web page that can monitor the status of a website dynamically and track the IP addresses of visitors.
-    Database_Management_Website:  # Course Lab    2017.09 – 2017.12
-      In order to be proficient in SQL Server and Visual Studio, this lab was done with some web pages using various controls and SQL statements to implement CRUD functionalities. Later, the website was rewritten and add in login function using CodeIgniter.
-  Interests: Reading, listening to Music, flashing phones/computers, modifying my blog/writing articles, individual learning and Googling
-```
----
 ``` yaml 中文
 耀:  # 作品链接：https://github.com/jinyaoMa
   邮箱: jinyao.ma@outlook.com
@@ -89,4 +54,38 @@ Mark:  # Collection Link：https://github.com/jinyaoMa
     验票员:  # 2015.04 – 2015.05
       多伦多国际电影节连续守门验票一周
   兴趣爱好: 阅读，听歌，刷机，弄博客，各种自学加百度
+```
+
+``` yaml ENGLISH
+Mark:  # Collection Link：https://github.com/jinyaoMa
+  Email: jinyao.ma@outlook.com
+  Cellphone: +1234567890
+  Objective:
+  - Web development, in order to have in-depth comprehension about web development and expand knowledge in this field. I am confident to develop my skills quickly in a web development related position.
+  - Mobile development, in order to develop myself comprehensively in the software industry. I am interested in iOS and Android development and have higher grades in iOS and Android fundamental courses than others’ at school.
+  Education:
+    Mohawk_College:
+    Software_Development:  # 2015.09 – 2019.12
+      Introduction: 1/3 Web Development，1/3 Programming and Design Fundamentals，1/3 others (include fundamentals about iOS, Android, machine learning, etc.）
+      Full-mark_Courses: Emerging Web Technology (include CodeIgniter, Vue, Laravel), Android Application Development，Web Application ASP.NET，HTML5 & Web Development，PHP & JavaScript 
+  Technical_Skills:
+    Programming_Language: 
+      Commonly_Used: HTML, CSS, PHP, JavaScript, Java
+      Understand: Swift, Python 3, XML, VB, C, C#
+    Frameworks: 
+      Commonly_Used: jQuery
+      Understand: CodeIgniter, Vue, Bootstrap, Laravel
+    Others: 
+      Commonly_Used: Node.js, Oracle SQL/Transact SQL/MySQL, Git, Hexo
+      Understand: Redis, MVC, UML, Selenium, GML, Adobe Photoshop
+    IDEs: 
+      Have_Used: Notepad++, NetBeans, Visual Studio, Android Studio, XCode
+  Projects:
+    Personal_Blog:  # Individual Project    2018.12 – Present
+      In order to improve my comprehension to the software development field of study, I designed the theme of my blog and add in some plugins and functionalities using third-party APIs in my blog, and generated it using Hexo.
+    Website_Activity_Monitor:   # Course Lab    2018.09 – 2018.12
+      In order to be comprehensive and proficient in Vue and Node.js, this lab was done with a single web page that can monitor the status of a website dynamically and track the IP addresses of visitors.
+    Database_Management_Website:  # Course Lab    2017.09 – 2017.12
+      In order to be proficient in SQL Server and Visual Studio, this lab was done with some web pages using various controls and SQL statements to implement CRUD functionalities. Later, the website was rewritten and add in login function using CodeIgniter.
+  Interests: Reading, listening to Music, flashing phones/computers, modifying my blog/writing articles, individual learning and Googling
 ```
