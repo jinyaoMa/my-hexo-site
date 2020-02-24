@@ -13,7 +13,7 @@ GALLERY POST NOT SUPPORTTED!!!
 ![Widescreen wallpaper](/gallery/wallpaper-2572384.jpg)
 ![Portrait photo](/gallery/wallpaper-2311325.jpg)
 ![Dual widescreen wallpaper](/gallery/wallpaper-878514.jpg)
-![Small photo](http://placehold.it/350x150.jpg)
+![Small photo](https://placehold.it/350x150.jpg)
 
 This post contains 4 photos:
 

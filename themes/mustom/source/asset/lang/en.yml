@@ -112,8 +112,8 @@ records:
   caption: RECORD
   labels:
     type: "Type:"
-    author: "Contributor:"
     source: "Source:"
+    author: "Relevance:"
     progress: "Progress:"
     summary: "Summary:"
   types:

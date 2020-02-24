@@ -112,8 +112,8 @@ records:
   caption: 记录
   labels:
     type: "类型："
-    author: "创作者："
     source: "来源："
+    author: "相关："
     progress: "进度："
     summary: "总结："
   types:

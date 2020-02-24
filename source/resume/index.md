@@ -4,12 +4,21 @@ name: resume
 title: 简历样本 / Resume Samples
 ---
 
+# 程序员简历小技巧 / Programmer Resume Tips
 
+## 中文
+- 数字化
+- 案例化
+- 正式化
 
+## English
+- Digitizing
+- case-flow
+- formalizing
 
+# 旧版 / OLD
 
-
-``` YAML
+``` yaml 中文
 耀:  # 作品链接：https://github.com/jinyaoMa
   邮箱: jinyao.ma@outlook.com
   手机: +1234567890
@@ -47,10 +56,8 @@ title: 简历样本 / Resume Samples
       多伦多国际电影节连续守门验票一周
   兴趣爱好: 阅读，听歌，刷机，弄博客，各种自学加百度
 ```
-
 ---
-
-``` YAML
+``` yaml ENGLISH
 Mark:  # Collection Link：https://github.com/jinyaoMa
   Email: jinyao.ma@outlook.com
   Cellphone: +1234567890
@@ -83,4 +90,3 @@ Mark:  # Collection Link：https://github.com/jinyaoMa
       In order to be proficient in SQL Server and Visual Studio, this lab was done with some web pages using various controls and SQL statements to implement CRUD functionalities. Later, the website was rewritten and add in login function using CodeIgniter.
   Interests: Reading, listening to Music, flashing phones/computers, modifying my blog/writing articles, individual learning and Googling
 ```
-
