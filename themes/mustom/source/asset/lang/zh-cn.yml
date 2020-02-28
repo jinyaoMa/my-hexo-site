@@ -109,7 +109,7 @@ pather:
   gallery: 图库
   home: 首页
 records:
-  caption: 记录
+  caption: 存档
   labels:
     type: "类型："
     source: "来源："

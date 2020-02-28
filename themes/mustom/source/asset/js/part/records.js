@@ -5,6 +5,7 @@ let element = null;
 
 const _setRecord = (dom, record) => {
   let cover = dom.querySelector('[p-record-cover] img');
+  let date = dom.querySelector('[p-record-date]');
   let title = dom.querySelector('[p-record-title] [p-record-inner]');
   let type = dom.querySelector('[p-record-type] [p-record-inner]');
   let author = dom.querySelector('[p-record-author] [p-record-inner]');
@@ -13,11 +14,12 @@ const _setRecord = (dom, record) => {
   let progress = dom.querySelector('[p-record-progress] [p-record-inner]');
 
   record.cover && (cover.src = record.cover);
-  title.innerText = record.title;
+  record.date && (date.innerText = record.date.replace(/\s/g, ''));
+  record.title && (title.innerText = record.title);
   type.setAttribute('data-lang', `records.types.${record.type ? record.type : 'default'}`);
-  author.innerText = record.author;
-  source.innerText = record.source;
-  summary.innerText = record.summary;
+  record.author && (author.innerText = record.author);
+  record.source && (source.innerText = record.source);
+  record.summary && (summary.innerText = record.summary);
 
   let progressCurrent = progress.querySelector('[p-record-progress-current]');
   if (record.progress && progressCurrent) {

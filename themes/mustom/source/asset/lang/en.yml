@@ -109,7 +109,7 @@ pather:
   gallery: Gallery
   home: Home
 records:
-  caption: RECORD
+  caption: SAVE
   labels:
     type: "Type:"
     source: "Source:"

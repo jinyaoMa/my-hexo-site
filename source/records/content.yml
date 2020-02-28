@@ -1,5 +1,6 @@
 # Sample
 - cover: /asset/img/author.medium.png # [empty] to use default cover
+  date: 2019/02 - Latest # string
   title: 耀 の 个人网站
   type: # e.g. [empty] / books / article / paper / newspaper / report / picture / anime / video / movie / audio
   author: jinyaoMa
@@ -7,10 +8,12 @@
   progress: Latest # format 'number/total' OR '100%' OR 'Complete', [empty] to use 'N/A', NO ALLOW SPACE
   summary: 耀 の 个人网站 | Mark の Personal Website
 
+# Test
 - cover:
-  title: Test
+  date:
+  title:
   type:
-  author: jinyaoMa
-  source: "https://ma-jinyao.cn"
+  author:
+  source:
   progress:
-  summary: Test
+  summary:
