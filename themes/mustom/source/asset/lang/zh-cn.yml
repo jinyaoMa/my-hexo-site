@@ -18,8 +18,8 @@ menus:
   job:
     caption: 工作
     items:
-      resume: 简历
-      letter: 自荐信
+      resume: 简历小贴士
+      letter: 求职信小贴士
   others:
     caption: 其他
     items:
@@ -103,8 +103,8 @@ pather:
   catarchive: "归档 [分类]"
   tagarchive: "归档 [标签]"
   about: 关于
-  resume: 简历
-  letter: 自荐信
+  resume: 简历小贴士
+  letter: 求职信小贴士
   records: 记录
   gallery: 图库
   home: 首页

@@ -18,8 +18,8 @@ menus:
   job:
     caption: JOB
     items:
-      resume: Resume
-      letter: Cover Letter
+      resume: Resume Tips
+      letter: Cover Letter Tips
   others:
     caption: OTHERS
     items:
@@ -103,8 +103,8 @@ pather:
   catarchive: "Archive [Categories]"
   tagarchive: "Archive [Tags]"
   about: About
-  resume: Resume
-  letter: Cover Letter
+  resume: Resume Tips
+  letter: Cover Letter Tips
   records: Records
   gallery: Gallery
   home: Home
