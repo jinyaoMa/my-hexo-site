@@ -55,9 +55,14 @@
   box-shadow 0 0 0 $gap * 0.5 var(--color-extension-front)
 
 [p-extension-scroll]
-  max-height $extension_grid_width * 2.2 + $gap * 4 + $font_size * 1.6
+  max-height $extension_grid_width * 2.3 + $gap * 4 + $font_size * 1.6
   overflow-x hidden
   overflow-y auto
+  &::-webkit-scrollbar
+    width $gap
+    background var(--color-clear)
+  &::-webkit-scrollbar-thumb
+    background-color var(--color-text)
 
 [p-extension-content]
   max-width $extension_grid_width * 3 + $gap * 4

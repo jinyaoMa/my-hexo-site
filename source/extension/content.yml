@@ -3,10 +3,14 @@
   icon: /asset/img/author.medium.png
   link: /
 
-- name: Test
-  icon: /extension/test/icon.png
-  link: /extension/test/
+- name: 简历生成
+  icon: /extension/resume/icon.png
+  link: /extension/resume/
 
 - name: Driving Test
   icon: https://www.drivingtest.ca/wp-content/uploads/apple-icon-180x180.png
   link: https://www.drivingtest.ca/ontario-g1-driving-test/
+
+- name: Test
+  icon: /extension/test/icon.png
+  link: /extension/test/
