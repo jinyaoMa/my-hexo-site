@@ -478,8 +478,8 @@ util.run(next => { // DEFAULT
       jsonpCallback: "BusuanziCallback_" + Math.floor(1099511627776 * Math.random())
     }, result => {
       footer.init({
-        site_pv: result.site_pv,
-        site_uv: result.site_uv,
+        site_pv: result && result.site_pv ? result.site_pv : '∞',
+        site_uv: result && result.site_uv ? result.site_uv : '∞',
         site_wd: sdata.word4site
       });
     }, true);

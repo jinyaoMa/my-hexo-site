@@ -22,6 +22,16 @@
   i
     margin-right $gap * 0.5
 
+[p-recentposts-more]
+  text-align center
+  cursor pointer
+  line-height 3
+  border-top 1px solid var(--color-clear)
+  color var(--color-recentposts-more-front)
+  &:hover
+    color var(--color-recentposts-more-back)
+    background var(--color-recentposts-more-front)
+
 [p-recentpost]:not(:first-child)
   border-top 1px solid var(--color-clear)
 
@@ -30,6 +40,7 @@
   position relative
   display table
   width 100%
+  animation recentposts-appear 0.6s ease
 
 [p-recentpost-cover]
   position absolute
@@ -47,9 +58,31 @@
     display table-cell
     vertical-align middle
 
+[p-recentpost-title], [p-recentpost-meta]
+  @media (min-width: $app_mobile_width)
+    a
+      display inline-block
+      &:after
+        content ''
+        display block
+        margin-top -1px
+        width 0
+        height 1px
+        background var(--color-link)
+        transition width 0.6s
+      &:hover
+        &:after
+          width 100%
+
 [p-recentpost-title], [p-recentpost-meta], [p-recentpost-excerpt]
   max-width 70%
   line-height 2
+
+[p-recentpost].nocover
+  [p-recentpost-title], [p-recentpost-meta], [p-recentpost-excerpt]
+    max-width 100%
+  [p-recentpost-cover]
+    display none
 
 [p-recentpost-title], [p-recentpost-excerpt]
   user-select text

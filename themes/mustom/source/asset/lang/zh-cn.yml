@@ -52,6 +52,7 @@ recentposts:
   date: 发布日期
   updated: 更新日期
   categories: 文章分类
+  more: 查看更多
 comment:
   caption: 留言板
   placeholder: ヾﾉ≧∀≦)o 来呀，快写点什么吧！

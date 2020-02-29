@@ -52,6 +52,7 @@ recentposts:
   date: Release date
   updated: Last update
   categories: Post categories
+  more: MORE
 comment:
   caption: MESSAGE BOARD
   placeholder: ヾﾉ≧∀≦)o  ~  Come on，write something here!
