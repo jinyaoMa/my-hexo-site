@@ -3,9 +3,13 @@
   icon: /asset/img/author.medium.png
   link: /
 
-- name: 简历生成
+- name: Resume
   icon: /extension/resume/icon.png
-  link: /extension/resume/
+  link: /extension/resume/english/
+
+- name: 简历
+  icon: /extension/resume/icon.png
+  link: /extension/resume/chinese/
 
 - name: Driving Test
   icon: https://www.drivingtest.ca/wp-content/uploads/apple-icon-180x180.png

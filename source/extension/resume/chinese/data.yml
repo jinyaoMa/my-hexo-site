@@ -1,0 +1,95 @@
+keyword:
+  - Hexo
+  - ES6
+  - Stylus
+  - EJS
+  - REST
+  - 8+
+  - 400+
+  - PJAX
+  - 22%
+  - Node.js
+  - Vue.js
+  - socket.io
+  - 10+
+  - Postman
+  - RSA/AES
+custom_width: 1566px
+resume:
+  side:
+    avatar: /asset/img/author.medium.png
+    brand:
+      name: 耀
+      position: WEB前端开发工程师
+    personal:
+      address: Somewhere, Earth
+      phone: (123) 123-1234
+      email: jinyao.ma@outlook.com
+      www: ma-jinyao.cn
+    skill:
+      frontend: Vue, jQuery
+      backend: ASP.NET, Laravel, CodeIgniter
+      database: MySQL, Oracle, Redis
+      tool: Git, Selenium
+      other: HTTP, TCP/IP, WebSocket
+    language:
+      - name: 普通话
+        data: 67
+      - name: 英语
+        data: 33
+  main:
+    intro: Highly innovative. Good analytical and entrepreneurial skills that lead to find out newer ideas from existing systems and data. Highly adaptable. Continual self-learner. Enjoys working both as a team member and individual.
+    education:
+      - school: Mohawk College
+        start: 2016/01
+        end: 2019/12
+        field: Computer System Technologies - Software Development
+        grade: 92
+        semester: 6
+        extend:
+          - name: Java
+            data: [0, 6]
+          - name: PHP
+            data: [1, 6]
+          - name: HTML, CSS, JavaScript, MySQL
+            data: [0, 6]
+          - name: C#, VB
+            data: [2, 5]
+          - name: Python
+            data: [4, 6]
+          - name: Swift
+            data: [5, 6]
+        desc:
+          - Followed my passion in a core of web/mobile development classes
+          - Excelled in front-end development and RESTful API
+          - Pursued modularization and reusability in development
+    experience:
+      - title: Entry Level Web Developer
+        employer: Puzheng Technology Co. Ltd.
+        start: 2019/06
+        end: 2019/08
+        desc:
+          - Web developer responsible for business analysis, function design, collaborative development and coding with two teams
+          - Redesigned and developed 8+ subpages of a financial-tax system coordinating with the team
+          - Managed user login and permission system coordinating with the team, and processed 400+ of new users
+    project:
+      - title: Blog (ma-jinyao.cn)
+        start: 2019/01
+        end: NOW
+        desc:
+          - Designed and developed my website using Hexo generator
+          - Theme developed using ES6, Stylus and EJS
+          - Impelemented PJAX to boost at least 22% of user experience score
+      - title: Login Status Monitering Lab
+        start: 2018/09
+        end: 2018/12
+        desc:
+          - Developed a status monitering web application using Node.js and Vue.js
+          - Used socket.io to send status to the moniter continuously
+      - title: Audio Information/Source Spider
+        start: 2018/04
+        end: 2018/09
+        desc:
+          - Experimented crawling audio information and source from music.163.com
+          - Analyized 10+ URLs using Postman and encryption (RSA/AES) used in music.163.com
+          - Integrated the spider's functionalities into a native Android application

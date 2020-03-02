@@ -71,8 +71,36 @@ const pathname = o => window.location.pathname;
 
 const topping = o => root.querySelector('[m-center]').offsetTop + root.querySelector('[m-header]').offsetTop;
 
-const disableLaunch = flag => {
-  flag ? root.querySelector('[m-launch]').classList.add('disabled') : root.querySelector('[m-launch]').classList.remove('disabled');
+const launch = {
+  _close: null,
+  disable(flag) {
+    if (flag) {
+      let that = this;
+      let hidden;
+      if (typeof document.hidden !== 'undefined') { // Opera 12.10 and Firefox 18 and later support 
+        hidden = 'hidden';
+      } else if (typeof document.msHidden !== 'undefined') {
+        hidden = 'msHidden';
+      } else if (typeof document.webkitHidden !== 'undefined') {
+        hidden = 'webkitHidden';
+      } else {
+        hidden = 'nohiddren';
+      }
+      if (!document[hidden]) {
+        root.querySelector('[m-launch]').classList.add('disabled');
+      } else {
+        that._close = window.setInterval(e => {
+          if (!document[hidden]) {
+            root.querySelector('[m-launch]').classList.add('disabled');
+            window.clearInterval(that._close);
+            that._close = null;
+          }
+        }, lock_wait);
+      }
+    } else {
+      root.querySelector('[m-launch]').classList.remove('disabled');
+    }
+  }
 };
 
 const activateSpinner = flag => {
@@ -163,6 +191,7 @@ const final_load = o => util.layoutParts(parts => {
       window.clearInterval(looper);
       evanyou.draw();
       listen2Links();
+      launch.disable(true);
       activateSpinner(false);
       applyConfig();
       baiduPush();
@@ -562,7 +591,6 @@ util.run(next => { // DEFAULT
       });
       if (flag) {
         window.clearInterval(looper);
-        disableLaunch(true);
         progress.to(60);
         final();
       }
@@ -673,7 +701,7 @@ util.run(next => { // DEFAULT
       });
       if (flag) {
         window.clearInterval(looper);
-        disableLaunch(true);
+        launch.disable(true);
         progress.to(60);
         final();
       }
