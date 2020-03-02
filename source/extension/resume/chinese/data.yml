@@ -1,20 +1,4 @@
-keyword:
-  - Hexo
-  - ES6
-  - Stylus
-  - EJS
-  - REST
-  - 8+
-  - 400+
-  - PJAX
-  - 22%
-  - Node.js
-  - Vue.js
-  - socket.io
-  - 10+
-  - Postman
-  - RSA/AES
-custom_width: 1566px
+custom_width: 1572px
 resume:
   side:
     avatar: /asset/img/author.medium.png
@@ -38,12 +22,12 @@ resume:
       - name: 英语
         data: 33
   main:
-    intro: Highly innovative. Good analytical and entrepreneurial skills that lead to find out newer ideas from existing systems and data. Highly adaptable. Continual self-learner. Enjoys working both as a team member and individual.
+    intro: 有良好的代码风格，通过添加注释提高代码可读性，注重代码质量，研读多个开源项目，学习改善代码的健壮性与扩展性。善于与人沟通，良好的团队合作精神和高度的责任感，能够承受压力，有较强的吃苦耐劳和创新精神。熟悉 Node.js 开发，熟练使用 npm, webpack, gulp 等工具。熟悉前端性能的优化，熟悉使用 Chrome，Safari 等前端调试工具。
     education:
-      - school: Mohawk College
+      - school: 莫哈克学院
         start: 2016/01
         end: 2019/12
-        field: Computer System Technologies - Software Development
+        field: 计算机系统技术 - 软件开发
         grade: 92
         semester: 6
         extend:
@@ -60,36 +44,37 @@ resume:
           - name: Swift
             data: [5, 6]
         desc:
-          - Followed my passion in a core of web/mobile development classes
-          - Excelled in front-end development and RESTful API
-          - Pursued modularization and reusability in development
+          - 热爱 WEB /移动 相关核心课程
+          - 擅长开发前端和 RESTful API
+          - 追求模块化开发和代码复用性
     experience:
-      - title: Entry Level Web Developer
-        employer: Puzheng Technology Co. Ltd.
+      - title: 初级WEB开发工程师
+        employer: 江门市普政信息科技有限公司
         start: 2019/06
         end: 2019/08
         desc:
-          - Web developer responsible for business analysis, function design, collaborative development and coding with two teams
-          - Redesigned and developed 8+ subpages of a financial-tax system coordinating with the team
-          - Managed user login and permission system coordinating with the team, and processed 400+ of new users
+          - 参与软件产品的业务分析和功能设计
+          - 协助管理用户开通与用户权限
+          - 深入理解 W3C 标准与 ES 规范，熟悉 HTML、CSS、JavaScript 等 Web 基础以及常用浏览器兼容方案
     project:
-      - title: Blog (ma-jinyao.cn)
+      - title: 博客 (ma-jinyao.cn)
         start: 2019/01
-        end: NOW
+        end: 现在
         desc:
-          - Designed and developed my website using Hexo generator
-          - Theme developed using ES6, Stylus and EJS
-          - Impelemented PJAX to boost at least 22% of user experience score
-      - title: Login Status Monitering Lab
+          - 使用 Hexo 设计并开发个人网站
+          - 熟练使用 ES6, Stylus 和 EJS 开发个性主题
+          - 实现 PJAX 以提高用户体验和页面响应速度
+      - title: 登录状态监控实验
         start: 2018/09
         end: 2018/12
         desc:
-          - Developed a status monitering web application using Node.js and Vue.js
-          - Used socket.io to send status to the moniter continuously
-      - title: Audio Information/Source Spider
+          - 使用 Node.js 和 Vue.js 开发单页面登录状态监控 WEB 应用
+          - 通过使用 socket.io 持续发送用户状态以达到监控目的
+      - title: 音乐信息和资源爬虫
         start: 2018/04
         end: 2018/09
         desc:
-          - Experimented crawling audio information and source from music.163.com
-          - Analyized 10+ URLs using Postman and encryption (RSA/AES) used in music.163.com
-          - Integrated the spider's functionalities into a native Android application
+          - 实验从 music.163.com 爬取音乐信息和音频资源
+          - 熟练使用 Postman 分析至少10个 API 和数据传输加密方法
+          - 使用 Android Studio 集成爬虫代码做成一个原生音乐播放器应用程序
+keyword:

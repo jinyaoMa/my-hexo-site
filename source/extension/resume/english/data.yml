@@ -1,20 +1,4 @@
-keyword:
-  - Hexo
-  - ES6
-  - Stylus
-  - EJS
-  - REST
-  - 8+
-  - 400+
-  - PJAX
-  - 22%
-  - Node.js
-  - Vue.js
-  - socket.io
-  - 10+
-  - Postman
-  - RSA/AES
-custom_width: 1566px
+custom_width: 1572px
 resume:
   side:
     avatar: /asset/img/author.medium.png
@@ -93,3 +77,19 @@ resume:
           - Experimented crawling audio information and source from music.163.com
           - Analyized 10+ URLs using Postman and encryption (RSA/AES) used in music.163.com
           - Integrated the spider's functionalities into a native Android application
+keyword:
+  - Hexo
+  - ES6
+  - Stylus
+  - EJS
+  - REST
+  - 8+
+  - 400+
+  - PJAX
+  - 22%
+  - Node.js
+  - Vue.js
+  - socket.io
+  - 10+
+  - Postman
+  - RSA/AES

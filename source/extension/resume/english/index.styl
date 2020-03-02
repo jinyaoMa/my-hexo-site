@@ -40,11 +40,14 @@ $font_size = 16pt
 $resume_height = auto // (297 / 210) * 100vw // letter radio
 $side_width = $font_size * 24
 $max_width = auto // $font_size * 77
+$min_width = $font_size * 60
 
 *
   margin 0
   padding 0
   box-sizing border-box
+  &:focus
+    outline none
 
 body
   font-family Arial, Helvetica, Calibri
@@ -58,6 +61,7 @@ body
 
 #resume
   margin 0 auto
+  min-width $min_width
   max-width $max_width
   min-height $resume_height
   overflow hidden
@@ -94,7 +98,7 @@ body
     display block
 
 #name, #position
-  line-height 1
+  line-height 1.25
 
 #name
   font-size 3em

@@ -271,14 +271,16 @@ function highlight(data) {
 
 function fixResume(paper, custom) {
   var resume = document.querySelector('#resume');
+  var side = document.querySelector('#side');
   custom && (resume.style.maxWidth = custom);
   switch (paper.toLowerCase()) {
     case 'letter':
-      resume.style.height = 279 / 216 * resume.offsetWidth + 'px';
+      resume.style.minHeight = 279 / 216 * resume.offsetWidth + 'px';
       break;
     case 'a4':
-      resume.style.height = 297 / 210 * resume.offsetWidth + 'px';
+      resume.style.minHeight = 297 / 210 * resume.offsetWidth + 'px';
   }
+  side.style.height = resume.offsetHeight + 'px';
 }
 
 ajax({
