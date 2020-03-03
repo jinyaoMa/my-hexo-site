@@ -1,48 +1,24 @@
-function forIn(object, callback) {
-  for (const key in object) {
-    if (object.hasOwnProperty(key)) {
-      if (typeof callback === 'function' && callback(object[key], key)) {
-        break;
-      }
-    }
-  }
-}
-
-function ajax(options) {
-  if (!options.method || !options.url) return;
-  var request = new XMLHttpRequest();
-  request.open(options.method, options.url);
-  request.timeout = 30000;
-  if (options.method.toLowerCase() === 'post') {
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  }
-  if (options.timeout) {
-    request.timeout = options.timeout;
-  }
-  if (options.dataType) {
-    request.responseType = options.dataType;
-  }
-  request.addEventListener('readystatechange', () => {
-    if (request.readyState === 4 && request.status === 200 && request.response) {
-      options.success && options.success(request.response);
-    }
-  });
-  if (options.error) {
-    request.addEventListener('error', (e) => {
-      options.error(e);
-    });
-    request.addEventListener('timeout', (e) => {
-      options.error(e);
-    });
-  }
-  request.send(options.data ? options.data : null);
-}
-
 function fillAvatar(data) {
   var avatar = document.querySelector('#avatar');
-  var newImg = document.createElement('img');
-  newImg.src = data.resume.side.avatar;
-  avatar.appendChild(newImg);
+  var photo = document.createElement('img');
+  var fileOpen = document.createElement('input');
+  photo.id = 'photo';
+  photo.src = data.resume.side.avatar;
+  fileOpen.id = 'fileOpen';
+  fileOpen.type = 'file';
+  fileOpen.accept = 'image/*';
+  avatar.appendChild(photo);
+  avatar.appendChild(fileOpen);
+  fileOpen.onchange = function () {
+    var file = fileOpen.files[0];
+    if (file) {
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function () {
+        photo.src = reader.result;
+      }
+    }
+  };
 }
 
 function fillBrand(data) {
@@ -242,29 +218,11 @@ function fillExperience(data) {
   });
 }
 
-function generate(data) {
-  if (typeof data === 'object' && data.resume) {
-    fillAvatar(data);
-    fillBrand(data);
-    fillPersonal(data);
-    fillSkill(data);
-    fillLanguage(data);
-    fillIntro(data);
-    fillEducation(data);
-    fillExperience(data);
-    fillProject(data);
-    highlight(data);
-    fixResume('A4', data.custom_width);
-    window.onresize = function () {
-      fixResume('A4', data.custom_width);
-    }
-  }
-}
-
 function highlight(data) {
   if (Array.isArray(data.keyword) && data.keyword.length) {
-    data.keyword.forEach(word => {
-      document.body.innerHTML = document.body.innerHTML.replace(word, '<strong>' + word + '</strong>');
+    var main = document.querySelector('#main');
+    data.keyword.forEach(function (word) {
+      main.innerHTML = main.innerHTML.replace(word, '<strong>' + word + '</strong>');
     });
   }
 }
@@ -283,9 +241,44 @@ function fixResume(paper, custom) {
   side.style.height = resume.offsetHeight + 'px';
 }
 
-ajax({
+function setPrint() {
+  var print = document.querySelector('#print');
+  print.onclick = function () {
+    window.print ? window.print() : document.execCommand('print');
+  }
+}
+
+function generate(data) {
+  if (typeof data === 'object' && data.resume) {
+    fillAvatar(data);
+    fillBrand(data);
+    fillPersonal(data);
+    fillSkill(data);
+    fillLanguage(data);
+    fillIntro(data);
+    fillEducation(data);
+    fillExperience(data);
+    fillProject(data);
+    highlight(data);
+    fixResume(data.size, data.custom_width);
+    setPrint();
+  }
+}
+
+function getJSON(options) {
+  if (!options.url) return;
+  var request = new XMLHttpRequest();
+  request.open('get', options.url);
+  request.responseType = 'json';
+  request.addEventListener('readystatechange', function () {
+    if (request.readyState === 4 && request.status === 200 && request.response) {
+      options.success && options.success(request.response);
+    }
+  });
+  request.send();
+}
+
+getJSON({
   url: 'data.json',
-  method: 'get',
-  dataType: 'json',
   success: generate
 });

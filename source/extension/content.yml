@@ -8,7 +8,7 @@
   link: /extension/resume/english/
 
 - name: 简历
-  icon: /extension/resume/icon.png
+  icon: /extension/resume/icon.reverse.png
   link: /extension/resume/chinese/
 
 - name: Driving Test
