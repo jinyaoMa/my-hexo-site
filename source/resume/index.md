@@ -4,6 +4,10 @@ name: resume
 title: Resume Tips / 简历小贴士
 ---
 
+My Resume / 我的简历
+- [English](https://ma-jinyao.cn/extension/resume/english/)
+- [Chinese](https://ma-jinyao.cn/extension/resume/chinese/)
+
 Reference: [https://github.com/resumejob/awesome-resume](https://github.com/resumejob/awesome-resume)
 Reference: [https://zhuanlan.zhihu.com/p/106632768](https://zhuanlan.zhihu.com/p/106632768)
 
