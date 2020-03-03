@@ -8,6 +8,15 @@
   progress: Latest # format 'number/total' OR '100%' OR 'Complete', [empty] to use 'N/A', NO ALLOW SPACE
   summary: 耀 の 个人网站 | Mark の Personal Website
 
+- cover: /extension/resume/icon.png
+  date: 2019/02 - 2019/03
+  title: Resume Template/Generator
+  type:
+  author: jinyaoMa
+  source: "https://ma-jinyao.cn/extension/resume/english/"
+  progress: Latest
+  summary: My Resume
+
 # Test
 - cover:
   date:
