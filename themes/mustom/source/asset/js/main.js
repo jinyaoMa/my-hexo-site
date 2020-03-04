@@ -412,7 +412,7 @@ const listen2Links = o => {
   root.querySelectorAll('.highlight a:not([target="_blank"])').forEach(link => {
     link.target = "_blank";
   });
-  root.querySelectorAll('a:not([target="_blank"]):not([data-listened="true"]):not(.toc-link)').forEach(link => {
+  root.querySelectorAll('a:not([target="_blank"]):not([href*="extension/"]):not([data-listened="true"]):not(.toc-link)').forEach(link => {
     link.onclick = linksStore.setClick;
     link.setAttribute('data-listened', true);
   });
