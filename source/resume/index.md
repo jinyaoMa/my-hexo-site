@@ -8,8 +8,10 @@ My Resume / 我的简历
 - [English](https://ma-jinyao.cn/extension/resume/english/)
 - [Chinese](https://ma-jinyao.cn/extension/resume/chinese/)
 
-Reference: [https://github.com/resumejob/awesome-resume](https://github.com/resumejob/awesome-resume)
-Reference: [https://zhuanlan.zhihu.com/p/106632768](https://zhuanlan.zhihu.com/p/106632768)
+Reference:
+- [https://github.com/resumejob/awesome-resume](https://github.com/resumejob/awesome-resume)
+- [https://zhuanlan.zhihu.com/p/106632768](https://zhuanlan.zhihu.com/p/106632768)
+- [https://zety.com/blog/web-developer-resume](https://zety.com/blog/web-developer-resume)
 
 ## Information Covered in Resume / 简历需要包含的信息
 
