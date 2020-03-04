@@ -172,7 +172,7 @@ serviceWorker:
   opts:
     networkTimeoutSeconds: 5
   routes:
-    - pattern: !!js/regexp /(baidu.com|google)/
+    - pattern: !!js/regexp /(baidu.com|google|lncld.net)/
       strategy: networkOnly
     - pattern: !!js/regexp /\/(api|asset\/lang)\/.+\.(json)$/
       strategy: networkFirst
