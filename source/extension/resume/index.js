@@ -73,6 +73,7 @@ function fillIntro(data) {
 }
 
 function fillEducation(data) {
+  var html = document.querySelector('html');
   var education = document.querySelector('#education');
   var edus = data.resume.main.education;
   edus.forEach(function (edu) {
@@ -91,7 +92,7 @@ function fillEducation(data) {
     var field = document.createElement('td');
     var grade = document.createElement('td');
     field.innerHTML = edu.field;
-    grade.innerHTML = 'Grade:&nbsp;' + edu.grade;
+    grade.innerHTML = (html.lang === 'zh' ? '成绩' : 'Grade') + ':&nbsp;' + edu.grade;
     tr1.appendChild(field);
     tr1.appendChild(grade);
 
