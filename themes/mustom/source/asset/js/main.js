@@ -529,7 +529,7 @@ util.run(next => { // DEFAULT
             app_key: appkey,
             placeholder: languageData.comment.placeholder,
             lang: language,
-            path: pathname().startsWith('/posts/') ? pathname().replace(/index.html$/, '') : '/',
+            path: pathname().replace(/index.html$/, ''),
             visitor: true
           });
         }
