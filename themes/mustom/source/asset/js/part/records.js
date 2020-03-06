@@ -4,14 +4,14 @@ let tag = 'records';
 let element = null;
 
 const _setRecord = (dom, record) => {
-  let cover = dom.querySelector('[p-record-cover] img');
-  let date = dom.querySelector('[p-record-date]');
-  let title = dom.querySelector('[p-record-title] [p-record-inner]');
-  let type = dom.querySelector('[p-record-type] [p-record-inner]');
-  let author = dom.querySelector('[p-record-author] [p-record-inner]');
-  let source = dom.querySelector('[p-record-source] [p-record-inner]');
-  let summary = dom.querySelector('[p-record-summary] [p-record-inner]');
-  let progress = dom.querySelector('[p-record-progress] [p-record-inner]');
+  let cover = dom.querySelector('.p-record-cover img');
+  let date = dom.querySelector('.p-record-date');
+  let title = dom.querySelector('.p-record-title .p-record-inner');
+  let type = dom.querySelector('.p-record-type .p-record-inner');
+  let author = dom.querySelector('.p-record-author .p-record-inner');
+  let source = dom.querySelector('.p-record-source .p-record-inner');
+  let summary = dom.querySelector('.p-record-summary .p-record-inner');
+  let progress = dom.querySelector('.p-record-progress .p-record-inner');
 
   record.cover && (cover.src = record.cover);
   record.date && (date.innerText = record.date.replace(/\s/g, ''));
@@ -21,7 +21,7 @@ const _setRecord = (dom, record) => {
   record.source && (source.innerText = record.source);
   record.summary && (summary.innerText = record.summary);
 
-  let progressCurrent = progress.querySelector('[p-record-progress-current]');
+  let progressCurrent = progress.querySelector('.p-record-progress-current');
   if (record.progress && progressCurrent) {
     let newProgress = record.progress.replace(/\s/g, ''); // clean space
     let isNT = /^[0-9]+\/[0-9]+$/.test(newProgress); // format 'number/total'
@@ -51,7 +51,7 @@ const init = (params, callback) => {
     document.querySelector(tag).replaceWith(element);
 
     if (params && params.data && params.data.length) {
-      let cache = element.querySelector('[p-record]');
+      let cache = element.querySelector('.p-record');
       params.data.forEach((record, i) => {
         if (i + 1 === params.data.length) {
           _setRecord(cache, record);

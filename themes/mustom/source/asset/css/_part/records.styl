@@ -4,16 +4,16 @@
   to
     opacity 1
 
-[p-record]
+.p-record
   user-select none
   background var(--color-background)
   animation records-appear 0.6s ease
   @media (min-width: $app_mobile_width)
-    margin $gap * 3 0
-    border-radius $gap
+    margin $gap * 4 0
+    border-radius $gap * 0.5
     border 1px solid var(--color-clear)
 
-[p-record-caption]
+.p-record-caption
   padding 0 $gap
   font-size 0.8em
   line-height 2.5
@@ -21,11 +21,11 @@
   i
     margin-right $gap * 0.5
 
-[p-record-frame]
+.p-record-frame
   overflow hidden
   padding $gap 0
 
-[p-record-main]
+.p-record-main
   white-space nowrap
   overflow-x auto
   overflow-y hidden
@@ -40,7 +40,7 @@
     display block
     clear both
 
-[p-record-cover]
+.p-record-cover
   float left
   width $main_min_width + $gap
   height $main_min_width
@@ -57,7 +57,7 @@
     max-width 100%
     max-height $main_min_width
 
-[p-record-content]
+.p-record-content
   display inline-block
   @media (min-width: $app_mobile_width)
     padding 0 $gap * 4
@@ -80,41 +80,41 @@
     line-height 2
     min-height 2em
     user-select text
-  [p-record-title]
+  .p-record-title
     white-space normal
     line-height 1.5
     padding-bottom 0.25em
     font-weight bold
-    [p-record-inner]
+    .p-record-inner
       font-size 1.25em
 
-[p-record-inner]
+.p-record-inner
   font-size $font_size - 2px
 
-[p-record-label]
+.p-record-label
   font-weight bold
 
-[p-record-summary]
+.p-record-summary
   white-space normal
 
-[p-record-type], [p-record-author], [p-record-source]
+.p-record-type, .p-record-author, .p-record-source
   text-overflow ellipsis
   overflow hidden
 
-[p-record-summary]
-  [p-record-inner]
+.p-record-summary
+  .p-record-inner
     line-height 1.5
     min-height 1.5em
 
-[p-record-progress]
+.p-record-progress
   overflow-x hidden
-  [p-record-inner]
+  .p-record-inner
     min-height 2em
     position relative
     background var(--color-clear)
     margin 0.25em 0
 
-[p-record-progress-current]
+.p-record-progress-current
   position absolute
   top 0
   left 0
@@ -134,19 +134,19 @@
     background var(--color-records-progress-back)
 
 @media (max-width: $app_mobile_width)
-  [p-record-caption]
+  .p-record-caption
     text-align center
     i
       display none
 
 :root.closeDrawer:not(.closeAside)
-  [p-record-content]
+  .p-record-content
     max-width $app_width - $aside_width - $main_min_width - $gap * 3 - 2px // outer border-width offset
 
 :root.closeAside:not(.closeDrawer)
-  [p-record-content]
+  .p-record-content
     max-width $app_width - $drawer_width - $main_min_width - $gap * 3 - 2px // outer border-width offset
 
 :root.closeDrawer.closeAside
-  [p-record-content]
+  .p-record-content
     max-width $app_width - $main_min_width - $gap * 5 - 2px // outer border-width offset

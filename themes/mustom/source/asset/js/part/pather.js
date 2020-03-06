@@ -1,5 +1,4 @@
 import part from "../common/part.js";
-import util from "../common/util.js";
 
 let tag = 'pather';
 let element = null;
@@ -22,7 +21,7 @@ const init = (params, callback) => {
 
 const update = o => {
   if (!element || !menus || !abbrMatch) return;
-  let queue = element.querySelector('[p-pather-queue]');
+  let queue = element.querySelector('.p-pather-queue');
   let pathname = window.location.pathname;
 
   queue.innerHTML = '';

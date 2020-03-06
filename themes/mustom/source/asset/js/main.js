@@ -69,7 +69,7 @@ const root = document.querySelector(':root');
 
 const pathname = o => window.location.pathname;
 
-const topping = o => root.querySelector('[m-center]').offsetTop + root.querySelector('[m-header]').offsetTop;
+const topping = o => root.querySelector('.m-center').offsetTop + root.querySelector('.m-header').offsetTop;
 
 const launch = {
   _close: null,
@@ -87,37 +87,37 @@ const launch = {
         hidden = 'nohiddren';
       }
       if (!document[hidden]) {
-        root.querySelector('[m-launch]').classList.add('disabled');
+        root.querySelector('.m-launch').classList.add('disabled');
       } else {
         that._close = window.setInterval(e => {
           if (!document[hidden]) {
-            root.querySelector('[m-launch]').classList.add('disabled');
+            root.querySelector('.m-launch').classList.add('disabled');
             window.clearInterval(that._close);
             that._close = null;
           }
         }, lock_wait);
       }
     } else {
-      root.querySelector('[m-launch]').classList.remove('disabled');
+      root.querySelector('.m-launch').classList.remove('disabled');
     }
   }
 };
 
 const activateSpinner = flag => {
-  flag ? root.querySelector('[m-spinner]').classList.add('active') : root.querySelector('[m-spinner]').classList.remove('active');
+  flag ? root.querySelector('.m-spinner').classList.add('active') : root.querySelector('.m-spinner').classList.remove('active');
 };
 
 const progress = {
   current: 0,
   to(num) {
     if (num < 0 || num > 100) return;
-    root.querySelector('[m-progress-current]').style.width = num + '%';
+    root.querySelector('.m-progress-current').style.width = num + '%';
     this.current = num;
   },
   step(num) {
     let next = this.current + num;
     if (next < 0 || next > 100) return;
-    root.querySelector('[m-progress-current]').style.width = next + '%';
+    root.querySelector('.m-progress-current').style.width = next + '%';
     this.current = next;
   }
 };
@@ -136,9 +136,9 @@ const applyConfig = o => {
 };
 
 const sticky = e => {
-  let main = root.querySelector('[m-main]');
-  let drawer = root.querySelector('[m-drawer]');
-  let aside = root.querySelector('[m-aside]');
+  let main = root.querySelector('.m-main');
+  let drawer = root.querySelector('.m-drawer');
+  let aside = root.querySelector('.m-aside');
   let topOffset = topping();
   drawer.classList.remove('sticky');
   aside.classList.remove('sticky-top');
@@ -359,7 +359,7 @@ const pjax = {
       callback,
       work(cb) {
         let _that = this;
-        let mainContent = root.querySelector('[m-content]');
+        let mainContent = root.querySelector('.m-content');
         let parts = root.querySelector('meta[name="layout-parts"]');
         let keywords = root.querySelector('meta[name="keywords"]');
         let description = root.querySelector('meta[name="description"]');
@@ -377,7 +377,7 @@ const pjax = {
               parts.setAttribute('content', data.querySelector('meta[name="layout-parts"]').getAttribute('content'));
               keywords.setAttribute('content', data.querySelector('meta[name="keywords"]').getAttribute('content'));
               description.setAttribute('content', data.querySelector('meta[name="description"]').getAttribute('content'));
-              mainContent.innerHTML = data.querySelector('[m-content]').innerHTML;
+              mainContent.innerHTML = data.querySelector('.m-content').innerHTML;
               final_load();
             }
           }
@@ -502,16 +502,18 @@ util.run(next => { // DEFAULT
     }, el => {
       checklist.brand = true;
     });
-    checklist.footer = true;
-    fetch("//busuanzi.ibruce.info/busuanzi", {
-      jsonpCallback: "BusuanziCallback_" + Math.floor(1099511627776 * Math.random())
-    }, result => {
-      footer.init({
-        site_pv: result && result.site_pv ? result.site_pv : '∞',
-        site_uv: result && result.site_uv ? result.site_uv : '∞',
-        site_wd: sdata.word4site
-      });
-    }, true);
+    footer.init(null, el => {
+      fetch("//busuanzi.ibruce.info/busuanzi", {
+        jsonpCallback: "BusuanziCallback_" + Math.floor(1099511627776 * Math.random())
+      }, result => {
+        footer.update({
+          site_pv: result && result.site_pv ? result.site_pv : '∞',
+          site_uv: result && result.site_uv ? result.site_uv : '∞',
+          site_wd: sdata && sdata.word4site ? sdata.word4site : '∞',
+        });
+      }, true);
+      checklist.footer = true;
+    });
     comment.init({
       valine: {
         pass: sdata.valine.pass,
@@ -522,7 +524,7 @@ util.run(next => { // DEFAULT
         if (languageData) {
           new Valine({
             av: AV,
-            el: '[p-comment-valine]',
+            el: '.p-comment-valine',
             notify: false,
             verify: false,
             app_id: appid,
@@ -596,7 +598,7 @@ util.run(next => { // DEFAULT
       }
     }, lock_wait);
 
-    evanyou.init('[m-evanyou-canvas]');
+    evanyou.init('.m-evanyou-canvas');
 
     goingto.init(null, el => {
       checklist.goingto = true;

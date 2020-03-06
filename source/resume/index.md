@@ -4,6 +4,9 @@ name: resume
 title: Resume Tips / 简历小贴士
 ---
 
+![unsplash.com](https://source.unsplash.com/1600x900/?resume)*Image source from: [unsplash.com](https://unsplash.com)*
+<!-- more -->
+
 My Resume / 我的简历
 - [English](https://ma-jinyao.cn/extension/resume/english/)
 - [Chinese](https://ma-jinyao.cn/extension/resume/chinese/)

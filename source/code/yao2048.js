@@ -24,6 +24,8 @@
     outer.appendChild(closeButton);
     parent.appendChild(outer);
 
+    // ...
+
     topView.style.cssText = "\
       height: 24px;\
       width: 160px;\

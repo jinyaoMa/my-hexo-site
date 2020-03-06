@@ -23,8 +23,8 @@ const show = o => {
 };
 
 const update = (content, offset) => {
-  let message = element.querySelector('[p-toc-message]');
-  let main = element.querySelector('[p-toc-list]');
+  let message = element.querySelector('.p-toc-message');
+  let main = element.querySelector('.p-toc-list');
   if (element && element.style.display !== 'none' && content) {
     message.style.display = 'none';
     main.innerHTML = content;

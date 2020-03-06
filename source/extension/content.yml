@@ -11,6 +11,10 @@
   icon: /extension/resume/icon.reverse.png
   link: /extension/resume/chinese/
 
+- name: WebSafeColors
+  icon: https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.11/dist/ico/apple-touch-icon-precomposed.png
+  link: https://www.bootcss.com/p/websafecolors/
+
 - name: Driving Test
   icon: https://www.drivingtest.ca/wp-content/uploads/apple-icon-180x180.png
   link: https://www.drivingtest.ca/ontario-g1-driving-test/

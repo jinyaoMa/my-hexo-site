@@ -8,7 +8,7 @@ const init = (params, callback) => {
     element = el;
     document.querySelector(tag).replaceWith(element);
     if (params && params.data && params.data.length) {
-      let content = element.querySelector('[p-extension-content]');
+      let content = element.querySelector('.p-extension-content');
       params.data.forEach(item => {
         let img = document.createElement('img');
         img.src = item.icon;

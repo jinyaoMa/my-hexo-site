@@ -55,6 +55,8 @@
     var $listView = this.Component.ListView(playlist);
     var $extra = this.Component.InOut();
 
+    // ...
+
     $outer.append($coverButton);
     $outer.append($songInfo);
     $outer.append($prevButton);

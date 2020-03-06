@@ -4,6 +4,9 @@ name: letter
 title: Cover Letter Tips / 求职信小贴士
 ---
 
+![unsplash.com](https://source.unsplash.com/1600x900/?cover%20letter)*Image source from: [unsplash.com](https://unsplash.com)*
+<!-- more -->
+
 Reference: [https://www.zhihu.com/question/20372030/answer/62881601](https://www.zhihu.com/question/20372030/answer/62881601)
 
 > 1. 开门见山——说说你是谁，你想干啥累

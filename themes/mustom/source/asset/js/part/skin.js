@@ -21,7 +21,7 @@ const setup = o => {
   element.querySelectorAll('[data-skin-key]').forEach(el => {
     el.addEventListener('click', setClick);
   });
-}
+};
 
 const init = (params, callback) => {
   part(tag, el => {
@@ -41,12 +41,41 @@ const set = key => {
   });
   element.querySelector(`[data-skin-key="${key}"]`).classList.add('active');
   if (key === 'default') {
+    colorIcons.clear();
     document.querySelector(':root').classList.remove('colorful');
   } else if (key === 'colorful') {
+    colorIcons.run();
     document.querySelector(':root').classList.add('colorful');
   }
   listener && listener(key);
-}
+};
+
+const colorIcons = {
+  queue: (o => {
+    let result = [];
+    for (let i = 1; i <= 5; i++) { // 5 colors, 1 - 5
+      result.push(i);
+    }
+    return result;
+  })(),
+  run() {
+    let that = this;
+    let is = document.querySelectorAll('i.fas:not([data-colored="true"]), i.fab:not([data-colored="true"])');
+    is.forEach(i => {
+      let next = that.queue.shift();
+      i.classList.add('color_' + next);
+      i.setAttribute('data-colored', true);
+      that.queue.push(next);
+    });
+  },
+  clear() {
+    let is = document.querySelectorAll('i[data-colored="true"]');
+    is.forEach(i => {
+      i.className = i.className.replace(/\scolor_[1-5]/, ''); // 5 colors, 1 - 5
+      i.setAttribute('data-colored', false);
+    });
+  }
+};
 
 export default {
   tag,

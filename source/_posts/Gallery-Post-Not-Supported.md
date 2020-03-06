@@ -1,8 +1,14 @@
 ---
 title: Gallery Post Not Supported
 abbrlink: 64366
+categories:
+  - - Blog
+    - Test
+tags:
+  - Test
 date: 2020-02-22 00:16:18
 updated: 2020-02-22 00:16:18
+mathjax: false
 ---
 
 Theme [Mustom](https://github.com/jinyaoMa/hexo-theme-mustom) does NOT SUPPORT variable `photos` in front-matter.

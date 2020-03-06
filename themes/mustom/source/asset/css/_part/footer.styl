@@ -4,7 +4,7 @@
   to
     opacity 1
 
-[p-footer]
+.p-footer
   overflow hidden
   user-select none
   animation footer-appear 0.6s ease
@@ -16,13 +16,13 @@
   border-bottom none
   transition all 0.6s
   @media (min-width: $app_mobile_width)
-    border-radius $gap
+    border-radius $gap * 0.5
     padding-bottom $font_size * 5
     width s('calc(100% - %s)', $drawer_width + $aside_width)
   @media (max-width: $app_mobile_width)
     padding-bottom s('calc(20vh + %s)', $font_size * 2)
 
-[p-footer-powered], [p-footer-theme]
+.p-footer-powered, .p-footer-theme
   @media (min-width: $app_mobile_width)
     a
       display inline-block
@@ -38,7 +38,7 @@
         &:after
           width 100%
 
-[p-footer-license]
+.p-footer-license
   font-size $font_size * 2
   line-height 1
   padding-top $gap
@@ -48,9 +48,9 @@
       height $font_size * 2
 
 :root.lyride
-  [p-footer]
+  .p-footer
     padding-bottom $font_size
 
 :root.closeDrawer, :root.closeAside
-  [p-footer]
+  .p-footer
     width 100%

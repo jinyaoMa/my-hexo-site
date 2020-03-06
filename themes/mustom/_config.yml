@@ -51,7 +51,7 @@ contact:
     url: mailto:jinyao.ma@outlook.com
     icon: '<i class="fas fa-envelope fa-fw"></i>'
   qq:
-    url: tencent://message/?uin=907881445
+    url: tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=907881445
     icon: '<i class="fab fa-qq fa-fw"></i>'
 menuicons:
   main: '<i class="fas fa-sitemap fa-fw"></i>'

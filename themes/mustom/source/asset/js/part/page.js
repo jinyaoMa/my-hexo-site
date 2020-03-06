@@ -9,12 +9,12 @@ const init = (params, callback) => {
     document.querySelector(tag).replaceWith(element);
 
     if (params) {
-      params.title && (element.querySelector('[p-page-title]').innerText = params.title);
+      params.title && (element.querySelector('.p-page-title').innerText = params.title);
       if (params.content && params.content.trim() !== '') {
-        element.querySelector('[p-page-main]').innerHTML = params.content;
+        element.querySelector('.p-page-main').innerHTML = params.content;
       } else {
-        element.querySelector('[p-page-title]').style.borderWidth = 0;
-        element.querySelector('[p-page-main]').style.display = 'none';
+        element.querySelector('.p-page-title').style.borderWidth = 0;
+        element.querySelector('.p-page-main').style.display = 'none';
       }
 
       let scripts = element.querySelectorAll('script');

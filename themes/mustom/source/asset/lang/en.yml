@@ -35,7 +35,7 @@ settings:
   items:
     langshift: 简体中文
     night: Night Shift
-    transfigure: Trnsprnt Figure
+    transfigure: "*1/2 Figure"
     lyride: Hide Lyric
     autoplay: Autoplay
 footer:
@@ -52,7 +52,7 @@ recentposts:
   date: Release date
   updated: Last update
   categories: Post categories
-  more: MORE
+  more: MORE POSTS
 comment:
   caption: MESSAGE BOARD
   placeholder: ヾﾉ≧∀≦)o  ~  Come on，write something here!

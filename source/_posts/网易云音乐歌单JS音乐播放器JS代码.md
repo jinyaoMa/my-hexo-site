@@ -1,16 +1,15 @@
 ---
 title: 网易云音乐歌单JS音乐播放器JS代码
 categories:
-  - - Note
   - - Blog
     - Plugin
 tags:
-  - 网易云音乐
   - 音乐播放器
-  - Javascript
-abbrlink: 12019
+  - JavaScript
+abbrlink: 12020
 date: 2019-01-17 18:09:00
 updated: 2019-01-17 18:09:00
+mathjax: false
 ---
 
 ![JS音乐播放器截图](/gallery/yaoplayer-0.jpg)
@@ -42,4 +41,4 @@ $.get('https://v1.itooi.cn/netease/songList', {
 
 ## 插件全代码
 
-{% include_code lang:javascript yaoplayer.js %}
+{% include_code lang:javascript from:1 to:59 yaoplayer.js %}

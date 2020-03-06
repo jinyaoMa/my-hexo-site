@@ -4,8 +4,8 @@ let tag = 'gallery';
 let element = null;
 
 const _setRecord = (dom, image) => {
-  let name = dom.querySelector('[p-gallery-caption] span');
-  let a = dom.querySelector('[p-gallery-image] a');
+  let name = dom.querySelector('.p-gallery-caption span');
+  let a = dom.querySelector('.p-gallery-image a');
   let img = a.querySelector('img');
 
   a.title = name.innerText = image.name;
@@ -18,7 +18,7 @@ const init = (params, callback) => {
     document.querySelector(tag).replaceWith(element);
 
     if (params && params.data && params.data.length) {
-      let cache = element.querySelector('[p-gallery-item]');
+      let cache = element.querySelector('.p-gallery-item');
       params.data.forEach((image, i) => {
         if (i + 1 === params.data.length) {
           _setRecord(cache, image);
