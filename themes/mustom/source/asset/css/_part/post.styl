@@ -121,7 +121,7 @@
 .p-post-license
   line-height 2
   background var(--color-post-license-back)
-  padding $gap $gap * 1.5
+  padding $gap 0
   border-left $gap * 0.5 solid var(--color-link)
   margin $gap * 4 0
   overflow-x auto
@@ -135,6 +135,9 @@
   .label
     margin-right $gap
     font-weight bold
+  > div
+    width fit-content
+    padding 0 $gap * 1.5
   @media (min-width: $app_mobile_width)
     a
       display inline-block
