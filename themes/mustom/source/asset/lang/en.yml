@@ -29,6 +29,7 @@ skin:
   caption: SKIN
   items:
     default: Default
+    gray: Light Gray
     colorful: Colorful
 settings:
   caption: SETTINGS

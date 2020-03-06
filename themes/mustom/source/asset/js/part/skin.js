@@ -40,12 +40,19 @@ const set = key => {
     el.classList.remove('active');
   });
   element.querySelector(`[data-skin-key="${key}"]`).classList.add('active');
+  let root = document.querySelector(':root');
   if (key === 'default') {
     colorIcons.clear();
-    document.querySelector(':root').classList.remove('colorful');
+    root.classList.remove('gray');
+    root.classList.remove('colorful');
+  } else if (key === 'gray') {
+    colorIcons.clear();
+    root.classList.remove('colorful');
+    root.classList.add('gray');
   } else if (key === 'colorful') {
     colorIcons.run();
-    document.querySelector(':root').classList.add('colorful');
+    root.classList.remove('gray');
+    root.classList.add('colorful');
   }
   listener && listener(key);
 };

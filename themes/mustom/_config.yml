@@ -85,6 +85,7 @@ menus:
 skinicon: '<i class="fas fa-tshirt fa-fw"></i>'
 skin:
   default: "#000000"
+  gray: "#dddddd"
   colorful: "linear-gradient(to bottom right,#ff3333 ,#66cc66 , #0099cc)"
 settingsicon: '<i class="fas fa-cog fa-fw"></i>'
 settings:

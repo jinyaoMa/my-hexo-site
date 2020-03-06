@@ -29,6 +29,7 @@ skin:
   caption: 皮肤
   items:
     default: 默认
+    gray: 亮灰
     colorful: 彩色
 settings:
   caption: 设置
