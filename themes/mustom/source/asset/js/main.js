@@ -414,7 +414,7 @@ const listen2Links = o => {
   });
   root.querySelectorAll('a:not([target="_blank"]):not([href*="extension/"]):not([data-listened="true"]):not(.toc-link)').forEach(link => {
     link.onclick = linksStore.setClick;
-    link.setAttribute('data-listened', true);
+    link.setAttribute('data-listened', true);//
   });
 };
 
@@ -727,9 +727,7 @@ util.run(next => { // DEFAULT
           lang(flag ? 'en' : 'zh-cn', ldata => {
             comment.update(ldata);
             post.updateShare(ldata);
-            sticky();
             listen2Links();
-            listen2Title();
             progress.to(100);
           });
         } else if (key === 'lyride') {
