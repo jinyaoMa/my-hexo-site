@@ -4,9 +4,10 @@ categories:
   - - Note
 tags:
   - Links
+mathjax: false
+abbrlink: 64322
 date: 2018-12-05 13:00:00
 updated: 2019-12-05 13:00:00
-mathjax: false
 ---
 
 Helpful Links

@@ -6,9 +6,10 @@ categories:
 tags:
   - Oracle
   - SQL
+mathjax: false
+abbrlink: 2141
 date: 2019-06-19 20:00:00
 updated: 2019-06-19 20:00:00
-mathjax: false
 ---
 
 Oracle SQL 复习笔记（~~进行中~~放弃了...）
