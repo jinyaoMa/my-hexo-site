@@ -1,6 +1,5 @@
 ---
 title: Gallery Post Not Supported
-abbrlink: 64366
 categories:
   - - Blog
     - Test

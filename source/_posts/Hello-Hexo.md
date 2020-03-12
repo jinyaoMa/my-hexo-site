@@ -4,7 +4,6 @@ categories:
   - - Hexo
 tags:
   - Command
-abbrlink: 9628
 date: 2018-12-01 19:00:00
 updated: 2018-12-01 19:00:00
 mathjax: false

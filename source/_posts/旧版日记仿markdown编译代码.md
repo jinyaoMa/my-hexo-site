@@ -6,7 +6,6 @@ categories:
 tags:
   - old blog
   - diary
-abbrlink: 51385
 date: 2019-02-21 22:00:00
 updated: 2019-02-21 22:00:00
 mathjax: false
