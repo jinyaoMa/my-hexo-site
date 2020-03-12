@@ -87,5 +87,6 @@ const colorIcons = {
 export default {
   tag,
   init,
-  set
+  set,
+  colorIcons
 };

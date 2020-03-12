@@ -26,6 +26,15 @@
 .p-toc-main
   padding $gap * 1.5
   font-size 0.88em
+  @media (min-width: $app_mobile_width)
+    max-height s('calc(100vh - 5.5em - %s - %s)', $gap * 8 + 3px, $progress_height)
+    overflow-y auto
+    &::-webkit-scrollbar
+      width $gap
+    &::-webkit-scrollbar-thumb
+      background var(--color-text)
+
+.p-toc-list
   pointer-events none
   ol
     list-style none
