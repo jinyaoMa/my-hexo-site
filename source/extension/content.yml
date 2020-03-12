@@ -15,6 +15,10 @@
   icon: https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.11/dist/ico/apple-touch-icon-precomposed.png
   link: https://www.bootcss.com/p/websafecolors/
 
+- name: HTML Entities
+  icon: https://www.w3schools.com/favicon.ico
+  link: https://www.w3schools.com/html/html_entities.asp
+
 - name: Driving Test
   icon: https://www.drivingtest.ca/wp-content/uploads/apple-icon-180x180.png
   link: https://www.drivingtest.ca/ontario-g1-driving-test/
