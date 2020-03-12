@@ -52,7 +52,7 @@
   border $gap * 0.5 solid var(--color-extension-front)
 
 .p-extension-scroll
-  max-height $extension_grid_width * 2.3 + $gap * 4 + $font_size * 1.3
+  max-height $extension_grid_width * 3.4 + $gap * 4 + $font_size * 2 // 0.65 * 3 + 0.05(offset)
   overflow-x hidden
   overflow-y auto
   &::-webkit-scrollbar
@@ -63,10 +63,11 @@
 
 .p-extension-content
   max-width $extension_grid_width * 5 + $gap * 6
+  padding-top $gap
   a
     display inline-block
     width $extension_grid_width
-    margin $gap 0 0 $gap
+    margin-left $gap
     border-radius $gap
     color var(--color-extension-front)
     &:hover
