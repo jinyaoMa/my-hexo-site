@@ -12,24 +12,20 @@
 
 .p-extension
   position fixed
-  left $gap * 2
-  bottom $gap * 2
+  left $gap * 3
+  bottom $gap * 3
   z-index 3
   user-select none
   animation extension-appear 0.6s ease
   &:hover
     .p-extension-button
-      border-radius 50% 0 0 50%
       background var(--color-extension-front)
-      border-right none
       border-color var(--color-extension-front)
-    .p-extension-front, .p-extension-back
-      transform scale(0.8)
+      border-radius 0 0 50% 50%
     .p-extension-frame
-      display inline-block
+      display block
 
 .p-extension-button
-  display inline-block
   width $font_size * 2 + $gap
   height $font_size * 2 + $gap
   border $gap * 0.5 solid var(--color-extension-back)
@@ -37,11 +33,11 @@
   border-radius 50%
   cursor pointer
   transition none
-  vertical-align bottom
 
 .p-extension-front, .p-extension-back
   height 100%
   animation extension-el-appear 0.6s ease
+  display block
 
 .p-extension-back
   display none
@@ -52,9 +48,8 @@
   min-height $font_size * 2 + $gap * 2
   padding 0 $gap * 0.5
   background var(--color-extension-back)
-  border-radius $gap * 0.5 $gap * 0.5 $gap * 0.5 0
-  box-shadow 0 0 0 $gap * 0.5 var(--color-extension-front)
-  vertical-align text-bottom
+  border-radius $gap $gap $gap 0
+  border $gap * 0.5 solid
 
 .p-extension-scroll
   max-height $extension_grid_width * 2.3 + $gap * 4 + $font_size * 1.3
