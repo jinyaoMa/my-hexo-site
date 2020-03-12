@@ -11,10 +11,10 @@
   background var(--color-spinner-back)
   animation search-appear 0.6s ease
   position fixed
-  top s('calc(3em + 1px + %s)', $progress_height)
+  top s('calc(3em + %s)', $progress_height)
   left 0
   width 100%
-  height s('calc(100% - 3em - %s)', $progress_height)
+  height s('calc(100% + 1px - 3em - %s)', $progress_height)
   z-index zIndex(5)
   display none
   &.active

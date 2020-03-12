@@ -8,7 +8,7 @@
   overflow hidden
   user-select none
   animation footer-appear 0.6s ease
-  padding-bottom $font_size
+  padding $font_size * 0.5
   margin 0 auto
   text-align center
   background var(--color-background)
@@ -21,11 +21,7 @@
     width s('calc(100% - %s)', $drawer_width + $aside_width)
   @media (max-width: $app_mobile_width)
     padding-bottom s('calc(20vh + %s)', $font_size * 2)
-
-.p-footer-copyright
-  background var(--color-clear)
-  border-radius $gap * 0.5
-  margin-bottom 0.25em
+    border-top $gap * 0.5 solid var(--color-clear)
 
 .p-footer-powered, .p-footer-theme
   @media (min-width: $app_mobile_width)
@@ -54,7 +50,7 @@
 
 :root.lyride
   .p-footer
-    padding-bottom $font_size
+    padding-bottom $font_size * 0.75
 
 :root.closeDrawer, :root.closeAside
   .p-footer
