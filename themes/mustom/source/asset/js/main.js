@@ -519,12 +519,12 @@ util.run(next => { // DEFAULT
         pass: sdata.valine.pass,
         pointer: sdata.valine.pointer
       },
-      onupdate(appid, appkey, languageData) {
+      onupdate(appid, appkey, languageData, valineId) {
         let language = config.get('langshift') ? 'en' : 'zh-cn';
         if (languageData) {
           new Valine({
             av: AV,
-            el: '.p-comment-valine',
+            el: `#${valineId}`,
             notify: false,
             verify: false,
             app_id: appid,
