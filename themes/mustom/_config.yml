@@ -96,7 +96,6 @@ settings:
   autoplay: '<i class="fas fa-play-circle fa-fw"></i>'
 footer:
   icons:
-    copyright: '<i class="far fa-copyright fa-fw"></i>'
     pv: '<i class="fas fa-eye fa-fw"></i>'
     uv: '<i class="fas fa-user-tie fa-fw"></i>'
     wd: '<i class="fas fa-file-word fa-fw"></i>'

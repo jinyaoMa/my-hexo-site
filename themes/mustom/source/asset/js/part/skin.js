@@ -67,7 +67,7 @@ const colorIcons = {
   })(),
   run() {
     let that = this;
-    let is = document.querySelectorAll('i.fas:not([data-colored="true"]), i.fab:not([data-colored="true"])');
+    let is = document.querySelectorAll('i.fas:not([data-colored="true"]), i.fab:not([data-colored="true"]), i.far:not([data-colored="true"])');
     is.forEach(i => {
       let next = that.queue.shift();
       i.classList.add('color_' + next);

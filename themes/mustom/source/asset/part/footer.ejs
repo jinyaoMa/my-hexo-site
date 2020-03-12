@@ -1,7 +1,6 @@
 <div class="p-footer">
   <div class="p-footer-copyright">
-    <%- theme.footer.icons.copyright %>
-    <span class="p-footer-copyright-year"><%= config.year ? config.year : '2019' %> - <%= (new Date()).getFullYear() %></span>
+    <span class="p-footer-copyright-year">&copy; <%= config.year ? config.year : '2019' %> - <%= (new Date()).getFullYear() %></span>
     <span class="p-footer-copyright-author"><%= config.author %></span>
   </div>
   <div class="p-footer-powered" data-lang="footer.powered" data-lang-params="<%- $encodeHTML(`

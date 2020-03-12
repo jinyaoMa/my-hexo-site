@@ -8,19 +8,24 @@
   overflow hidden
   user-select none
   animation footer-appear 0.6s ease
-  padding $font_size
+  padding-bottom $font_size
   margin 0 auto
   text-align center
   background var(--color-background)
-  border 1px solid var(--color-clear)
-  border-bottom none
   transition all 0.6s
   @media (min-width: $app_mobile_width)
+    border 1px solid var(--color-clear)
+    border-bottom none
     border-radius $gap * 0.5
     padding-bottom $font_size * 5
     width s('calc(100% - %s)', $drawer_width + $aside_width)
   @media (max-width: $app_mobile_width)
     padding-bottom s('calc(20vh + %s)', $font_size * 2)
+
+.p-footer-copyright
+  background var(--color-clear)
+  border-radius $gap * 0.5
+  margin-bottom 0.25em
 
 .p-footer-powered, .p-footer-theme
   @media (min-width: $app_mobile_width)
