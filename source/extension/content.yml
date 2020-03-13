@@ -11,6 +11,14 @@
   icon: /extension/resume/icon.reverse.png
   link: /extension/resume/chinese/
 
+- name: Cover Letter
+  icon: /extension/letter/icon.png
+  link: /extension/letter/english/
+
+- name: 求职信
+  icon: /extension/letter/icon.reverse.png
+  link: /extension/letter/chinese/
+
 - name: WebSafeColors
   icon: https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.11/dist/ico/apple-touch-icon-precomposed.png
   link: https://www.bootcss.com/p/websafecolors/

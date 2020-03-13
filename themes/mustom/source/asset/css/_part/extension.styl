@@ -17,6 +17,8 @@
   z-index 3
   user-select none
   animation extension-appear 0.6s ease
+  @media (max-width: $app_mobile_width)
+    display none
   &:hover
     .p-extension-button
       background var(--color-extension-front)
