@@ -59,7 +59,7 @@
     vertical-align middle
 
 .p-recentpost-title, .p-recentpost-meta
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     a
       display inline-block
       &:after
@@ -92,7 +92,7 @@
   white-space nowrap
   overflow-x hidden
   text-overflow ellipsis
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     a
       &:after
         margin-top -2px

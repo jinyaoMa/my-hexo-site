@@ -21,6 +21,7 @@
   width s('calc(100% - %s)', $gap * 4)
   margin $gap * 2
   border-radius $gap * 0.5
+  max-width $app_mobile_width * 0.5
 
 .p-brand-name
   background var(--color-clear)
@@ -52,7 +53,7 @@
     width 2em
     color var(--color-text)
     border-radius $gap * 0.5
-    @media (min-width: $app_mobile_width)
+    @media (min-width: $app_mobile_width_min)
       &:hover
         background var(--color-clear)
 

@@ -128,7 +128,7 @@ a
   text-overflow ellipsis
   overflow-x hidden
   // background lightgreen
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     transition all 0.6s
     &.sticky
       float none
@@ -138,7 +138,7 @@ a
 .m-frame
   float right
   width s('calc(100% - %s)', $drawer_width)
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     transition all 0.6s
 
 .m-aside
@@ -147,7 +147,7 @@ a
   text-overflow ellipsis
   overflow-x hidden
   // background mediumspringgreen
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     transition all 0.6s
     &.sticky-bottom
       position fixed
@@ -162,13 +162,13 @@ a
   float left
   min-width $main_min_width
   width s('calc(100% - %s)', $aside_width)
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     transition all 0.6s
 
 .m-footer
   clear both
   width 100%
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     transition all 0.6s
 
 .m-heaper
@@ -176,14 +176,14 @@ a
   height 3em
   line-height 3
   background var(--color-background)
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     margin $gap * 4 0
     border-radius $gap * 0.5
     border 1px solid var(--color-clear)
 
 .m-content
   width 100%
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     margin $gap * 4 0
 
 #live2d-widget
@@ -201,7 +201,7 @@ a
       height 0
   .m-frame
     width 100%
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     .m-main, .m-footer
       padding-left $gap * 2
     .m-footer
@@ -209,7 +209,7 @@ a
       margin 0 $aside_width 0 0
 
 :root.closeAside
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     .m-aside
       width 0
     .m-main
@@ -278,7 +278,7 @@ a
         margin-top -1px
         background var(--color-link)
         transition width 0.6s
-      @media (min-width: $app_mobile_width)
+      @media (min-width: $app_mobile_width_min)
         &:hover
           text-decoration none
           &:after
@@ -294,11 +294,11 @@ a
       border 1px solid
       margin-bottom 0.25em
       display inline-block
-      @media (min-width: $app_mobile_width)
+      @media (min-width: $app_mobile_width_min)
         opacity 0.25
         &:hover
           opacity 1
-    @media (min-width: $app_mobile_width)
+    @media (min-width: $app_mobile_width_min)
       &:hover
         + em
           opacity 1
@@ -327,7 +327,7 @@ a
       color #33ccff
 
 :root.gray:not(.night)
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     .m-header
       box-shadow 0 0 4px 2px var(--color-shadow)
     .p-translater-result

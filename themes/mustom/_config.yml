@@ -163,7 +163,7 @@ manifest:
       sizes: 512x512
       type: image/png
   start_url: /index.html
-  theme_color: "#ff3300"
+  theme_color: "#000000"
   background_color: "#ffffff"
   display: standalone
   orientation: portrait

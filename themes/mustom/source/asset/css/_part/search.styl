@@ -44,7 +44,7 @@
   width 5em
   text-align center
   background var(--color-clear)
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     &:hover
       background var(--color-text)
       color var(--color-background)
@@ -76,7 +76,7 @@
     strong
       color var(--color-search-highlight)
       text-decoration underline
-    @media (min-width: $app_mobile_width)
+    @media (min-width: $app_mobile_width_min)
       a
         font-size 1.5em
         display inline-block

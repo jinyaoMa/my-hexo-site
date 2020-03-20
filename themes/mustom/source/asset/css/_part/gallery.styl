@@ -9,7 +9,7 @@
   background var(--color-background)
   animation gallery-appear 0.6s ease
   overflow hidden
-  @media (min-width: $app_mobile_width)
+  @media (min-width: $app_mobile_width_min)
     margin $gap * 4 0
     border-radius $gap * 0.5
     border 1px solid var(--color-clear)
@@ -37,7 +37,7 @@
     background var(--color-gallery)
     @media (max-width: $app_mobile_width)
       padding $gap
-    @media (min-width: $app_mobile_width)
+    @media (min-width: $app_mobile_width_min)
       padding $gap * 3
       &:hover
         background var(--color-gallery-hover)
