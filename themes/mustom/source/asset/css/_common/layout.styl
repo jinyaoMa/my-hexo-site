@@ -134,6 +134,11 @@ a
       float none
       position fixed
       bottom 0
+  @media (min-width: $app_mobile_width_min)
+    position fixed
+    bottom 0
+    height s('calc(100vh - 3em - %s)', $progress_height)
+    overflow hidden
 
 .m-frame
   float right
@@ -157,6 +162,14 @@ a
       position fixed
       right s('calc(50% - %s)', $app_width * 0.5)
       top s('calc(3em + %s)', $progress_height)
+  @media (min-width: $app_mobile_width_min)
+    position fixed
+    bottom 0
+    right s('calc(50% - %s)', $app_width * 0.5)
+    height s('calc(100vh - 3em - %s)', $progress_height)
+    overflow hidden
+  @media (min-width: $app_mobile_width_min) and (max-width: $app_width)
+    right 0
 
 .m-main
   float left
@@ -306,6 +319,7 @@ a
 :root.colorful
   .m-evanyou-canvas
     display none
+  /*
   &:not(.night)
     body:before
       content '图片/Picture URL: ' + $picurl
@@ -318,6 +332,7 @@ a
       line-height 1.5
       height 100%
       text-align center
+  */
 
 :root.night
   .m-evanyou-canvas

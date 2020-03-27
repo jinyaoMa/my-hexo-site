@@ -171,6 +171,18 @@ const setSticky = o => {
   document.addEventListener('scroll', sticky);
 };
 
+const scrolling = e => {
+  let drawer = root.querySelector('.m-drawer');
+  let aside = root.querySelector('.m-aside');
+  drawer.scrollTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  aside.scrollTop = window.scrollY * 2;
+};
+
+const setScrolling = o => {
+  document.removeEventListener('scroll', scrolling);
+  document.addEventListener('scroll', scrolling);
+};
+
 const final_load = o => util.layoutParts(parts => {
   let checklist = (o => {
     let result = {};
@@ -478,7 +490,8 @@ util.run(next => { // DEFAULT
     if (flag) {
       window.clearInterval(looper);
       progress.to(20);
-      setSticky();
+      //setSticky();
+      setScrolling();
       next();
     }
   }, lock_wait);
@@ -669,7 +682,8 @@ util.run(next => { // DEFAULT
           lang(flag ? 'en' : 'zh-cn', ldata => {
             comment.update(ldata);
             post.updateShare(ldata);
-            sticky();
+            //sticky();
+            scrolling();
             listen2Links();
             listen2Title();
             progress.to(100);
@@ -682,6 +696,7 @@ util.run(next => { // DEFAULT
           flag && audioplayer.play();
         }
         config.set(key, flag);
+        scrolling();
       }
     }, el => {
       checklist.settings = true;
