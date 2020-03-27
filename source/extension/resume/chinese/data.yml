@@ -2,7 +2,7 @@ size: A4 # A4 / Letter
 custom_width: 1572px
 resume:
   side:
-    avatar: /asset/img/author.medium.png
+    avatar: ../my_linkedin_qr_code.zh.png
     brand:
       name: 耀
       position: WEB前端开发工程师

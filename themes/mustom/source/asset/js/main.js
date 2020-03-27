@@ -172,10 +172,14 @@ const setSticky = o => {
 };
 
 const scrolling = e => {
-  let drawer = root.querySelector('.m-drawer');
   let aside = root.querySelector('.m-aside');
-  drawer.scrollTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (document.body.scrollHeight - window.innerHeight);
   aside.scrollTop = window.scrollY * 1.5;
+
+  let drawer = root.querySelector('.m-drawer');
+  //let content = root.querySelector('.m-content');
+  //let drawerTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (content.offsetHeight + content.offsetTop - window.innerHeight);
+  let drawerTop = window.scrollY * 0.5;
+  drawer.scrollTop = drawerTop;
 };
 
 const setScrolling = o => {

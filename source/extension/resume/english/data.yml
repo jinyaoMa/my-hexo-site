@@ -2,7 +2,7 @@ size: A4 # A4 / Letter
 custom_width: 1572px
 resume:
   side:
-    avatar: /asset/img/author.medium.png
+    avatar: ../my_linkedin_qr_code.en.png
     brand:
       name: Jinyao Ma
       position: Web Developer

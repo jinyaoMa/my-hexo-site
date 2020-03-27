@@ -301,20 +301,22 @@ a
   img
     border-radius $gap * 0.5
     + em
-      font-size 0.85em
+      font-size 0.5em
       border-radius 1em
       padding 0.25em 0.75em
       border 1px solid
-      margin-bottom 0.25em
+      margin-bottom 0.5em
       display inline-block
       @media (min-width: $app_mobile_width_min)
         opacity 0.25
         &:hover
           opacity 1
+          color #03a9f4
     @media (min-width: $app_mobile_width_min)
       &:hover
         + em
           opacity 1
+          color #03a9f4
 
 :root.colorful
   .m-evanyou-canvas
@@ -342,6 +344,8 @@ a
       color #33ccff
 
 :root.gray:not(.night)
+  .m-evanyou-canvas
+    display none
   @media (min-width: $app_mobile_width_min)
     .m-header
       box-shadow 0 0 4px 2px var(--color-shadow)

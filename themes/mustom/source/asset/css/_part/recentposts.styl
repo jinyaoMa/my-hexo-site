@@ -28,9 +28,13 @@
   line-height 3
   border-top 1px solid var(--color-clear)
   color var(--color-recentposts-more-front)
-  &:hover
+  @media (max-width: $app_mobile_width)
     color var(--color-recentposts-more-back)
     background var(--color-recentposts-more-front)
+  @media (min-width: $app_mobile_width_min)
+    &:hover
+      color var(--color-recentposts-more-back)
+      background var(--color-recentposts-more-front)
 
 .p-recentpost:not(:first-child)
   border-top 1px solid var(--color-clear)
