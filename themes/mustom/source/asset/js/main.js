@@ -175,7 +175,7 @@ const scrolling = e => {
   let drawer = root.querySelector('.m-drawer');
   let aside = root.querySelector('.m-aside');
   drawer.scrollTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (document.body.scrollHeight - window.innerHeight);
-  aside.scrollTop = window.scrollY * 2;
+  aside.scrollTop = window.scrollY * 1.5;
 };
 
 const setScrolling = o => {
@@ -220,7 +220,10 @@ const final_load = o => util.layoutParts(parts => {
 
     api('posts', pdata => {
       parts.includes('recentposts') && recentposts.init({
-        posts: pdata
+        posts: pdata,
+        onMore() {
+          listen2Links();
+        }
       }, el => {
         checklist.recentposts = true;
         progress.step(stepping);
@@ -231,7 +234,10 @@ const final_load = o => util.layoutParts(parts => {
   if (/^\/(posts)\//.test(pathname())) {
     api(pathname().substring(1, pathname().lastIndexOf('/')), pdata => {
       parts.includes('post') && post.init({
-        post: pdata
+        post: pdata,
+        onFriend() {
+          scrolling();
+        }
       }, el => {
         checklist.post = true;
         toc.show();
@@ -426,7 +432,7 @@ const listen2Links = o => {
   });
   root.querySelectorAll('a:not([target="_blank"]):not([href*="extension/"]):not([data-listened="true"]):not(.toc-link)').forEach(link => {
     link.onclick = linksStore.setClick;
-    link.setAttribute('data-listened', true);//
+    link.setAttribute('data-listened', true);
   });
 };
 

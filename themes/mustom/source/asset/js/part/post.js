@@ -39,6 +39,7 @@ const init = (params, callback) => {
         } else {
           qrcode.classList.add('active')
         }
+        params.onFriend && params.onFriend();
       };
 
       let a = document.createElement('a');

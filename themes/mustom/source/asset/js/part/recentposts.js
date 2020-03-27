@@ -75,10 +75,14 @@ const init = (params, callback) => {
           let cache = item.cloneNode(true);
           setPost(p, cache);
           items.appendChild(cache);
+          cache.querySelectorAll('a').forEach(link => {
+            link.removeAttribute('data-listened'); // reset signal For listen2Links()
+          });
         });
         if (posts.length === 0) {
           more.style.display = 'none';
         }
+        params.onMore && params.onMore(more);
       };
     }
 
