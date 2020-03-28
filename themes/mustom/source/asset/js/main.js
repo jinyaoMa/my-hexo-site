@@ -171,15 +171,28 @@ const setSticky = o => {
   document.addEventListener('scroll', sticky);
 };
 
-const scrolling = e => {
-  let aside = root.querySelector('.m-aside');
-  aside.scrollTop = window.scrollY * 1.5;
+const fixMainHeight = o => {
+  util.runOnDesktop(p => {
+    let main = root.querySelector('.m-main');
+    let drawer = root.querySelector('.m-drawer');
+    let aside = root.querySelector('.m-aside');
+    let footer = root.querySelector('.m-footer');
+    let maxHeight = drawer.scrollHeight > aside.scrollHeight ? drawer.scrollHeight : aside.scrollHeight;
+    main.style.minHeight = (maxHeight - footer.offsetHeight) * 1.35 + 'px';
+  });
+};
 
-  let drawer = root.querySelector('.m-drawer');
-  //let content = root.querySelector('.m-content');
-  //let drawerTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (content.offsetHeight + content.offsetTop - window.innerHeight);
-  let drawerTop = window.scrollY * 0.5;
-  drawer.scrollTop = drawerTop;
+const scrolling = e => {
+  util.runOnDesktop(o => {
+    let aside = root.querySelector('.m-aside');
+    aside.scrollTop = window.scrollY * 0.65; // offset 0.35
+
+    let drawer = root.querySelector('.m-drawer');
+    //let content = root.querySelector('.m-content');
+    //let drawerTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (content.offsetHeight + content.offsetTop - window.innerHeight);
+    let drawerTop = window.scrollY * 0.65; // offset 0.35
+    drawer.scrollTop = drawerTop;
+  });
 };
 
 const setScrolling = o => {
@@ -694,6 +707,7 @@ util.run(next => { // DEFAULT
             post.updateShare(ldata);
             //sticky();
             scrolling();
+            fixMainHeight();
             listen2Links();
             listen2Title();
             progress.to(100);
@@ -702,11 +716,12 @@ util.run(next => { // DEFAULT
           flag ? root.classList.add('transfigure') : root.classList.remove('transfigure');
         } else if (key === 'lyride') {
           flag ? root.classList.add('lyride') : root.classList.remove('lyride');
+          scrolling();
+          fixMainHeight();
         } else if (key === 'autoplay') {
           flag && audioplayer.play();
         }
         config.set(key, flag);
-        scrolling();
       }
     }, el => {
       checklist.settings = true;
