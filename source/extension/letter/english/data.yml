@@ -1,10 +1,10 @@
 position:
-  - name: Test
+  - name: __test__
     file: test.cl
 name: Jinyao Ma
 email: jinyao.ma@outlook.com
-phone: +1 (234) 567-8910
-address: Somewhere, Earth A0A 0A0
+phone: N/A
+address: Hamilton, ON
 www: https://ma-jinyao.cn
 linkedin: https://www.linkedin.com/in/jinyao-ma-01115412a
 github: https://github.com/jinyaoMa
