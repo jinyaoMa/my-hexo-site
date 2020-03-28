@@ -1,0 +1,187 @@
+// COLOR
+$color_background = #ffffff
+$color_text = #000000
+$color_text_reverse = #ffffff
+$color_main = #004477
+$color_dark = #002255
+// DIMENSION
+$font_size = 16px
+$width = 1024px
+
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+  &:focus
+    outline none
+
+body
+  font-family Arial, Helvetica, Calibri
+  line-height 1.5
+  font-size $font_size
+  overflow-y scroll
+  overflow-x hidden
+
+a
+  text-decoration none
+  color $color_text_reverse
+  cursor pointer
+  display inline-block
+  &:after
+    content ''
+    width 0
+    height 2px
+    margin-top -2px
+    float right
+    background $color_text_reverse
+    transition width 0.3s ease
+  &:hover
+    &:after
+      width 100%
+
+#letter
+  min-width $width
+
+#brand
+  height 100vh
+  background $color_main
+  color $color_text_reverse
+  margin 0 -100vw
+  padding 0 100vw
+  overflow hidden
+  position relative
+
+@keyframes shake
+  from
+    transform s('translateY(%s)', $font_size * -1)
+  to
+    transform translateY(0)
+
+#signal
+  position absolute
+  bottom 0
+  text-align center
+  font-size 3em
+  width 100%
+  display none
+  cursor pointer
+  i
+    text-shadow 0 0 $font_size
+    animation shake 0.6s ease infinite
+
+#frame
+  height 100%
+  width 100%
+  position relative
+  &:before
+    content ''
+    position absolute
+    top 0
+    right 0
+    height s('calc(100vmax + %s)', $width)
+    width 100vmax
+    background $color_dark
+    transform-origin top right
+    transform rotate(52deg)
+
+.top, .bottom
+  position absolute
+  width 100%
+  padding $font_size * 5
+
+.top
+  top 0
+  left 0
+
+.bottom
+  bottom 0
+  right 0
+  i
+    margin-left $font_size
+
+.table
+  display table
+
+.table-cell
+  display table-cell
+  vertical-align middle
+
+#avatar
+  width s('calc(50vmin - %s)', $font_size * 5)
+  img
+    display block
+    height s('calc(50vmin - %s)', $font_size * 5)
+    float left
+    border-radius 50%
+
+#name, #date, #position
+  margin-left $font_size * 2
+  line-height 1
+
+#name
+  font-size 3em
+  margin-bottom $font_size * 2
+
+#date
+  font-size 1.5em
+  margin-bottom $font_size * 2
+
+#position
+  margin-bottom $font_size * 2
+  display inline-block
+  min-width 50vmin
+  position relative
+  vertical-align middle
+  overflow hidden
+  background-color $color_background
+  text-shadow none
+  border-radius $font_size * 0.25
+  transition box-shadow 0.3s ease
+  z-index 2
+  &:hover
+    box-shadow inset 0 0 ($font_size * 0.5) $color_dark
+  &:before
+    content ''
+    position absolute
+    width 0
+    height 0
+    border $font_size * 0.5 solid transparent
+    border-top-color $color_dark
+    top $font_size * 1.25
+    right $font_size * 0.75
+    z-index -2
+  select
+    font-size 1.25em
+    padding $font_size * 0.75
+    padding-right $font_size * 2.5
+    width 100%
+    border none
+    background transparent
+    background-image none
+    -webkit-appearance none
+    -moz-appearance none
+    cursor pointer
+    line-height 1
+    option
+      cursor pointer
+    &:focus
+      outline none
+
+#email, #phone, #address, #www, #linkedin, #github
+  text-align right
+  line-height 2
+  font-size 1.25em
+
+@keyframes appear
+  from
+    opacity 0
+  to
+    opacity 1
+
+#body
+  display none
+  animation appear 0.6s ease
+  padding $font_size * 5
+  min-height 100vh
+  max-width $width
+  margin 0 auto
