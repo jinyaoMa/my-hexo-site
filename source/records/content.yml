@@ -26,12 +26,21 @@
   progress: Latest
   summary: My Resume
 
-# Test
-- cover:
-  date:
-  title:
+- cover: /extension/test/icon.png
+  date: 20??/?? - ????/??
+  title: Test
   type:
+  author: jinyaoMa
+  source: "https://ma-jinyao.cn/extension/test/"
+  progress: 50%
+  summary: 2048 越改越多 bug，好久之前打的码了，音乐播放器也是很乱。这两东西基本上没啥用了，代码也没有复用价值，2048 的算法也就看看这样子
+
+# N/A
+- cover: # [empty] to use default cover
+  date: # string
+  title:
+  type: # e.g. [empty] / books / article / paper / newspaper / report / picture / anime / video / movie / audio
   author:
   source:
-  progress:
+  progress: # format 'number/total' OR '100%' OR 'Complete', [empty] to use 'N/A', NO ALLOW SPACE
   summary:
