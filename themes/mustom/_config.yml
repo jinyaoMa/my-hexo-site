@@ -172,7 +172,7 @@ serviceWorker:
   opts:
     networkTimeoutSeconds: 5
   routes:
-    - pattern: !!js/regexp /(baidu.com|google)/
+    - pattern: !!js/regexp /(baidu.com|google|music.126.net)/
       strategy: networkOnly
     - pattern: !!js/regexp /\/asset\/part\/.+\.(html)$/
       strategy: cacheFirst
