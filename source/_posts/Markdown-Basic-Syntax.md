@@ -13,7 +13,7 @@ date: 2019-12-02 08:00:00
 updated: 2020-02-18 08:00:00
 ---
 
-This post is originated from [here](https://gist.github.com/apackeer/4159268) and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.
+This post is originated from [here](//gist.github.com/apackeer/4159268) and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.
 
 <!-- more -->
 
@@ -158,9 +158,9 @@ And more text.
 ## Links
 
 ```markdown
-[I'm an inline-style link](https://www.google.com)
+[I'm an inline-style link](//www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[I'm an inline-style link with title](//www.google.com "Google's Homepage")
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
@@ -172,14 +172,14 @@ Or leave it empty and use the [link text itself]
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://hexo.io
-[1]: https://hexo.io/docs/
-[link text itself]: https://hexo.io/api/
+[arbitrary case-insensitive reference text]: //hexo.io
+[1]: //hexo.io/docs/
+[link text itself]: //hexo.io/api/
 ```
 
-[I'm an inline-style link](https://www.google.com)
+[I'm an inline-style link](//www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[I'm an inline-style link with title](//www.google.com "Google's Homepage")
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
@@ -191,9 +191,9 @@ Or leave it empty and use the [link text itself]
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://hexo.io
-[1]: https://hexo.io/docs/
-[link text itself]: https://hexo.io/api/
+[arbitrary case-insensitive reference text]: //hexo.io
+[1]: //hexo.io/docs/
+[link text itself]: //hexo.io/api/
 
 ## Images
 
@@ -202,24 +202,24 @@ hover to see the title text:
 
 Inline-style:
 
-![alt text](https://hexo.io/icon/favicon-196x196.png "Logo Title Text 1")
+![alt text](//hexo.io/icon/favicon-196x196.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: https://hexo.io/icon/favicon-196x196.png "Logo Title Text 2"
+[logo]: //hexo.io/icon/favicon-196x196.png "Logo Title Text 2"
 ```
 
 hover to see the title text:
 
 Inline-style:
 
-![alt text](https://hexo.io/icon/favicon-196x196.png "Logo Title Text 1")
+![alt text](//hexo.io/icon/favicon-196x196.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: https://hexo.io/icon/favicon-196x196.png "Logo Title Text 2"
+[logo]: //hexo.io/icon/favicon-196x196.png "Logo Title Text 2"
 
 ## Code and Syntax Highlighting
 
@@ -304,7 +304,7 @@ $$
 i\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi
 $$
 
-> You can find more information about **LaTeX** mathematical expressions [here](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+> You can find more information about **LaTeX** mathematical expressions [here](//math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
 ## Blockquotes
 
@@ -393,19 +393,19 @@ This is another regular paragraph.
 ## Youtube videos
 
 ```markdown
-<a href="https://www.youtube.com/watch?feature=player_embedded&v=ARted4RniaU
-" target="_blank"><img src="https://img.youtube.com/vi/ARted4RniaU/0.jpg"
+<a href="//www.youtube.com/watch?feature=player_embedded&v=ARted4RniaU
+" target="_blank"><img src="//img.youtube.com/vi/ARted4RniaU/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 Pure markdown version:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ARted4RniaU/0.jpg)](https://www.youtube.com/watch?v=ARted4RniaU)
+[![IMAGE ALT TEXT HERE](//img.youtube.com/vi/ARted4RniaU/0.jpg)](//www.youtube.com/watch?v=ARted4RniaU)
 ```
 
-<a href="https://www.youtube.com/watch?feature=player_embedded&v=ARted4RniaU
-" target="_blank"><img src="https://img.youtube.com/vi/ARted4RniaU/0.jpg"
+<a href="//www.youtube.com/watch?feature=player_embedded&v=ARted4RniaU
+" target="_blank"><img src="//img.youtube.com/vi/ARted4RniaU/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 Pure markdown version:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ARted4RniaU/0.jpg)](https://www.youtube.com/watch?v=ARted4RniaU)
+[![IMAGE ALT TEXT HERE](//img.youtube.com/vi/ARted4RniaU/0.jpg)](//www.youtube.com/watch?v=ARted4RniaU)

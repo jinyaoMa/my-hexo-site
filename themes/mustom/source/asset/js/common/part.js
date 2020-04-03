@@ -22,7 +22,8 @@ const factory = {
  * @param {Function} callback 
  */
 export default function (tag, callback) {
-  /*factory.queue.push(o => {
+  /*
+  factory.queue.push(o => {
     factory.isWorking = true;
     ajax({
       url: `/asset/part/${tag}.html`,
@@ -35,7 +36,9 @@ export default function (tag, callback) {
       }
     });
   });
-  factory.work();*/
+  factory.work();
+  */
+  
   ajax({
     url: `/asset/part/${tag}.html`,
     method: 'get',
@@ -44,4 +47,5 @@ export default function (tag, callback) {
       callback && callback(data.body.firstElementChild);
     }
   });
+  
 }
