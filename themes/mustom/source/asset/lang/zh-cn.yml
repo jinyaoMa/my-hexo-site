@@ -133,4 +133,8 @@ records:
     movie: 电影
     audio: 音频
 codelib:
-  caption: 代码
+  captions:
+    log: 更新历史
+    stack: 代码栈
+  more: 展开
+  less: 收起

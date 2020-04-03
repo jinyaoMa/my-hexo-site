@@ -133,4 +133,8 @@ records:
     movie: Movie
     audio: Audio
 codelib:
-  caption: CODE
+  captions:
+    log: LOGS
+    stack: STACK
+  more: MORE
+  less: LESS
