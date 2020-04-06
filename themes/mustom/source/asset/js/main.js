@@ -241,7 +241,6 @@ const final_load = o => util.layoutParts(parts => {
     });
     if (flag) {
       window.clearInterval(looper);
-      evanyou.draw();
       listen2Links();
       util.runOnMobile(p => {
         launch.disable(true);
@@ -709,6 +708,7 @@ live2d(z => {
         onclick(key, flag) {
           if (key === 'night') {
             flag ? root.classList.add('night') : root.classList.remove('night');
+            evanyou.draw(flag ? 'evanyou' : 'wave');
           } else if (key === 'langshift') {
             progress.to(90);
             menus.update();

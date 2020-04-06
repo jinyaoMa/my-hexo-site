@@ -73,10 +73,105 @@ const evanyou = {
   }
 }
 
+const wave = {
+  draw: null,
+  animate: null,
+  clear(){
+    window.cancelAnimationFrame(this.animate)
+    this.animate = null
+  },
+  init(selector) {
+    var WAVE_HEIGHT = 200 //波浪变化高度
+    var SCALE = 0.5 // 绘制速率
+    var CYCLE = 360 / SCALE
+    var TIME = 0
+
+    var c = document.querySelector(selector)
+    var width = window.innerWidth
+    var height = window.innerHeight
+
+    var ctx = c.getContext("2d")
+    c.width = width
+    c.height = height
+
+    function _draw() {
+      ctx.clearRect(0, 0, width, height)
+
+      TIME = (TIME + 1) % CYCLE
+      var angle = SCALE * TIME // 当前正弦角度
+      var dAngle = 45 // 两个波峰相差的角度
+
+      ctx.beginPath()
+      ctx.moveTo(0, height * 0.9 + distance(WAVE_HEIGHT, angle, 0))
+      ctx.bezierCurveTo(
+        width * 0.3,
+        height * 0.6 + distance(WAVE_HEIGHT, angle, dAngle),
+        width * 0.5,
+        height * 0.7 + distance(WAVE_HEIGHT, angle, 2 * dAngle),
+        width,
+        height * 0.8 + distance(WAVE_HEIGHT, angle, 3 * dAngle)
+      )
+      ctx.lineTo(width, height)
+      ctx.lineTo(0, height)
+      ctx.fillStyle = "#eeeeeeff"
+      ctx.fill()
+
+      ctx.beginPath()
+      ctx.moveTo(0, height * 0.7 + distance(WAVE_HEIGHT, angle, -15))
+      ctx.bezierCurveTo(
+        width * 0.4,
+        height * 0.8 + distance(WAVE_HEIGHT, angle, dAngle - 15),
+        width * 0.6,
+        height * 0.6 + distance(WAVE_HEIGHT, angle, 2 * dAngle - 15),
+        width,
+        height * 0.7 + distance(WAVE_HEIGHT, angle, 3 * dAngle - 15)
+      )
+      ctx.lineTo(width, height)
+      ctx.lineTo(0, height)
+      ctx.fillStyle = "#ddddddcc"
+      ctx.fill()
+
+      ctx.beginPath()
+      ctx.moveTo(0, height * 0.8 + distance(WAVE_HEIGHT, angle, -30))
+      ctx.bezierCurveTo(
+        width * 0.5,
+        height * 0.7 + distance(WAVE_HEIGHT, angle, dAngle - 30),
+        width * 0.5,
+        height * 0.8 + distance(WAVE_HEIGHT, angle, 2 * dAngle - 30),
+        width,
+        height * 0.9 + distance(WAVE_HEIGHT, angle, 3 * dAngle - 30)
+      )
+      ctx.lineTo(width, height)
+      ctx.lineTo(0, height)
+      ctx.fillStyle = "#ccccccaa"
+      ctx.fill()
+
+      function distance(height, currAngle, diffAngle) {
+        return height * Math.cos((((currAngle - diffAngle) % 360) * Math.PI) / 180)
+      }
+    }
+    
+    let that = this
+    that.draw = function () {
+      that.animate = window.requestAnimationFrame(function fn() {
+        _draw()
+        that.animate = requestAnimationFrame(fn)
+      })
+    }
+  }
+}
 
 export default {
-  init: evanyou.init,
-  draw(){
-    typeof evanyou.draw === 'function' && evanyou.draw();
+  init(s) {
+    evanyou.init(s)
+    wave.init(s)
+  },
+  draw(opt) {
+    wave.clear()
+    if(opt.toLowerCase() === 'wave') {
+      typeof wave.draw === 'function' && wave.draw()
+    } else {
+      typeof evanyou.draw === 'function' && evanyou.draw()
+    }
   }
 }
