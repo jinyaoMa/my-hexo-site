@@ -1,8 +1,7 @@
 ---
 title: Gallery Post Not Supported
 categories:
-  - - Blog
-    - Test
+  - Blog
 tags:
   - Test
 mathjax: false

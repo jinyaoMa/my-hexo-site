@@ -1,10 +1,8 @@
 ---
 title: Markdown Basic Syntax
 categories:
-  - - Note
-    - Markdown
-  - - Blog
-    - Test
+  - Markdown
+  - Blog
 tags:
   - Test
 mathjax: true
@@ -244,18 +242,18 @@ But let's throw in a <b>tag</b>.
 ## Tables
 
 ```markdown
-|                    |  ASCII                            |  HTML                           |
-|  ----------------  |  -------------------------------  |  -----------------------------  |
-|  Single backticks  |  `'Isn't this fun?'`              |  'Isn't this fun?'              |
-|  Quotes            |  `"Isn't this fun?"`              |  "Isn't this fun?"              |
-|  Dashes            |  `-- is en-dash, --- is em-dash`  |  -- is en-dash, --- is em-dash  |
+|                  | ASCII                           | HTML                          |
+| ---------------- | ------------------------------- | ----------------------------- |
+| Single backticks | `'Isn't this fun?'`             | 'Isn't this fun?'             |
+| Quotes           | `"Isn't this fun?"`             | "Isn't this fun?"             |
+| Dashes           | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
 ```
 
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+|                  | ASCII                           | HTML                          |
+| ---------------- | ------------------------------- | ----------------------------- |
+| Single backticks | `'Isn't this fun?'`             | 'Isn't this fun?'             |
+| Quotes           | `"Isn't this fun?"`             | "Isn't this fun?"             |
+| Dashes           | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
 
 
 
@@ -285,10 +283,10 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 | | 1               | 2                 | 3          |          |
 ```
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| *Still*  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 
 ## MathJax
 
