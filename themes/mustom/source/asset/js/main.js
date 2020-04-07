@@ -10,6 +10,7 @@ import fetch from "./common/fetch.js";
 import api from "./common/api.js";
 import config from "./common/config.js";
 import ajax from "./common/ajax.js";
+import storage from "./common/storage.js";
 import goingto from "./part/goingto.js";
 import extension from "./part/extension.js";
 import search from "./part/search.js";
@@ -36,6 +37,7 @@ import page from "./part/page.js";
 import codelib from "./part/codelib.js";
 import records from "./part/records.js";
 import gallery from "./part/gallery.js";
+import xcanvas from "./part/xcanvas.js";
 
 _run_APlayer();
 _run_AV();
@@ -66,26 +68,38 @@ const baiduPush = o => {
   fetch(url, null, null, true);
 };
 
+const noCanvas = {
+  value: storage.get('noCanvas'),
+  update(newValue) {
+    this.value = newValue;
+    storage.set('noCanvas', newValue);
+  }
+};
+
 const live2d = callback => {
   util.runOnMobile(callback);
-  L2Dwidget.on('create-canvas', name => {
-    callback && callback(name);
-  }).init({
-    model: {
-      scale: 1,
-      jsonPath: '/asset/live2d/haruto.model.json'
-    },
-    display: {
-      width: 200,
-      height: 400,
-      position: 'right',
-      hOffset: 50,
-      vOffset: 0
-    },
-    mobile: {
-      show: false
-    }
-  });
+  if (noCanvas.value) {
+    callback && callback();
+  } else {
+    L2Dwidget.on('create-canvas', name => {
+      callback && callback(name);
+    }).init({
+      model: {
+        scale: 1,
+        jsonPath: '/asset/live2d/haruto.model.json'
+      },
+      display: {
+        width: 200,
+        height: 400,
+        position: 'right',
+        hOffset: 50,
+        vOffset: 0
+      },
+      mobile: {
+        show: false
+      }
+    });
+  }
 };
 
 const root = document.querySelector(':root');
@@ -624,7 +638,8 @@ live2d(z => {
         translater: false,
         skin: false,
         settings: false,
-        pather: false
+        pather: false,
+        xcanvas: false
       };
       let looper = window.setInterval(o => {
         let flag = true;
@@ -642,6 +657,30 @@ live2d(z => {
       }, lock_wait);
 
       evanyou.init('.m-evanyou-canvas');
+
+      xcanvas.init({
+        noCanvas: noCanvas.value,
+        onchange(flag) {
+          noCanvas.update(flag);
+          let l2d = document.querySelector('#live2d-widget');
+          if (flag) {
+            evanyou.hide();
+            l2d && (l2d.style.visibility = 'hidden');
+          } else {
+            evanyou.draw(root.classList.contains('night') ? 'evanyou' : 'wave');
+            if (l2d) {
+              l2d.style.visibility = 'visible';
+            } else {
+              activateSpinner(true);
+              live2d(y => {
+                activateSpinner(false);
+              })
+            }
+          }
+        }
+      }, el => {
+        checklist.xcanvas = true;
+      });
 
       goingto.init(null, el => {
         checklist.goingto = true;
@@ -708,7 +747,7 @@ live2d(z => {
         onclick(key, flag) {
           if (key === 'night') {
             flag ? root.classList.add('night') : root.classList.remove('night');
-            evanyou.draw(flag ? 'evanyou' : 'wave');
+            !noCanvas.value && evanyou.draw(flag ? 'evanyou' : 'wave');
           } else if (key === 'langshift') {
             progress.to(90);
             menus.update();

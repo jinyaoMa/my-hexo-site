@@ -66,6 +66,7 @@ const evanyou = {
     }
 
     this.draw = function () {
+      c.style.visibility = 'visible'
       x.clearRect(0, 0, w, h) // clear all rect
       q = [{ x: 0, y: h * .7 + f }, { x: 0, y: h * .7 - f }]
       while (q[1].x < w + f) d(q[0], q[1]) // w + f
@@ -76,6 +77,7 @@ const evanyou = {
 const wave = {
   draw: null,
   animate: null,
+  hide: null,
   clear() {
     window.cancelAnimationFrame(this.animate)
     this.animate = null
@@ -183,10 +185,15 @@ const wave = {
 
     let that = this
     that.draw = function () {
+      c.style.visibility = 'visible'
       that.animate = window.requestAnimationFrame(function fn() {
         _draw()
         that.animate = requestAnimationFrame(fn)
       })
+    }
+    that.hide = function () {
+      that.clear()
+      c.style.visibility = 'hidden'
     }
   }
 }
@@ -203,5 +210,8 @@ export default {
     } else {
       typeof evanyou.draw === 'function' && evanyou.draw()
     }
+  },
+  hide() {
+    wave.hide()
   }
 }
