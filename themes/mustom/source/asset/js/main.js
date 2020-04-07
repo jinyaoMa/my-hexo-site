@@ -69,7 +69,13 @@ const baiduPush = o => {
 };
 
 const noCanvas = {
-  value: storage.get('noCanvas'),
+  value: (o => {
+    let v = storage.get('noCanvas');
+    if (v === null) {
+      return true;
+    }
+    return v;
+  })(),
   update(newValue) {
     this.value = newValue;
     storage.set('noCanvas', newValue);
