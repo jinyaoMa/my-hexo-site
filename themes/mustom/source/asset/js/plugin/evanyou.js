@@ -97,10 +97,10 @@ const wave = {
     c.height = height
 
     let colors = {
-      op: ['ff', 'cc', 'aa'],
+      op: ['66', '99', 'cc'],
       now: [],
       r: 0,
-      d: 5000,
+      d: 5 * 16 * 30 * 2, // 5/c, 1f/16ms, 30fps, 2 times slower
       num: -1,
       roll() {
         let that = this
@@ -134,29 +134,29 @@ const wave = {
       //}
 
       x.beginPath()
-      x.moveTo(0, height * 0.9 + distance(WAVE_HEIGHT, angle, 0))
+      x.moveTo(0, height * 0.77 + distance(WAVE_HEIGHT, angle, 0))
       x.bezierCurveTo(
-        width * 0.3,
-        height * 0.6 + distance(WAVE_HEIGHT, angle, dAngle),
-        width * 0.5,
-        height * 0.7 + distance(WAVE_HEIGHT, angle, 2 * dAngle),
+        width * 0.6,
+        height * 0.77 + distance(WAVE_HEIGHT, angle, dAngle),
+        width * 0.4,
+        height * 0.77 + distance(WAVE_HEIGHT, angle, 2 * dAngle),
         width,
-        height * 0.8 + distance(WAVE_HEIGHT, angle, 3 * dAngle)
+        height * 0.66 + distance(WAVE_HEIGHT, angle, 3 * dAngle)
       )
       x.lineTo(width, height)
       x.lineTo(0, height)
-      x.fillStyle = colors.now[0]
+      x.fillStyle = colors.now[2]
       x.fill()
 
       x.beginPath()
-      x.moveTo(0, height * 0.7 + distance(WAVE_HEIGHT, angle, -15))
+      x.moveTo(0, height * 0.77 + distance(WAVE_HEIGHT, angle, -15))
       x.bezierCurveTo(
-        width * 0.4,
-        height * 0.8 + distance(WAVE_HEIGHT, angle, dAngle - 15),
-        width * 0.6,
-        height * 0.6 + distance(WAVE_HEIGHT, angle, 2 * dAngle - 15),
+        width * 0.55,
+        height * 0.77 + distance(WAVE_HEIGHT, angle, dAngle - 15),
+        width * 0.45,
+        height * 0.77 + distance(WAVE_HEIGHT, angle, 2 * dAngle - 30),
         width,
-        height * 0.7 + distance(WAVE_HEIGHT, angle, 3 * dAngle - 15)
+        height * 0.66 + distance(WAVE_HEIGHT, angle, 3 * dAngle - 45)
       )
       x.lineTo(width, height)
       x.lineTo(0, height)
@@ -164,18 +164,18 @@ const wave = {
       x.fill()
 
       x.beginPath()
-      x.moveTo(0, height * 0.8 + distance(WAVE_HEIGHT, angle, -30))
+      x.moveTo(0, height * 0.77 + distance(WAVE_HEIGHT, angle, -30))
       x.bezierCurveTo(
         width * 0.5,
-        height * 0.7 + distance(WAVE_HEIGHT, angle, dAngle - 30),
+        height * 0.77 + distance(WAVE_HEIGHT, angle, dAngle - 30),
         width * 0.5,
-        height * 0.8 + distance(WAVE_HEIGHT, angle, 2 * dAngle - 30),
+        height * 0.77 + distance(WAVE_HEIGHT, angle, 2 * dAngle - 60),
         width,
-        height * 0.9 + distance(WAVE_HEIGHT, angle, 3 * dAngle - 30)
+        height * 0.66 + distance(WAVE_HEIGHT, angle, 3 * dAngle - 90)
       )
       x.lineTo(width, height)
       x.lineTo(0, height)
-      x.fillStyle = colors.now[2]
+      x.fillStyle = colors.now[0]
       x.fill()
 
       function distance(height, currAngle, diffAngle) {

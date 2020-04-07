@@ -519,7 +519,6 @@ live2d(z => {
       comment: false,
       menus: false,
       panels: false,
-      audioplayer: false,
       toc: false,
       search: false
     };
@@ -610,10 +609,6 @@ live2d(z => {
         });
       });
     });
-    audioplayer.init(null, el => {
-      _run_Meting();
-      checklist.audioplayer = true;
-    });
     toc.init(null, el => {
       checklist.toc = true;
     });
@@ -639,6 +634,7 @@ live2d(z => {
         skin: false,
         settings: false,
         pather: false,
+        audioplayer: false,
         xcanvas: false
       };
       let looper = window.setInterval(o => {
@@ -680,6 +676,11 @@ live2d(z => {
         }
       }, el => {
         checklist.xcanvas = true;
+      });
+
+      audioplayer.init(null, el => {
+        _run_Meting();
+        checklist.audioplayer = true;
       });
 
       goingto.init(null, el => {
