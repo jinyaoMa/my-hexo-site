@@ -84,28 +84,30 @@ const noCanvas = {
 
 const live2d = callback => {
   util.runOnMobile(callback);
-  if (noCanvas.value) {
-    callback && callback();
-  } else {
-    L2Dwidget.on('create-canvas', name => {
-      callback && callback(name);
-    }).init({
-      model: {
-        scale: 1,
-        jsonPath: '/asset/live2d/haruto.model.json'
-      },
-      display: {
-        width: 200,
-        height: 400,
-        position: 'right',
-        hOffset: 50,
-        vOffset: 0
-      },
-      mobile: {
-        show: false
-      }
-    });
-  }
+  util.runOnDesktop(x => {
+    if (noCanvas.value) {
+      callback && callback();
+    } else {
+      L2Dwidget.on('create-canvas', name => {
+        callback && callback(name);
+      }).init({
+        model: {
+          scale: 1,
+          jsonPath: '/asset/live2d/haruto.model.json'
+        },
+        display: {
+          width: 200,
+          height: 400,
+          position: 'right',
+          hOffset: 50,
+          vOffset: 0
+        },
+        mobile: {
+          show: false
+        }
+      });
+    }
+  });
 };
 
 const root = document.querySelector(':root');
