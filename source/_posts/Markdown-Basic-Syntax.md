@@ -1,8 +1,8 @@
 ---
 title: Markdown Basic Syntax
 categories:
-  - Markdown
-  - Blog
+  - - Markdown
+  - - Blog
 tags:
   - Test
 mathjax: true

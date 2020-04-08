@@ -1,7 +1,7 @@
 ---
 title: 旧版日记仿markdown编译代码
 categories:
-  - Hexo
+  - - Hexo
 tags:
   - old blog
   - diary
