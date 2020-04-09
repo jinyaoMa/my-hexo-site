@@ -10,7 +10,7 @@
 
 # Site
 title: "耀 の 个人网站 | Mark の Personal Website"
-description: "耀 の 个人网站 | Mark の Personal Website"
+description: "耀の个人网站, 耀的个人网站, Mark の Personal Website, Mark's Personal Website, 耀的部落阁, 耀の部落阁, jinyaoMa, Mustom, Hexo"
 author: jinyaoMa ( 耀 / Mark )
 year: 2019
 
@@ -75,6 +75,27 @@ deploy:
     repo:
 
 all_minifier: true # 如果装了 hexo-all-minifier
+markdown: # 如果换了原装 hexo-renderer-marked, 用了 hexo-renderer-markdown-it
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  anchors:
+    level: 1
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: headerlink
+    permalinkSide: 'left'
+    permalinkSymbol: ''
 nofollow: # 如果装了 hexo-filter-nofollow
   enable: true
   field: post
@@ -90,6 +111,11 @@ babelify: # 如果装了 hexo-renderer-babelify + @babel/preset-env
   presets:
     - "@babel/preset-env"
   sourceMaps: false
+mathjax: # 如果装了 hexo-filter-mathjax
+  tags: none # or 'ams' or 'all'
+  single_dollars: true # enable single dollar signs as in-line math delimiters
+  cjk_width: 0.9 # relative CJK char width
+  normal_width: 0.6 # relative normal (monospace) width
 
 ignore:
   - "**/source/asset/js/common/*.js" # 如果装了 hexo-renderer-babelify
