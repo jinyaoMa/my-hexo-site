@@ -318,6 +318,8 @@ a
         + em
           opacity 1
           color #03a9f4
+  table
+    word-break keep-all
 
 :root.colorful
   .m-evanyou-canvas
@@ -341,6 +343,13 @@ a
   .markdown-body
     a
       color #33ccff
+    img
+      filter brightness(0.8)
+    table
+      tr
+        background-color var(--color-background)
+        &:nth-child(2n)
+          background-color var(--color-clear)
 
 :root.gray:not(.night)
   .m-evanyou-canvas
