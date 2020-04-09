@@ -301,6 +301,7 @@ const final_load = o => util.layoutParts(parts => {
     api(pathname().substring(1, pathname().lastIndexOf('/')), pdata => {
       parts.includes('post') && post.init({
         post: pdata,
+        offset: topping(),
         onFriend() {
           scrolling();
         }
@@ -488,7 +489,7 @@ const listen2Links = o => {
   root.querySelectorAll('.highlight a:not([target="_blank"])').forEach(link => {
     link.target = "_blank";
   });
-  root.querySelectorAll('a:not([target="_blank"]):not([href*="extension/"]):not([data-listened="true"]):not(.toc-link)').forEach(link => {
+  root.querySelectorAll('a:not([target="_blank"]):not([href*="extension/"]):not([data-listened="true"]):not(.toc-link):not(.footnote)').forEach(link => {
     link.onclick = linksStore.setClick;
     link.setAttribute('data-listened', true);
   });

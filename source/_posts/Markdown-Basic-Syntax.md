@@ -293,13 +293,21 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 ```
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 $$
-i\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi
+f(n) =
+\begin{cases}
+\frac{n}{2},  & \text{if $n$ is even} \\\\[2ex]
+3n+1, & \text{if $n$ is odd}
+\end{cases}
 $$
 ```
 
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 $$
-i\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi
+f(n) =
+\begin{cases}
+\frac{n}{2},  & \text{if $n$ is even} \\\\[2ex]
+3n+1, & \text{if $n$ is odd}
+\end{cases}
 $$
 
 > You can find more information about **LaTeX** mathematical expressions [here](//math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
