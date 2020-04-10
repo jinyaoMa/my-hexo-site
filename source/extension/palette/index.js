@@ -1,17 +1,20 @@
 class Color {
   constructor(r, g, b) {
-    this.R = Math.round(Math.abs(r % 256));
-    this.G = Math.round(Math.abs(g % 256));
-    this.B = Math.round(Math.abs(b % 256));
+    this.R = Math.floor(r);
+    this.G = Math.floor(g);
+    this.B = Math.floor(b);
   }
   setAlpha(a) {
-    this.A = Math.round(Math.abs(a % 256 / 255));
+    this.A = Math.floor(a / 255);
   }
   localeCompare(that) {
     return this.toString().localeCompare(that.toString());
   }
   toString() {
-    return `#${(this.R << 16 | this.G << 8 | this.B).toString(16)}`;
+    let r = (this.R < 16 ? '0' : '') + this.R.toString(16);
+    let g = (this.G < 16 ? '0' : '') + this.G.toString(16);
+    let b = (this.B < 16 ? '0' : '') + this.B.toString(16);
+    return `#${r}${g}${b}`;
   }
 }
 
@@ -75,6 +78,7 @@ function setupInputFile() {
   let img = document.querySelector('#input');
   let placeholder = document.querySelector('#placeholder');
   let output = document.querySelector('#output');
+  let loading = document.querySelector('#loading');
   file.onchange = e => {
     if (file.files.length) {
       let infile = file.files[0];
@@ -85,8 +89,9 @@ function setupInputFile() {
           img.style.backgroundColor = 'black';
           img.style.backgroundImage = `url(${reader.result})`;
           placeholder.style.opacity = 0;
+          loading.classList.add('active');
+          output.classList.remove('active');
           getImage(reader.result, imgObj => {
-            file.disabled = true;
             output.innerHTML = '';
             let imgColors = getImageColors(imgObj);
             imgColors.forEach(color => {
@@ -101,13 +106,15 @@ function setupInputFile() {
               div.appendChild(spanName);
               output.appendChild(div);
             });
-            file.disabled = false;
+            output.classList.add('active');
+            loading.classList.remove('active');
           });
         }
       } else {
         img.style.backgroundColor = 'white';
         img.style.backgroundImage = 'none';
         placeholder.style.opacity = 1;
+        output.classList.remove('active');
       }
     } else {
       img.style.backgroundColor = 'white';
