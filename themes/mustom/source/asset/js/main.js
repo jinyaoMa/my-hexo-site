@@ -72,7 +72,7 @@ const noCanvas = {
   value: (o => {
     let v = storage.get('noCanvas');
     if (v === null) {
-      return true;
+      return false; // default
     }
     return v;
   })(),
