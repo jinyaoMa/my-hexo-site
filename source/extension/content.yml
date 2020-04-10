@@ -19,6 +19,10 @@
   icon: /extension/letter/icon.reverse.png
   link: /extension/letter/chinese/
 
+- name: Palette
+  icon: /extension/palette/icon.png
+  link: /extension/palette/
+
 - name: Azure
   icon: https://azureforeducation.microsoft.com/Library/Main/Images/favicon.ico
   link: https://azureforeducation.microsoft.com/devtools

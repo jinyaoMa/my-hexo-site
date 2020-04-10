@@ -1,0 +1,54 @@
+*
+  padding 0
+  margin 0
+  box-sizing border-box
+
+body
+  overflow hidden
+
+#app, #input, #output
+  width 100%
+  user-select none
+
+#input
+  height 100vh
+  position relative
+  background-repeat no-repeat
+  background-size contain
+  background-position center
+
+#placeholder
+  line-height 100vh
+  text-align center
+  font-size 10vmin
+  color gray
+
+#file
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  opacity 0
+
+#output
+  position fixed
+  bottom 0
+  left 0
+  text-align center
+  padding 1em 0 0.5em
+  white-space nowrap
+  overflow-y hidden
+  overflow-x auto
+  background white
+
+.colors
+  display inline-block
+
+.colors-color
+  display block
+  height 2em
+  width 7em
+
+.colors-name
+  line-height 2
