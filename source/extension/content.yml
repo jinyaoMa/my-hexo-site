@@ -23,25 +23,25 @@
   icon: /extension/palette/icon.png
   link: /extension/palette/
 
+- name: 在线工具
+  icon: //tool.oschina.net/img/favicon.ico
+  link: //tool.oschina.net
+
 - name: Azure
-  icon: https://azureforeducation.microsoft.com/Library/Main/Images/favicon.ico
-  link: https://azureforeducation.microsoft.com/devtools
+  icon: //azureforeducation.microsoft.com/Library/Main/Images/favicon.ico
+  link: //azureforeducation.microsoft.com/devtools
 
 - name: WebSafeColors
-  icon: https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.11/dist/ico/apple-touch-icon-precomposed.png
-  link: https://www.bootcss.com/p/websafecolors/
-
-- name: HTML Entities
-  icon: https://www.w3schools.com/favicon.ico
-  link: https://www.w3schools.com/html/html_entities.asp
+  icon: //cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.11/dist/ico/apple-touch-icon-precomposed.png
+  link: //www.bootcss.com/p/websafecolors/
 
 - name: Driving Test
-  icon: https://www.drivingtest.ca/wp-content/uploads/apple-icon-180x180.png
-  link: https://www.drivingtest.ca/ontario-g1-driving-test/
+  icon: //www.drivingtest.ca/wp-content/uploads/apple-icon-180x180.png
+  link: //www.drivingtest.ca/ontario-g1-driving-test/
 
 - name: Altima Help
-  icon: https://altimatel.com/wp-content/uploads/2019/11/apple-touch-icon.png
-  link: https://altimatel.com/access-and-customize-your-wireless-home-network/
+  icon: //altimatel.com/wp-content/uploads/2019/11/apple-touch-icon.png
+  link: //altimatel.com/access-and-customize-your-wireless-home-network/
 
 - name: Test
   icon: /extension/test/icon.png
