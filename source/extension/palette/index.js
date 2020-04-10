@@ -4,9 +4,6 @@ class Color {
     this.G = Math.floor(g);
     this.B = Math.floor(b);
   }
-  setAlpha(a) {
-    this.A = Math.floor(a / 255);
-  }
   localeCompare(that) {
     return this.toString().localeCompare(that.toString());
   }
