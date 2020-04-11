@@ -37,6 +37,16 @@ HTTP状态码：
 - 400及以上，这是客户放的错
 - 500及以上，这是服务方的错
 
+## HTTP请求/响应报文结构
+
+![HTTP请求报文结构](/gallery/http-request-format.png)*Image from: [HTTP协议超级详解](//www.cnblogs.com/an-wen/p/11180076.html)*
+
+![HTTP请求报文例子](/gallery/http-request-example.jpg)*Image from: [HTTP协议超级详解](//www.cnblogs.com/an-wen/p/11180076.html)*
+
+![HTTP响应报文结构](/gallery/http-response-format.png)*Image from: [HTTP协议超级详解](//www.cnblogs.com/an-wen/p/11180076.html)*
+
+![HTTP响应报文例子](/gallery/http-response-example.jpg)*Image from: [HTTP协议超级详解](//www.cnblogs.com/an-wen/p/11180076.html)*
+
 ## 比较HTTP/1.1和HTTP/2
 
 - HTTP/2在一次TCP连接中可以同时发送多个请求，多行程减少了连接次数和响应的等待时间
