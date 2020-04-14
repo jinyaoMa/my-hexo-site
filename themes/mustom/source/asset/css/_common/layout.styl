@@ -32,6 +32,8 @@ a
   width 100%
   height s('calc(100% - 3em - %s)', $progress_height)
   pointer-events none
+  background-color var(--color-background)
+  visibility hidden
 
 .m-launch
   user-select none
@@ -116,6 +118,7 @@ a
   color var(--color-header-text)
   background var(--color-header-background)
   z-index zIndex(4)
+  box-shadow 0 0 4px 2px var(--color-body-back)
 
 .m-center
   width 100%
