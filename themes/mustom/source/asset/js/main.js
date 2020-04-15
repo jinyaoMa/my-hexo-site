@@ -665,13 +665,18 @@ live2d(z => {
 
       xcanvas.init({
         noCanvas: noCanvas.value,
-        onchange(flag) {
+        onchange(flag, el) {
           noCanvas.update(flag);
-          let l2d = document.querySelector('#live2d-widget');
+          let l2d = root.querySelector('#live2d-widget');
+          let header = root.querySelector('.m-header');
           if (flag) {
+            el.classList.add('active');
+            header.classList.add('shadow');
             evanyou.hide();
             l2d && (l2d.style.visibility = 'hidden');
           } else {
+            el.classList.remove('active');
+            header.classList.remove('shadow');
             evanyou.draw(root.classList.contains('night') ? 'evanyou' : 'wave');
             if (l2d) {
               l2d.style.visibility = 'visible';

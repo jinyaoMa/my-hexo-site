@@ -118,7 +118,8 @@ a
   color var(--color-header-text)
   background var(--color-header-background)
   z-index zIndex(4)
-  box-shadow 0 0 4px 2px var(--color-body-back)
+  &.shadow
+    box-shadow 0 0 $gap * 0.5 $gap * 0.25 var(--color-body-back)
 
 .m-center
   width 100%

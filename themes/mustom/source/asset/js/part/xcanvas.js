@@ -8,21 +8,16 @@ const init = (params, callback) => {
   part(tag, el => {
     element = el;
     document.querySelector(tag).replaceWith(element);
-
-    if (params && params.noCanvas) {
-      element.classList.add('active');
+    
+    if (params && typeof params.noCanvas === 'boolean' && typeof params.onchange === 'function') {
       noCanvas = params.noCanvas;
-    }
+      params.onchange(noCanvas, element);
 
-    element.onclick = e => {
-      noCanvas = !noCanvas;
-      params && params.onchange && params.onchange(noCanvas);
-      if (noCanvas) {
-        element.classList.add('active');
-      } else {
-        element.classList.remove('active');
-      }
-    };
+      element.onclick = e => {
+        noCanvas = !noCanvas;
+        params.onchange(noCanvas, element);
+      };
+    }
 
     callback && callback(element);
   });
