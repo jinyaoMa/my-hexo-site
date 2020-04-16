@@ -701,6 +701,9 @@ parts:
 在`themes/mustom`主题目录中`source/asset/js/main.js`对号插入以下代码：
 
 ``` js
+// 头部所有import下面
+import links from './part/links.js';
+
 /* Ctrl+F 查找 “Extra Operations”，在“Extra Operations”下添加代码加载组件到“links”单页面 */
 // Extra Operations
 if (/^\/(links)\//.test(pathname())) {
