@@ -15,9 +15,9 @@ Theme [Mustom](//github.com/jinyaoMa/hexo-theme-mustom) does NOT SUPPORT variabl
 
 GALLERY POST NOT SUPPORTTED!!!
 
-![Widescreen wallpaper](/gallery/wallpaper-2572384.jpg)
-![Portrait photo](/gallery/wallpaper-2311325.jpg)
-![Dual widescreen wallpaper](/gallery/wallpaper-878514.jpg)
+![Widescreen wallpaper](//raw.githubusercontent.com/hexojs/hexo-theme-unit-test/master/source/assets/wallpaper-2572384.jpg)
+![Portrait photo](//raw.githubusercontent.com/hexojs/hexo-theme-unit-test/master/source/assets/wallpaper-2311325.jpg)
+![Dual widescreen wallpaper](//raw.githubusercontent.com/hexojs/hexo-theme-unit-test/master/source/assets/wallpaper-878514.jpg)
 ![Small photo](//placehold.it/350x150.jpg)
 
 This post contains 4 photos:
