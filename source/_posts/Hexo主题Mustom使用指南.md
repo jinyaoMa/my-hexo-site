@@ -732,6 +732,7 @@ if (/^\/(links)\//.test(pathname())) {
 想要停用某个单页面组件只要在单页面所属`source/YourPage/index.md`里面的front-matter中注释掉组件标记即可，例如：
 
 ``` yml
+---
 title: links
 layout: page
 name: links
