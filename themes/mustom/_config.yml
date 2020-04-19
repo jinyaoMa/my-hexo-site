@@ -21,7 +21,7 @@ hitokoto:
   icon: '<i class="fas fa-circle-notch fa-fw"></i>'
   image: /asset/img/qf3cu.huaji.png
   api: //v1.hitokoto.cn
-  type: r # a - Anime, b - Comic, c - Game, d - Novel, e - Myself, f - Internet, g - Other, r - Random
+  type: i # https://developer.hitokoto.cn/sentence/#请求参数
   content: 感谢一言网(Hitokoto.cn)提供一句话服务
   name: jinyaoMa
 brand:
