@@ -10,3 +10,4 @@ package-lock.json
 yarn.lock
 Jenkinsfile
 /_config.yml
+source/_posts/SyncToy*
