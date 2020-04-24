@@ -141,7 +141,7 @@ post:
 page:
   icon: '<i class="fas fa-file-alt fa-fw"></i>'
 toc:
-  icon: '<i class="fas fa-paragraph fa-fw"></i>'
+  icon: '<i class="fas fa-bookmark fa-fw"></i>'
 search:
   close: '<i class="fas fa-times fa-fw"></i>'
 extension:
