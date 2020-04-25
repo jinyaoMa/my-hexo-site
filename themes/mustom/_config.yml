@@ -183,11 +183,11 @@ serviceWorker:
   opts:
     networkTimeoutSeconds: 5
   routes:
-    - pattern: !!js/regexp /(baidu.com|google)/
+    - pattern: !!js/regexp /(http[^s]|baidu.com|google.com)/
       strategy: networkOnly
-    - pattern: !!js/regexp /\/asset\/part\/.+\.(html)$/
+    - pattern: !!js/regexp /(localhost|ma-jinyao).*\/asset\/part\/.+\.(html)$/
       strategy: cacheFirst
-    - pattern: !!js/regexp /.+\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|eot|ttf|woff|woff2|otf|mtn|moc|json)(\?.*)?$/
+    - pattern: !!js/regexp /(localhost|ma-jinyao).+\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|eot|ttf|woff|woff2|otf|mtn|moc|json)(\?.*)?$/
       strategy: cacheFirst
     - pattern: !!js/regexp /\//
       strategy: networkFirst
@@ -196,3 +196,5 @@ adframe:
     qrcode: '<i class="fas fa-qrcode"></i>'
     close: '<i class="fas fa-times-circle"></i>'
   ad: /ad.png
+empty:
+  image: /asset/img/empty.min.png

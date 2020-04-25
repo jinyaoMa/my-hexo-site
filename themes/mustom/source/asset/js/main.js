@@ -39,6 +39,7 @@ import records from "./part/records.js";
 import gallery from "./part/gallery.js";
 import xcanvas from "./part/xcanvas.js";
 import adframe from "./part/adframe.js";
+import empty from "./part/empty.js";
 
 _run_APlayer();
 _run_AV();
@@ -224,7 +225,12 @@ const fixMainHeight = o => {
     let aside = root.querySelector('.m-aside');
     let footer = root.querySelector('.m-footer');
     let maxHeight = drawer.scrollHeight > aside.scrollHeight ? drawer.scrollHeight : aside.scrollHeight;
-    main.style.minHeight = (maxHeight - footer.offsetHeight) * 1.35 + 'px';
+    let emptySpace = (maxHeight - footer.offsetHeight) * 1.35 - main.scrollHeight + empty.getHeight(); // offset 0.35
+    if (emptySpace > 0) {
+      empty.setHeight(emptySpace);
+    } else {
+      empty.setHeight(0);
+    }
   });
 };
 
@@ -646,7 +652,8 @@ live2d(z => {
         pather: false,
         audioplayer: false,
         xcanvas: false,
-        adframe: false
+        adframe: false,
+        empty: false
       };
       let looper = window.setInterval(o => {
         let flag = true;
@@ -719,6 +726,9 @@ live2d(z => {
       });
       adframe.init(null, el => {
         checklist.adframe = true;
+      });
+      empty.init(null, el => {
+        checklist.empty = true;
       });
       xdrawer.init({
         onclick(state) {

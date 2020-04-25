@@ -1,0 +1,28 @@
+@keyframes empty-appear
+  from
+    opacity 0
+  to
+    opacity 1
+
+.p-empty
+  height 0
+  overflow hidden
+  margin $gap * 4 0
+  border-radius $gap * 0.5
+  border 1px solid var(--color-clear)
+  background var(--color-background)
+  line-height 1
+  user-select none
+  pointer-events none
+  animation empty-appear 0.6s ease
+  transition height 0.6s
+  @media (max-width: $app_mobile_width)
+    display none
+  img
+    display block
+    margin 0 auto
+
+:root
+  &.colorful, &.gray
+    .p-empty img
+      filter invert(100%)

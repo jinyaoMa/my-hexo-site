@@ -134,7 +134,7 @@ records:
     audio: Audio
 codelib:
   captions:
-    log: LOG
+    log: LOGS
     stack: STACK
   more: MORE
   less: LESS
