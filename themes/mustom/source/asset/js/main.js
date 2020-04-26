@@ -221,11 +221,11 @@ const setSticky = o => {
 const fixMainHeight = o => {
   util.runOnDesktop(p => {
     let main = root.querySelector('.m-main');
-    let drawer = root.querySelector('.m-drawer');
-    let aside = root.querySelector('.m-aside');
+    let drawer = root.querySelector('.m-drawer-mark');
+    let aside = root.querySelector('.m-aside-mark');
     let footer = root.querySelector('.m-footer');
-    let maxHeight = drawer.scrollHeight > aside.scrollHeight ? drawer.scrollHeight : aside.scrollHeight;
-    let emptySpace = (maxHeight - footer.offsetHeight) * 1.35 - main.scrollHeight + empty.getHeight(); // offset 0.35
+    let maxHeight = drawer.offsetTop > aside.offsetTop ? drawer.offsetTop : aside.offsetTop;
+    let emptySpace = (maxHeight - footer.offsetHeight) * 1.2 - main.scrollHeight + empty.getHeight(); // offset 0.2
     if (emptySpace > 0) {
       empty.setHeight(emptySpace);
     } else {
@@ -237,12 +237,12 @@ const fixMainHeight = o => {
 const scrolling = e => {
   util.runOnDesktop(o => {
     let aside = root.querySelector('.m-aside');
-    aside.scrollTop = window.scrollY * 0.65; // offset 0.35
+    aside.scrollTop = window.scrollY * 0.8; // offset 0.2
 
     let drawer = root.querySelector('.m-drawer');
     //let content = root.querySelector('.m-content');
     //let drawerTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (content.offsetHeight + content.offsetTop - window.innerHeight);
-    let drawerTop = window.scrollY * 0.65; // offset 0.35
+    let drawerTop = window.scrollY * 0.8; // offset 0.2
     drawer.scrollTop = drawerTop;
   });
 };
