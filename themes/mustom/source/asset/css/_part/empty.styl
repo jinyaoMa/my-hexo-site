@@ -6,33 +6,33 @@
 
 @keyframes empty-ball
   0%
-    transform translate3d(32px,0,0)
+    transform translate3d(0,0,0)
   $y = 0px
   for $num in (1 9 17 25 33 41)
     {$num}\%
       transform translate3d(32px,$y,0)
-    $num += 5
+    $num += 4.5
     $y += 80px
     {$num}\%
       transform translate3d(160px,$y,0)
     $num += 1
     {$num}\%
       transform translate3d(100px,$y,0)
-    $num += 1
+    $num += 1.5
     $y += 50px
     {$num}\%
       transform translate3d(24px,$y,0)
   for $num in (51 59 67 75 83 91)
     {$num}\%
       transform translate3d(24px,$y,0)
-    $num += 1
+    $num += 1.5
     $y -= 50px
     {$num}\%
       transform translate3d(100px,$y,0)
     $num += 1
     {$num}\%
       transform translate3d(160px,$y,0)
-    $num += 5
+    $num += 4.5
     $y -= 80px
     {$num}\%
       transform translate3d(32px,$y,0)
