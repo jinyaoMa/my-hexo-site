@@ -226,9 +226,14 @@ const fixMainHeight = o => {
     let footer = root.querySelector('.m-footer');
     let maxHeight = drawer.offsetTop > aside.offsetTop ? drawer.offsetTop : aside.offsetTop;
     let emptySpace = (maxHeight - footer.offsetHeight) * 1.2 - main.scrollHeight + empty.getHeight(); // offset 0.2
+    let realEmptyImgHeight = 128;
     if (emptySpace > 0) {
       empty.show();
-      empty.setHeight(emptySpace);
+      if (emptySpace < realEmptyImgHeight) { // real empty image height
+        empty.setHeight(realEmptyImgHeight);
+      } else {
+        empty.setHeight(emptySpace);
+      }
     } else {
       empty.setHeight(0);
       util.delay(600, o => {
