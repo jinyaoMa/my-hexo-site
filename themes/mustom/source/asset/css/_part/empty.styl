@@ -41,12 +41,13 @@
 
 .p-empty
   height 0
+  min-height 128px // real image height
   max-height s('calc(100vh - %s - 3em - %s)', $progress_height, $gap * 8)
   overflow hidden
   margin $gap * 4 0
   border-radius $gap * 0.5
   border 1px solid var(--color-clear)
-  background var(--color-background)
+  background var(--color-clear)
   line-height 1
   user-select none
   pointer-events none
