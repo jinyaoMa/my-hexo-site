@@ -24,9 +24,21 @@ const setHeight = h => {
   element.style.height = h + 'px';
 };
 
+const hide = o => {
+  if (!element) return;
+  element.style.display = 'none';
+};
+
+const show = o => {
+  if (!element) return;
+  element.style.display = 'block';
+};
+
 export default {
   tag,
   init,
   setHeight,
-  getHeight
+  getHeight,
+  hide,
+  show
 };

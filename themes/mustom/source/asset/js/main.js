@@ -227,9 +227,13 @@ const fixMainHeight = o => {
     let maxHeight = drawer.offsetTop > aside.offsetTop ? drawer.offsetTop : aside.offsetTop;
     let emptySpace = (maxHeight - footer.offsetHeight) * 1.2 - main.scrollHeight + empty.getHeight(); // offset 0.2
     if (emptySpace > 0) {
+      empty.show();
       empty.setHeight(emptySpace);
     } else {
       empty.setHeight(0);
+      util.delay(600, o => {
+        empty.hide();
+      });
     }
   });
 };
