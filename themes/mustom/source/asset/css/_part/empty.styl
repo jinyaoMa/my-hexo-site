@@ -67,12 +67,13 @@
     border-radius 50%
     background var(--color-text)
     margin $gap calc(50% - 102px)
-    animation empty-ball 6s linear infinite
+    animation empty-ball 24s linear infinite
 
 :root:not(.night)
-  &.gray
-    .p-empty img
-      filter invert(100%)
   &.colorful
     .p-empty img
       filter sepia(100%)
+      
+:root.night
+  .p-empty img
+    filter invert(90%)
