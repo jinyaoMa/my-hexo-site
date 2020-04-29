@@ -183,7 +183,7 @@ serviceWorker:
   opts:
     networkTimeoutSeconds: 5
   routes:
-    - pattern: !!js/regexp /(baidu.com|google.com)/
+    - pattern: !!js/regexp /(baidu.com|google.com|i-meto.com)/
       strategy: networkOnly
     - pattern: !!js/regexp /(localhost|ma-jinyao).*\/asset\/part\/.+\.(html)$/
       strategy: cacheFirst
