@@ -225,7 +225,7 @@ const fixMainHeight = o => {
     let aside = root.querySelector('.m-aside-mark');
     let footer = root.querySelector('.m-footer');
     let maxHeight = drawer.offsetTop > aside.offsetTop ? drawer.offsetTop : aside.offsetTop;
-    let emptySpace = (maxHeight - footer.offsetHeight) * 1.2 - main.scrollHeight + empty.getHeight(); // offset 0.2
+    let emptySpace = (maxHeight - footer.offsetHeight) * 1.3 - main.scrollHeight + empty.getHeight(); // offset 0.3
     let realEmptyImgHeight = 128;
     if (emptySpace > 0) {
       empty.show();
@@ -246,12 +246,12 @@ const fixMainHeight = o => {
 const scrolling = e => {
   util.runOnDesktop(o => {
     let aside = root.querySelector('.m-aside');
-    aside.scrollTop = window.scrollY * 0.8; // offset 0.2
+    aside.scrollTop = window.scrollY * 0.7; // offset 0.3
 
     let drawer = root.querySelector('.m-drawer');
     //let content = root.querySelector('.m-content');
     //let drawerTop = (drawer.scrollHeight - drawer.offsetHeight) * window.scrollY / (content.offsetHeight + content.offsetTop - window.innerHeight);
-    let drawerTop = window.scrollY * 0.8; // offset 0.2
+    let drawerTop = window.scrollY * 0.7; // offset 0.3
     drawer.scrollTop = drawerTop;
   });
 };

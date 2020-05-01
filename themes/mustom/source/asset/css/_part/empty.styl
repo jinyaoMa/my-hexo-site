@@ -22,7 +22,9 @@
     $y += 50px
     {$num}\%
       transform translate3d(24px,$y,0)
+    $y -= 2px
   for $num in (51 59 67 75 83 91)
+    $y += 2px
     {$num}\%
       transform translate3d(24px,$y,0)
     $num += 1.5
@@ -41,7 +43,6 @@
 
 .p-empty
   height 0
-  max-height s('calc(100vh - %s - 3em - %s)', $progress_height, $gap * 8)
   overflow hidden
   margin $gap * 4 0
   border-radius $gap * 0.5
