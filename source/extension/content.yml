@@ -23,6 +23,10 @@
   icon: /extension/palette/icon.png
   link: /extension/palette/
 
+- name: CS Handbook
+  icon: //www.thecshandbook.com/public_html/img/favicon.png
+  link: //www.thecshandbook.com
+
 - name: 在线工具
   icon: //tool.oschina.net/img/favicon.ico
   link: //tool.oschina.net
