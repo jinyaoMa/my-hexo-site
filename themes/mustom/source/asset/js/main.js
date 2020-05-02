@@ -489,6 +489,14 @@ const linksStore = {
     if (url !== window.location.href) {
       pjax.run(url, data => {
         history.pushState({ url }, data.title, url);
+        fetch("//busuanzi.ibruce.info/busuanzi", {
+          jsonpCallback: "BusuanziCallback_" + Math.floor(1099511627776 * Math.random())
+        }, result => {
+          footer.update({
+            site_pv: result && result.site_pv ? result.site_pv : '∞',
+            site_uv: result && result.site_uv ? result.site_uv : '∞',
+          });
+        }, true);
       });
     }
     xsearch.off();
@@ -590,7 +598,7 @@ live2d(z => {
           footer.update({
             site_pv: result && result.site_pv ? result.site_pv : '∞',
             site_uv: result && result.site_uv ? result.site_uv : '∞',
-            site_wd: sdata && sdata.word4site ? sdata.word4site : '∞',
+            site_wd: sdata && sdata.word4site ? sdata.word4site : '∞'
           });
         }, true);
         checklist.footer = true;
