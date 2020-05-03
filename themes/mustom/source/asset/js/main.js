@@ -40,6 +40,7 @@ import gallery from "./part/gallery.js";
 import xcanvas from "./part/xcanvas.js";
 import adframe from "./part/adframe.js";
 import empty from "./part/empty.js";
+import notification from "./part/notification.js";
 
 _run_APlayer();
 _run_AV();
@@ -670,7 +671,8 @@ live2d(z => {
         audioplayer: false,
         xcanvas: false,
         adframe: false,
-        empty: false
+        empty: false,
+        notification: false
       };
       let looper = window.setInterval(o => {
         let flag = true;
@@ -688,6 +690,10 @@ live2d(z => {
       }, lock_wait);
 
       evanyou.init('.m-evanyou-canvas');
+
+      notification.init(null, o => {
+        checklist.notification = true;
+      });
 
       xcanvas.init({
         noCanvas: noCanvas.value,
@@ -808,6 +814,15 @@ live2d(z => {
               listen2Links();
               listen2Title();
               progress.to(100);
+
+              let message = ldata.notification.welcome;
+              let chromeVer = util.getChromeVersion();
+              if (chromeVer < 70) {
+                message += ldata.notification.browser;
+              }
+              if (notification.isFirstNotify()) {
+                notification.show(message);
+              }
             });
           } else if (key === 'transfigure') {
             flag ? root.classList.add('transfigure') : root.classList.remove('transfigure');

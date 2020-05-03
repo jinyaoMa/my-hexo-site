@@ -198,3 +198,5 @@ adframe:
   ad: /ad.png
 empty:
   image: /asset/img/empty.min.png
+notification:
+  icon: '<i class="fas fa-info-circle"></i>'

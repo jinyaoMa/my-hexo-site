@@ -138,3 +138,6 @@ codelib:
     stack: STACK
   more: MORE
   less: LESS
+notification:
+  welcome: Welcome to my website!
+  browser: It's recommended to use the latest Google Chrome for browsing this website.
