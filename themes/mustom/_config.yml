@@ -176,7 +176,7 @@ manifest:
       type: image/png
   start_url: /index.html
   theme_color: "#000000"
-  background_color: "#ffffff"
+  background_color: "#ff3300"
   display: standalone
   orientation: portrait
 serviceWorker:
