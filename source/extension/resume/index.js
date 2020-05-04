@@ -37,6 +37,8 @@ function fillPersonal(data) {
   email.innerHTML = data.resume.side.personal.email;
   var www = document.querySelector('#www');
   www.innerHTML = data.resume.side.personal.www;
+  var github = document.querySelector('#github');
+  github.innerHTML = data.resume.side.personal.github;
 }
 
 function fillSkill(data) {
@@ -48,8 +50,6 @@ function fillSkill(data) {
   database.innerHTML = data.resume.side.skill.database;
   var tool = document.querySelector('#tool');
   tool.innerHTML = data.resume.side.skill.tool;
-  var other = document.querySelector('#other');
-  other.innerHTML = data.resume.side.skill.other;
 }
 
 function fillLanguage(data) {

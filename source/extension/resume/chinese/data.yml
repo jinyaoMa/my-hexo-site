@@ -10,13 +10,13 @@ resume:
       address: 广东省江门市
       phone: N/A
       email: jinyao.ma@outlook.com
-      www: ma-jinyao.cn
+      www: https://ma-jinyao.cn
+      github: https://github.com/jinyaoMa
     skill:
       frontend: Vue, jQuery
       backend: ASP.NET, Laravel, CodeIgniter
       database: MySQL, Oracle, Redis
-      tool: Git, Selenium
-      other: HTTP, TCP/IP, WebSocket
+      tool: Git, Hexo, Selenium
     language:
       - name: 普通话
         data: 67
