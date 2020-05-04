@@ -9,6 +9,7 @@ license:
   image: /asset/img/by-nc-sa.svg
   name: BY-NC-SA
   icon: '<i class="fab fa-creative-commons"></i>'
+appleIcon: /asset/img/android-chrome-192x192.png
 favicon:
   small: /asset/img/icon.small.png
   medium: /asset/img/icon.medium.png
@@ -181,13 +182,17 @@ manifest:
 serviceWorker:
   path: /sw.js
   opts:
-    networkTimeoutSeconds: 5
+    networkTimeoutSeconds: 15
   routes:
     - pattern: !!js/regexp /(baidu.com|google.com|i-meto.com)/
       strategy: networkOnly
-    - pattern: !!js/regexp /(localhost|ma-jinyao).*\/asset\/part\/.+\.(html)$/
+    - pattern: !!js/regexp /manifest.json(\?.*)?$/
+      strategy: networkFirst
+    - pattern: !!js/regexp /.*\/asset\/lang\/.+\.(json)(\?.*)?$/
+      strategy: networkFirst
+    - pattern: !!js/regexp /.*\/asset\/part\/.+\.(html)(\?.*)?$/
       strategy: cacheFirst
-    - pattern: !!js/regexp /(localhost|ma-jinyao).+\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|eot|ttf|woff|woff2|otf|mtn|moc|json)(\?.*)?$/
+    - pattern: !!js/regexp /.+\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|eot|ttf|woff|woff2|otf|mtn|moc|json)(\?.*)?$/
       strategy: cacheFirst
     - pattern: !!js/regexp /\//
       strategy: networkFirst

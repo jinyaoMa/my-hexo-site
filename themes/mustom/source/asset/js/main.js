@@ -297,7 +297,6 @@ const final_load = o => util.layoutParts(parts => {
 
   if (/^\/(index.html)?$/.test(pathname())) {
     parts.includes('hitokoto') && hitokoto.init(null, el => {
-      hitokoto.update();
       checklist.hitokoto = true;
       progress.step(stepping);
     });
@@ -805,6 +804,7 @@ live2d(z => {
             progress.to(90);
             menus.update();
             pather.update();
+            hitokoto.update();
             lang(flag ? 'en' : 'zh-cn', ldata => {
               comment.update(ldata);
               post.updateShare(ldata);
@@ -815,13 +815,15 @@ live2d(z => {
               listen2Title();
               progress.to(100);
 
-              let message = ldata.notification.welcome;
-              let chromeVer = util.getChromeVersion();
-              if (chromeVer < 70) {
-                message += ldata.notification.browser;
-              }
-              if (notification.isFirstNotify()) {
-                notification.show(message);
+              if (ldata.notification) {
+                let message = ldata.notification.welcome;
+                let chromeVer = util.getChromeVersion();
+                if (chromeVer < 69) {
+                  message += ldata.notification.browser;
+                }
+                if (notification.isFirstNotify()) {
+                  notification.show(message);
+                }
               }
             });
           } else if (key === 'transfigure') {
@@ -875,6 +877,7 @@ live2d(z => {
           } else if (key === 'langshift') {
             progress.to(90);
             menus.update();
+            hitokoto.update();
             lang(flag ? 'en' : 'zh-cn', ldata => {
               comment.update(ldata);
               post.updateShare(ldata);
