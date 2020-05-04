@@ -24,7 +24,7 @@ const init = (params, callback) => {
 
 const show = (text, onClose, time = 10000) => {
   if (!element) return;
-  element.querySelector('.p-notification-text').innerText = text;
+  element.querySelector('.p-notification-text').innerHTML = text;
   element.classList.add('active');
   window.clearInterval(looper);
   looper = window.setInterval(o => {
