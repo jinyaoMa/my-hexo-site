@@ -10,7 +10,7 @@ const time = 320;
 const init = (params, callback) => {
   part(tag, el => {
     element = el;
-    document.querySelector(tag).replaceWith(element);
+    document.querySelector(tag) && document.querySelector(tag).replaceWith(element);
     callback && callback(element);
   });
 };
