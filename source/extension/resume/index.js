@@ -93,55 +93,59 @@ function fillEducation(data) {
     var field = document.createElement('td');
     var grade = document.createElement('td');
     field.innerHTML = edu.field;
-    grade.innerHTML = (html.lang === 'zh' ? '成绩' : 'Grade') + ':&nbsp;' + edu.grade;
+    grade.innerHTML = edu.grade ? (html.lang === 'zh' ? '成绩' : 'Grade') + ':&nbsp;' + edu.grade : '';
     tr1.appendChild(field);
     tr1.appendChild(grade);
 
     table.appendChild(tr0);
     table.appendChild(tr1);
 
-    var tr2 = document.createElement('tr');
-    var extend = document.createElement('td');
-    var ruler = document.createElement('div');
-    var desc = document.createElement('div');
-    ruler.className = 'ruler';
-    desc.className = 'desc';
-    extend.appendChild(ruler);
-    extend.appendChild(desc);
-    var gridWidth = 100 / edu.semester;
-    edu.extend.forEach(function (ex, i) {
-      if (ex.data.length === 2) {
-        var block = document.createElement('div');
-        var sub = document.createElement('div');
-        sub.className = 'sub';
-        sub.setAttribute('data-num', i + 1);
-        sub.style.width = ex.data[1] * gridWidth + '%';
-        var sup = document.createElement('div');
-        sup.className = 'sup';
-        sup.style.width = ex.data[0] * gridWidth + '%';
-        block.appendChild(sub);
-        block.appendChild(sup);
-        ruler.appendChild(block);
+    if (edu.extend) {
+      var tr2 = document.createElement('tr');
+      var extend = document.createElement('td');
+      var ruler = document.createElement('div');
+      var desc = document.createElement('div');
+      ruler.className = 'ruler';
+      desc.className = 'desc';
+      extend.appendChild(ruler);
+      extend.appendChild(desc);
+      var gridWidth = 100 / edu.semester;
+      edu.extend.forEach(function (ex, i) {
+        if (ex.data.length === 2) {
+          var block = document.createElement('div');
+          var sub = document.createElement('div');
+          sub.className = 'sub';
+          sub.setAttribute('data-num', i + 1);
+          sub.style.width = ex.data[1] * gridWidth + '%';
+          var sup = document.createElement('div');
+          sup.className = 'sup';
+          sup.style.width = ex.data[0] * gridWidth + '%';
+          block.appendChild(sub);
+          block.appendChild(sup);
+          ruler.appendChild(block);
+  
+          var inlineBlock = document.createElement('div');
+          inlineBlock.innerHTML = ex.name;
+          desc.appendChild(inlineBlock);
+        }
+      });
+      tr2.appendChild(extend);
+      table.appendChild(tr2);
+    }
 
-        var inlineBlock = document.createElement('div');
-        inlineBlock.innerHTML = ex.name;
-        desc.appendChild(inlineBlock);
-      }
-    });
-    tr2.appendChild(extend);
-    table.appendChild(tr2);
-
-    var tr3 = document.createElement('tr');
-    var desc = document.createElement('td');
-    var ul = document.createElement('ul');
-    edu.desc.forEach(function (text) {
-      var li = document.createElement('li');
-      li.innerHTML = text;
-      ul.appendChild(li);
-    });
-    desc.appendChild(ul);
-    tr3.appendChild(desc);
-    table.appendChild(tr3);
+    if (edu.desc) {
+      var tr3 = document.createElement('tr');
+      var desc = document.createElement('td');
+      var ul = document.createElement('ul');
+      edu.desc.forEach(function (text) {
+        var li = document.createElement('li');
+        li.innerHTML = text;
+        ul.appendChild(li);
+      });
+      desc.appendChild(ul);
+      tr3.appendChild(desc);
+      table.appendChild(tr3);
+    }
 
     education.appendChild(table);
   });

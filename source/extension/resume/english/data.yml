@@ -20,6 +20,10 @@ resume:
   main:
     intro: Good programming practice. Pursue code readability, modularization and reusability. Good anti-stress ability. Familiar with Node.js and tools like git, npm, webpack; also with ASP.NET and tools like TFS, SVN. Highly innovative. Good analytical and entrepreneurial skills that lead to find out newer ideas from existing systems and data. Highly adaptable. Continual self-learner. Enjoys working both as a team member and individual.
     education:
+      - school: McMaster University
+        start: 2020/05
+        end: NOW
+        field: Software Engineering
       - school: Mohawk College
         start: 2016/01
         end: 2019/12
@@ -60,12 +64,6 @@ resume:
           - Designed and developed my website using Hexo generator
           - Theme developed using ES6, Stylus and EJS
           - Impelemented PJAX to boost at least 22% of user experience score
-      - title: Login Status Monitering Lab
-        start: 2018/09
-        end: 2018/12
-        desc:
-          - Developed a status monitering web application using Node.js and Vue.js
-          - Used socket.io to send status to the moniter continuously
       - title: Audio Information/Source Spider
         start: 2018/04
         end: 2018/09
