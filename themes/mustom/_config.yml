@@ -9,7 +9,7 @@ license:
   image: /asset/img/by-nc-sa.svg
   name: BY-NC-SA
   icon: '<i class="fab fa-creative-commons"></i>'
-appleIcon: /asset/img/android-chrome-192x192.png
+appleIcon: /asset/img/author.medium.png
 favicon:
   small: /asset/img/icon.small.png
   medium: /asset/img/icon.medium.png
@@ -176,7 +176,7 @@ manifest:
       type: image/png
   start_url: /index.html
   theme_color: "#000000"
-  background_color: "#ff3300"
+  background_color: "#ffffff"
   display: standalone
   orientation: portrait
 serviceWorker:
