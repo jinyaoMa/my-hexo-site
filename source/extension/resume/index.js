@@ -54,6 +54,7 @@ function fillSkill(data) {
 
 function fillLanguage(data) {
   var language = document.querySelector('#language');
+  if (!language) return;
   var ruler = language.querySelector('.ruler');
   var desc = language.querySelector('.desc');
   var languages = data.resume.side.language;

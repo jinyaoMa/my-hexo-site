@@ -17,11 +17,6 @@ resume:
       backend: ASP.NET, Laravel, CodeIgniter
       database: MySQL, Oracle, Redis
       tool: Git, Hexo, Selenium
-    language:
-      - name: Chinese
-        data: 67
-      - name: English
-        data: 33
   main:
     intro: Good programming practice. Pursue code readability, modularization and reusability. Good anti-stress ability. Familiar with Node.js and tools like git, npm, webpack; also with ASP.NET and tools like TFS, SVN. Highly innovative. Good analytical and entrepreneurial skills that lead to find out newer ideas from existing systems and data. Highly adaptable. Continual self-learner. Enjoys working both as a team member and individual.
     education:
