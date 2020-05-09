@@ -37,8 +37,15 @@ const set = (key, flag) => {
   listener && listener(key, flag);
 }
 
+const transfigure = flag => {
+  if (!element) return;
+  let target = element.querySelector(`[data-settings-key="transfigure"]`);
+  flag ? target.style.display = 'block' : target.style.display = 'none';
+}
+
 export default {
   tag,
   init,
-  set
+  set,
+  transfigure
 };

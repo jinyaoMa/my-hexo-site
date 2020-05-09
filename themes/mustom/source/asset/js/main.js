@@ -75,7 +75,7 @@ const noCanvas = {
   value: (o => {
     let v = storage.get('noCanvas');
     if (v === null) {
-      return false; // default
+      return true; // default
     }
     return v;
   })(),
@@ -698,6 +698,7 @@ live2d(z => {
         noCanvas: noCanvas.value,
         onchange(flag, el) {
           noCanvas.update(flag);
+          settings.transfigure(!flag);
           let l2d = root.querySelector('#live2d-widget');
           let header = root.querySelector('.m-header');
           if (flag) {
@@ -836,6 +837,7 @@ live2d(z => {
             flag && audioplayer.play();
           }
           config.set(key, flag);
+          settings.transfigure(!noCanvas.value);
         }
       }, el => {
         checklist.settings = true;
