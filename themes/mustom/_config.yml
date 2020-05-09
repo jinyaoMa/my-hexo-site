@@ -186,13 +186,9 @@ serviceWorker:
   routes:
     - pattern: !!js/regexp /(baidu.com|google.com|i-meto.com)/
       strategy: networkOnly
-    - pattern: !!js/regexp /manifest.json(\?.*)?$/
-      strategy: networkFirst
-    - pattern: !!js/regexp /.*\/asset\/lang\/.+\.(json)(\?.*)?$/
-      strategy: networkFirst
     - pattern: !!js/regexp /.*\/asset\/part\/.+\.(html)(\?.*)?$/
       strategy: cacheFirst
-    - pattern: !!js/regexp /.+\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|eot|ttf|woff|woff2|otf|mtn|moc|json)(\?.*)?$/
+    - pattern: !!js/regexp /.+\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|eot|ttf|woff|woff2|otf|mtn|moc)(\?.*)?$/
       strategy: cacheFirst
     - pattern: !!js/regexp /\//
       strategy: networkFirst
