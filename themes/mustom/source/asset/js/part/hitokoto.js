@@ -36,7 +36,7 @@ const update = o => {
             if (!element || pointer > data.hitokoto.length) {
               window.clearInterval(looper);
               isLooping = false;
-              window.setTimeout(update, time * 50);
+              window.setTimeout(update, time * 600);
             } else {
               element.querySelector('.p-hitokoto-content').innerText = data.hitokoto.substr(0, pointer++);
             }
