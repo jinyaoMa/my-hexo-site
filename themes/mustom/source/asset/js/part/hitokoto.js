@@ -5,7 +5,8 @@ let tag = 'hitokoto';
 let element = null;
 
 let looper = null;
-const time = 320;
+let isLooping = false;
+const time = 160;
 
 const init = (params, callback) => {
   part(tag, el => {
@@ -16,7 +17,7 @@ const init = (params, callback) => {
 };
 
 const update = o => {
-  if (!element) return;
+  if (!element || isLooping) return;
   let type = element.getAttribute('data-type');
   ajax({
     url: element.getAttribute('data-api'),
@@ -29,10 +30,21 @@ const update = o => {
       let pointer = 0;
       window.clearInterval(looper);
       looper = window.setInterval(o => {
-        if (pointer > data.hitokoto.length) {
+        if (!element || element.querySelector('.p-hitokoto-content').innerText.length === 0) {
           window.clearInterval(looper);
+          looper = window.setInterval(o => {
+            if (!element || pointer > data.hitokoto.length) {
+              window.clearInterval(looper);
+              isLooping = false;
+              window.setTimeout(update, time * 50);
+            } else {
+              element.querySelector('.p-hitokoto-content').innerText = data.hitokoto.substr(0, pointer++);
+            }
+          }, time);
         } else {
-          element.querySelector('.p-hitokoto-content').innerText = data.hitokoto.substr(0, pointer++);
+          let temp = element.querySelector('.p-hitokoto-content').innerText;
+          element.querySelector('.p-hitokoto-content').innerText = temp.substr(0, temp.length - 1);
+          isLooping = true;
         }
       }, time);
       if (data.from_who === undefined || data.from_who === null || data.from_who.trim() === '') {
