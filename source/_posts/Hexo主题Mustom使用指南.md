@@ -1,5 +1,5 @@
 ---
-title: Hexo主题Mustom使用指南
+title: Hexo主题Mustom使用指南（对应主题1.0版）
 categories:
   - - Hexo
 tags:
