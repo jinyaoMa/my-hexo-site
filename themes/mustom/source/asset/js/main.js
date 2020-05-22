@@ -41,6 +41,7 @@ import xcanvas from "./part/xcanvas.js";
 import adframe from "./part/adframe.js";
 import empty from "./part/empty.js";
 import notification from "./part/notification.js";
+import iconlib from "./part/iconlib.js";
 
 _run_APlayer();
 _run_AV();
@@ -365,6 +366,23 @@ const final_load = o => util.layoutParts(parts => {
   }
 
   // Extra Operations
+  if (/^\/(icons)\//.test(pathname())) {
+    ajax({
+      url: '//api.github.com/repos/jinyaoMa/icon-lib/readme',
+      method: 'get',
+      headers: {
+        accept: 'application/vnd.github.v3.html'
+      },
+      success(data) {
+        parts.includes('iconlib') && iconlib.init({
+          readme: data
+        }, el => {
+          checklist.iconlib = true;
+          progress.step(stepping);
+        });
+      }
+    });
+  }
   if (/^\/(library)\//.test(pathname())) {
     ajax({
       url: '//api.github.com/repos/jinyaoMa/code-lib/readme',
