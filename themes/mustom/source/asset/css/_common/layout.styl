@@ -360,7 +360,7 @@ a
       text-align center
 
 :root.night
-  img
+  #live2d-widget, img
     filter brightness(0.8)
   .m-evanyou-canvas
     display initial
@@ -387,3 +387,17 @@ a
       box-shadow 0 1px 2px 1px var(--color-shadow)
     .m-heaper, .p-brand, .p-menus, .p-skin, .p-settings, .p-panels, .p-audioplayer, .p-toc, .p-hitokoto, .p-recentposts, .p-timeline, .p-post, .p-page, .p-record, .p-gallery-item, .p-comment, .p-footer, .p-search-dialog-bar, .p-search-dialog-result, .p-codelib, .p-empty, .p-iconlib
       border-width 0
+  .p-adframe-qrcode, .p-goingto-top, .p-goingto-bottom, .p-xcanvas
+    box-shadow 0 0 4px 2px var(--color-shadow)
+    &:hover
+      box-shadow 0 0 4px var(--color-shadow)
+    &:active
+      box-shadow inset 0 0 4px var(--color-shadow)
+  .p-adframe-content
+    box-shadow 0 0 4px 2px var(--color-shadow)
+  .p-extension
+    .p-extension-button, .p-extension-frame
+      box-shadow 0 0 4px 2px var(--color-shadow)
+    &:hover
+      .p-extension-button, .p-extension-frame
+        box-shadow none

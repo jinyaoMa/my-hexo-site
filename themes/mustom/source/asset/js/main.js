@@ -104,7 +104,7 @@ const live2d = callback => {
           height: 400,
           position: 'right',
           hOffset: 50,
-          vOffset: 0
+          vOffset: -50
         },
         mobile: {
           show: false

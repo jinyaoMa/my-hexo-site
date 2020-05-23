@@ -33,12 +33,3 @@
       display none
     i:nth-child(2)
       display inline-block
-
-@media (max-width: $float_button_min_app_width)
-  :root:not(.colorful)
-    .p-xcanvas
-      box-shadow 0 0 $gap 2px var(--color-goingto-shadow)
-      &:hover
-        box-shadow 0 0 $gap * 0.5 var(--color-goingto-shadow)
-      &:active
-        box-shadow inset 0 0 $gap * 0.25 1px var(--color-goingto-shadow)
