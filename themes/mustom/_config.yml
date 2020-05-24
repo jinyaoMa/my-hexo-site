@@ -191,7 +191,7 @@ serviceWorker:
   opts:
     networkTimeoutSeconds: 15
   routes:
-    - pattern: !!js/regexp /(baidu.com|google.com|i-meto.com)/
+    - pattern: !!js/regexp /(baidu.com|google.com|i-meto.com|font-mustom)/
       strategy: networkOnly
     - pattern: !!js/regexp /.*\/asset\/part\/.+\.(html)(\?.*)?$/
       strategy: cacheFirst
