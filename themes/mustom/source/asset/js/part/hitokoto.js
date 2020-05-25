@@ -31,6 +31,7 @@ const update = o => {
       c: type === null || type === 'r' ? '' : type
     },
     success: data => {
+      data.hitokoto = data.hitokoto.trim();
       let pointer = 0;
       looper = window.setInterval(o => {
         if (element.querySelector('.p-hitokoto-content').innerText.length === 0) {
@@ -46,9 +47,9 @@ const update = o => {
             }
           }, time);
           if (data.from_who === undefined || data.from_who === null || data.from_who.trim() === '') {
-            element.querySelector('.p-hitokoto-name').innerText = data.from;
+            element.querySelector('.p-hitokoto-name').innerText = data.from.trim();
           } else {
-            element.querySelector('.p-hitokoto-name').innerText = data.from_who;
+            element.querySelector('.p-hitokoto-name').innerText = data.from_who.trim();
           }
         } else {
           let temp = element.querySelector('.p-hitokoto-content').innerText;
