@@ -5,6 +5,7 @@ categories:
 tags:
   - SFWRTECH 3IT3
 mathjax: false
+abbrlink: 4759
 date: 2020-05-28 18:05:40
 updated: 2020-05-28 18:05:40
 ---
@@ -203,7 +204,7 @@ Answer:
 In classful IP addressing, what classful network would your Windows and CentOS IP addresses normally belong to? What “class” do they actually belong to, and why? Write the network address for the VMs in CIDR notation. What is the maximum number of hosts that can be configured in this subnet?
 
 Answer:
-Subnet Mask is `255.255.255.0` so it is actually a `Class C` => Network Address `10.0.2.0/24`. Number of possible hosts: 2 ^ 8 - 2 = 254.
+Subnet Mask is `255.255.255.0` so it is actually a `Class C` => Network Address `10.0.2.0/24`. Number of possible hosts: `2 ^ 8 - 2 = 254`.
 
 How could a computer detect an IP address conflict in the network when starting up, before it finishes loading its own IP network configuration? In other words, how could a computer determine whether an IP address is already in use on the network before it attempts to configure its network interface using the same address (which would then result in a conflict)?
 
