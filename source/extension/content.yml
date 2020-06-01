@@ -3,6 +3,10 @@
   icon: /asset/img/author.medium.png
   link: /
 
+- name: MPlayer
+  icon: /asset/img/icon.medium.png
+  link: /MPlayer
+
 - name: Resume
   icon: /extension/resume/icon.png
   link: /extension/resume/english/
