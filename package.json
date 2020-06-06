@@ -1,7 +1,8 @@
 {
-  "name": "hexo-site",
+  "name": "ma-jinyao.cn",
   "version": "0.0.0",
   "private": true,
+  "author": "jinyaoMa",
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
