@@ -17,7 +17,7 @@ This post is originated from [here](//gist.github.com/apackeer/4159268) and is u
 
 -------
 
-## Headers
+# Headers
 
 ```markdown
 # H1
