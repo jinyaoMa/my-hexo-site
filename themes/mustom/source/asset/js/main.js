@@ -504,6 +504,7 @@ const linksStore = {
     e.preventDefault();
     let url = this.href;
     if (url !== window.location.href) {
+      hitokoto.clear();
       pjax.run(url, data => {
         history.pushState({ url }, data.title, url);
         fetch("//busuanzi.ibruce.info/busuanzi", {
