@@ -65,8 +65,7 @@ const baiduPush = o => {
   let curProtocol = window.location.protocol.split(':')[0], url;
   if (curProtocol === 'https') {
     url = 'https://zz.bdstatic.com/linksubmit/push.js';
-  }
-  else {
+  } else {
     url = 'http://push.zhanzhang.baidu.com/push.js';
   }
   fetch(url, null, null, true);
@@ -287,7 +286,7 @@ const final_load = o => util.layoutParts(parts => {
       });
       activateSpinner(false);
       applyConfig();
-      baiduPush();
+      //baiduPush();
     }
   }, lock_wait);
   let stepping = 30 / Object.keys(checklist).length;
