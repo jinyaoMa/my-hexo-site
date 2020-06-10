@@ -77,6 +77,11 @@
         <div class="m-aside">
           <%- partial('_part/panels') %>
           <%- partial('_part/audioplayer') %>
+          <% if (config.clustrmaps && config.clustrmaps.enable) { %>
+          <div class="m-aside-clustrmaps">
+            <script id="<%= config.clustrmaps.id %>" src="<%= config.clustrmaps.src %>"></script>
+          </div>
+          <% } %>
           <%- partial('_part/toc') %>
           <div class="m-aside-mark"></div>
           <!-- END aside -->

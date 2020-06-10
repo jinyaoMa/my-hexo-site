@@ -140,6 +140,12 @@ valine:
 google_site_verification: ""
 baidu_site_verification: ""
 
+# clustrmaps访问监控，详情至：https://clustrmaps.com/
+clustrmaps:
+  enable: true
+  id: "clstr_globe" # clstr_globe / clustrmaps
+  src: "//cdn.clustrmaps.com/globe.js?d=..."
+
 # adScript: ''
 
 ```

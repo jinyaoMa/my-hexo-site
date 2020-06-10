@@ -208,6 +208,20 @@ a
   transition opacity 0.6s
   z-index zIndex(3) !important
 
+.m-aside-clustrmaps
+  user-select none
+  width $aside_width - $gap * 8
+  margin $gap * 4
+  padding $gap * 0.5
+  border-radius $gap * 0.5
+  border 1px solid var(--color-clear)
+  background var(--color-background)
+  overflow hidden
+  @media (max-width: $app_mobile_width)
+    width 100%
+    margin 0
+    border-radius 0
+
 .social-share
   .social-share-icon
     background white
@@ -369,10 +383,11 @@ a
       box-shadow 0 0 4px 2px var(--color-shadow)
     .p-translater-result
       box-shadow 0 2px 1px 1px var(--color-shadow)
-    .m-heaper, .p-brand, .p-menus, .p-skin, .p-settings, .p-panels, .p-audioplayer, .p-toc, .p-hitokoto, .p-recentposts, .p-timeline, .p-post, .p-page, .p-record, .p-gallery-item, .p-comment, .p-footer, .p-translater-bar, .p-search-dialog-bar, .p-search-dialog-result, .p-codelib, .p-empty, .p-iconlib
+    .m-heaper, .p-brand, .p-menus, .p-skin, .p-settings, .p-panels, .p-audioplayer, .p-toc, .p-hitokoto, .p-recentposts, .p-timeline, .p-post, .p-page, .p-record, .p-gallery-item, .p-comment, .p-footer, .p-translater-bar, .p-search-dialog-bar, .p-search-dialog-result, .p-codelib, .p-empty, .p-iconlib, .m-aside-clustrmaps
       box-shadow 0 1px 2px 1px var(--color-shadow)
-    .m-heaper, .p-brand, .p-menus, .p-skin, .p-settings, .p-panels, .p-audioplayer, .p-toc, .p-hitokoto, .p-recentposts, .p-timeline, .p-post, .p-page, .p-record, .p-gallery-item, .p-comment, .p-footer, .p-search-dialog-bar, .p-search-dialog-result, .p-codelib, .p-empty, .p-iconlib
+    .m-heaper, .p-brand, .p-menus, .p-skin, .p-settings, .p-panels, .p-audioplayer, .p-toc, .p-hitokoto, .p-recentposts, .p-timeline, .p-post, .p-page, .p-record, .p-gallery-item, .p-comment, .p-footer, .p-search-dialog-bar, .p-search-dialog-result, .p-codelib, .p-empty, .p-iconlib, .m-aside-clustrmaps
       border-width 2px
+      border-color #cccccc
   .p-adframe-qrcode, .p-goingto-top, .p-goingto-bottom, .p-xcanvas
     box-shadow 0 0 4px 2px var(--color-shadow)
     &:hover
