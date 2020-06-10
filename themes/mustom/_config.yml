@@ -191,7 +191,7 @@ serviceWorker:
   opts:
     networkTimeoutSeconds: 5
   routes:
-    - pattern: !!js/regexp /(hm.baidu.com|google.com|api.i-meto.com|github)/
+    - pattern: !!js/regexp /(hm.baidu.com|google.com|api.i-meto.com|api.github.com|clustrmaps.com)/
       strategy: networkOnly
     - pattern: !!js/regexp /(icon-lib|font-mustom|MPlayer)/
       strategy: networkOnly
