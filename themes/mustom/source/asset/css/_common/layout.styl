@@ -107,6 +107,10 @@ a
   margin 0 auto
   // background forestgreen
 
+@media (min-width $app_mobile_width)
+  .m-app-inner
+    padding 0 3em
+
 .m-header
   position fixed
   left 0
@@ -123,7 +127,7 @@ a
 
 .m-center
   width 100%
-  margin-top 3em
+  padding-top 3em
 
 .m-drawer
   float left
@@ -169,11 +173,12 @@ a
   @media (min-width $app_mobile_width_min)
     position fixed
     bottom 0
-    right s('calc(50% - %s)', $app_width * 0.5)
+    right s('calc(50% - %s + 3em)', $app_width * 0.5)
     height s('calc(100vh - 3em - %s)', $progress_height)
     overflow hidden
-  @media (min-width $app_mobile_width_min) and (max-width $app_width)
-    right 0
+  $app_width_special = $app_width + $font_size * 1.5 // 3em / 2
+  @media (min-width $app_mobile_width_min) and (max-width $app_width_special)
+    right 3em
 
 .m-main
   float left
@@ -217,7 +222,7 @@ a
   border 1px solid var(--color-clear)
   background var(--color-background)
   overflow hidden
-  @media (max-width: $app_mobile_width)
+  @media (max-width $app_mobile_width)
     width 100%
     margin 0
     border-radius 0
