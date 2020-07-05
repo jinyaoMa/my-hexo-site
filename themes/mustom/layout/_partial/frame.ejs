@@ -20,8 +20,9 @@
   <title><%= title %></title>
   <%- adScript ? adScript : '' %>
   <%- config.babelify ? '' : $nomjs('nomodule') %>
-  <%- $css('style') %>
-  <%- $mjs('main') %>
+  <%//- $css('style') %>
+  <%//- $mjs('main') %>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@latest/asset/css/style.css?t=<%= Date.now() %>">
 </head>
 
 <body>
@@ -102,6 +103,7 @@
       <!-- END app -->
     <!--</div>-->
   </div>
+  <script src="https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@latest/asset/js/main.js?t=<%= Date.now() %>"></script>
 </body>
 
 </html>
