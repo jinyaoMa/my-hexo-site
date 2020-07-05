@@ -106,11 +106,11 @@ a
   max-width $app_width
   margin 0 auto
   // background forestgreen
-
+/*
 @media (min-width $app_mobile_width)
   .m-app-inner
     padding 0 3em
-
+*/
 .m-header
   position fixed
   left 0
@@ -173,12 +173,12 @@ a
   @media (min-width $app_mobile_width_min)
     position fixed
     bottom 0
-    right s('calc(50% - %s + 3em)', $app_width * 0.5)
+    right s('calc(50% - %s)', $app_width * 0.5)
     height s('calc(100vh - 3em - %s)', $progress_height)
     overflow hidden
-  $app_width_special = $app_width + $font_size * 1.5 // 3em / 2
-  @media (min-width $app_mobile_width_min) and (max-width $app_width_special)
-    right 3em
+  //$app_width_special = $app_width + $font_size * 1.5 // 3em / 2
+  @media (min-width $app_mobile_width_min) and (max-width $app_width)//(max-width $app_width_special)
+    right 0
 
 .m-main
   float left
