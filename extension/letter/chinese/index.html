@@ -1,0 +1,46 @@
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="../icon.reverse.png">
+  <title>求职信</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+  <div id="letter">
+    <div id="brand">
+      <div id="frame">
+        <div class="top table">
+          <div id="avatar" class="table-cell">
+            <img src="/asset/img/author.large.png">
+          </div>
+          <div class="table-cell">
+            <div id="name"></div>
+            <div id="date"></div>
+            <div id="position" data-placeholder="选择一个工作岗位"></div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div id="email" data-icon="fas fa-envelope fa-fw"></div>
+          <div id="phone" contenteditable="true" data-icon="fas fa-phone fa-fw"></div>
+          <div id="address" contenteditable="true" data-icon="fas fa-map-marker-alt fa-fw"></div>
+          <div id="www" data-icon="fas fa-sitemap fa-fw"></div>
+          <div id="linkedin" data-icon="fab fa-linkedin fa-fw"></div>
+          <div id="github" data-icon="fab fa-github fa-fw"></div>
+        </div>
+        <div id="signal" data-icon="fas fa-angle-down"></div>
+      </div>
+    </div>
+    <div id="body" class="markdown-body"></div>
+  </div>
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.8.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+  <script src="../index.js"></script>
+</body>
+
+</html>
