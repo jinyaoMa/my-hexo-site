@@ -74,6 +74,8 @@ deploy:
   - type: git
     repo:
 
+CDN_ENABLE: true # layout.styl, frame.ejs, fontawesome.min.css, 搜索 cdn.jsdelivr.net 改 user/repo
+
 all_minifier: true # 如果装了 hexo-all-minifier
 markdown: # 如果换了原装 hexo-renderer-marked, 用了 hexo-renderer-markdown-it
   render:
