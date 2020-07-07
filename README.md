@@ -74,7 +74,10 @@ deploy:
   - type: git
     repo:
 
-CDN_ENABLE: true # layout.styl, frame.ejs, fontawesome.min.css, 搜索 cdn.jsdelivr.net 改 user/repo
+# layout.styl, frame.ejs, fontawesome.min.css, share.min.css, 搜索 cdn.jsdelivr.net 改 user/repo
+# 替换 https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.0/asset/font
+# 替换 https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.0/asset/img
+CDN_ENABLE: true
 
 all_minifier: true # 如果装了 hexo-all-minifier
 markdown: # 如果换了原装 hexo-renderer-marked, 用了 hexo-renderer-markdown-it
