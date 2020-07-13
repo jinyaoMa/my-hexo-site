@@ -49,7 +49,7 @@ contact:
     url: //github.com/jinyaoMa
     icon: '<i class="fab fa-github fa-fw"></i>'
   email:
-    url: mailto:jinyao.ma@outlook.com
+    url: mailto://jinyao.ma@outlook.com
     icon: '<i class="fas fa-envelope fa-fw"></i>'
   qq:
     url: tencent://Message/?uin=907881445
