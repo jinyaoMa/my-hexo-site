@@ -6,8 +6,8 @@ body, div, span, a, img, p, ul, ol, li, input
 
 @font-face
   font-family 'Source Han Sans CN'
-  src url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.2/asset/font/SourceHanSansCN.otf')
-  //src url('/asset/font/SourceHanSansCN.otf')
+  src url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.2.1/asset/font/SourceHanSansCN.otf')
+  // src url('/asset/font/SourceHanSansCN.otf')
 
 body
   font-family 'Source Han Sans CN', Arial, Helvetica, sans-serif
@@ -44,8 +44,8 @@ a
   width 100%
   height 100%
   background-color var(--color-link)
-  background-image url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.2/asset/img/cover.background.png')
-  //background-image url('/asset/img/cover.background.png')
+  background-image url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.2.1/asset/img/cover.background.png')
+  // background-image url('/asset/img/cover.background.png')
   background-repeat no-repeat
   background-size 50vmin
   background-position center
@@ -178,9 +178,9 @@ a
     right s('calc(50% - %s + 3em)', $app_width * 0.5)
     height s('calc(100vh - 3em - %s)', $progress_height)
     overflow hidden
-  //$app_width_special = $app_width + $font_size * 1.5 // 3em / 2
-  @media (min-width $app_mobile_width_min) and (max-width $app_width)//(max-width $app_width_special)
-    right 3em
+  // $app_width_special = $app_width + $font_size * 1.5 // 3em / 2
+  @media (min-width $app_mobile_width_min) and (max-width $app_width)
+    right 3em // (max-width $app_width_special)
 
 .m-main
   float left
@@ -414,6 +414,8 @@ a
       .p-extension-button, .p-extension-frame
         box-shadow none
 
+/*
 @media (max-width $float_button_min_app_width)
-  .p-adframe-qrcode, .p-goingto-top, .p-goingto-bottom, .p-xcanvas, .p-extension-button
+  .p-adframe-qrcode, .p-goingto-top, .p-goingto-bottom, .p-xcanvas
     box-shadow 0 0 4px 1px
+*/
