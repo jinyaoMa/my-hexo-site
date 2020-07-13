@@ -4,7 +4,7 @@
   link: /
 
 - name: vuepress-blog
-  icon: https://www.vuepress.cn/hero.png
+  icon: https://vuepress.vuejs.org/hero.png
   link: //blog.ma-jinyao.cn
 
 - name: MPlayer
