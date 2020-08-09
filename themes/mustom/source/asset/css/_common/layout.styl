@@ -6,7 +6,7 @@ body, div, span, a, img, p, ul, ol, li, input
 
 @font-face
   font-family 'Source Han Sans CN'
-  src url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.2.1/asset/font/SourceHanSansCN.otf')
+  src url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@master/asset/font/SourceHanSansCN.otf')
   // src url('/asset/font/SourceHanSansCN.otf')
 
 body
@@ -44,7 +44,7 @@ a
   width 100%
   height 100%
   background-color var(--color-link)
-  background-image url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@1.2.1/asset/img/cover.background.png')
+  background-image url('https://cdn.jsdelivr.net/gh/jinyaoMa/jinyaoMa.github.io@master/asset/img/cover.background.png')
   // background-image url('/asset/img/cover.background.png')
   background-repeat no-repeat
   background-size 50vmin
@@ -419,3 +419,55 @@ a
   .p-adframe-qrcode, .p-goingto-top, .p-goingto-bottom, .p-xcanvas
     box-shadow 0 0 4px 1px
 */
+:root.readmode
+  body
+    position fixed
+    width 100%
+  .p-post-main
+    position fixed
+    background var(--color-background)
+    top 0
+    left 0
+    z-index 999999999
+    height 100vh
+    overflow-x hidden
+    overflow-y scroll
+
+@media (max-width $app_mobile_width)
+  :root:not(.closeDrawer)
+    .m-app
+      .m-closeDrawer
+        position fixed
+        top 0
+        left 0
+        width 100%
+        height 100vh
+        background #00000099
+        z-index 999999996
+      .m-drawer
+        position fixed
+        background var(--color-background)
+        z-index 999999996
+        top 0
+        left 0
+        height 100vh
+        overflow-x hidden
+        overflow-y scroll
+        width s('calc(%s - 3em)', $drawer_width)
+        .p-brand-avatar
+          width 4em
+          position absolute
+          top 0
+          left 0
+        .p-brand-detail
+          padding-left 5em
+        .p-brand-name
+          margin-left -5em
+          padding-left 6em
+          text-align left
+          line-height 2.3
+        .p-brand-slogan
+          text-align left
+          padding-left 1.75em
+          font-size 0.7em
+          line-height 3.35
