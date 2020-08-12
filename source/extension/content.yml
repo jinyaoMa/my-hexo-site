@@ -28,8 +28,8 @@
   link: /extension/letter/chinese/
 
 - name: Palette
-  icon: /extension/palette/icon.png
-  link: /extension/palette/
+  icon: /Palette/icon.png
+  link: /Palette/
 
 - name: CS Handbook
   icon: //www.thecshandbook.com/public_html/img/favicon.png
