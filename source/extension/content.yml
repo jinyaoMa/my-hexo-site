@@ -5,11 +5,11 @@
 
 - name: vuepress-blog
   icon: https://vuepress.vuejs.org/hero.png
-  link: //blog.ma-jinyao.cn
+  link: //ma-jinyao.cn
 
 - name: MPlayer
   icon: /asset/img/icon.medium.png
-  link: /MPlayer
+  link: //jinyaoma.github.io/mplayer/
 
 - name: Resume
   icon: /extension/resume/icon.png
@@ -28,8 +28,8 @@
   link: /extension/letter/chinese/
 
 - name: Palette
-  icon: /Palette/icon.png
-  link: /Palette/
+  icon: //jinyaoma.github.io/palette/icon.png
+  link: //jinyaoma.github.io/palette/
 
 - name: CS Handbook
   icon: //www.thecshandbook.com/public_html/img/favicon.png
