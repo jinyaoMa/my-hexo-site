@@ -9,7 +9,7 @@
 
 - name: MPlayer
   icon: /asset/img/icon.medium.png
-  link: //jinyaoma.github.io/mplayer/
+  link: //jinyaoma.github.io/MPlayer/
 
 - name: Resume
   icon: /extension/resume/icon.png
@@ -28,8 +28,8 @@
   link: /extension/letter/chinese/
 
 - name: Palette
-  icon: //jinyaoma.github.io/palette/icon.png
-  link: //jinyaoma.github.io/palette/
+  icon: //jinyaoma.github.io/Palette/icon.png
+  link: //jinyaoma.github.io/Palette/
 
 - name: CS Handbook
   icon: //www.thecshandbook.com/public_html/img/favicon.png
