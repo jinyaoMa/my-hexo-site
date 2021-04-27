@@ -30,21 +30,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ma-jinyao.cn/library/index.html</loc>
-    
-    <lastmod>2020-07-05T09:44:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.ma-jinyao.cn/letter/index.html</loc>
-    
-    <lastmod>2020-07-05T09:44:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ma-jinyao.cn/resume/index.html</loc>
     
     <lastmod>2020-07-05T09:44:16.000Z</lastmod>
     
@@ -58,6 +44,13 @@
   </url>
   
   <url>
+    <loc>https://blog.ma-jinyao.cn/library/index.html</loc>
+    
+    <lastmod>2020-07-05T09:44:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.ma-jinyao.cn/records/content.json</loc>
     
     <lastmod>2020-07-05T09:44:16.000Z</lastmod>
@@ -65,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ma-jinyao.cn/extension/resume/index.css</loc>
+    <loc>https://blog.ma-jinyao.cn/resume/index.html</loc>
     
     <lastmod>2020-07-05T09:44:16.000Z</lastmod>
     
@@ -79,7 +72,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ma-jinyao.cn/extension/resume/chinese/data.json</loc>
+    <loc>https://blog.ma-jinyao.cn/extension/resume/index.css</loc>
     
     <lastmod>2020-07-05T09:44:16.000Z</lastmod>
     
@@ -93,14 +86,21 @@
   </url>
   
   <url>
-    <loc>https://blog.ma-jinyao.cn/extension/resume/english/data.json</loc>
+    <loc>https://blog.ma-jinyao.cn/extension/letter/english/data.json</loc>
     
     <lastmod>2020-07-05T09:44:16.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.ma-jinyao.cn/extension/letter/english/data.json</loc>
+    <loc>https://blog.ma-jinyao.cn/extension/resume/chinese/data.json</loc>
+    
+    <lastmod>2020-07-05T09:44:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ma-jinyao.cn/extension/resume/english/data.json</loc>
     
     <lastmod>2020-07-05T09:44:16.000Z</lastmod>
     
